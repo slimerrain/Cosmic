@@ -13,8 +13,8 @@ function start() {
     status = -1;
     style = -1;
     var options0 = Array(
-        "Appearance",
-        "Nothing"
+        "Change Appearance",
+        "Change Nothing"
     )
     cm.sendSimple("What would you like to do? \r\n" + generateSelectionMenu(options0));
 }
@@ -56,6 +56,7 @@ function action(mode, type, selection) {
                     // Decided To Do Nothing
                     case 1:
                         endConversation(status, selection);
+                        break;
                 }
                 break;
 
@@ -87,19 +88,19 @@ function action(mode, type, selection) {
                     case 3:
                         style = 1;
                         styleOptions = generateEyeColorListFromCurrentFace();
-                        cm.sendStyle("Pick a contact color.", styleOptions);
+                        cm.sendStyle("Pick an eye color.", styleOptions);
                         break;
 
                     // Skin Color
                     case 4:
                         style = 2;
-                        cm.sendNext("case " + selection);
+                        cm.sendNext("Pick a skin color." + selection);
                         break;
 
                     // Randomize Appearance
                     case 5:
                         style = 3;
-                        cm.sendNext("case " + selection);
+                        cm.sendYesNo("Suddenly I was hit with inspiration by your bravery! Can I do an experimental look on you?" + selection);
                         break;
 
                     // Gender
@@ -111,6 +112,7 @@ function action(mode, type, selection) {
                     // Exit
                     case 7:
                         endConversation(status, selection);
+                        break;
                 }
                 break;
 
@@ -132,7 +134,7 @@ function action(mode, type, selection) {
                 }
                 // randomize appearance
                 else if (style == 3) {
-                    cm.sendOk("You're very brave!");
+                    cm.sendOk("Voila! You look... wow!");
                 }
                 // change gender
                 else if (style == 4) {
@@ -143,9 +145,11 @@ function action(mode, type, selection) {
                     }
                 }
                 cm.dispose();
+                break;
 
             default:
                 endConversation(status, selection);
+                break;
         }
     }
 }
@@ -154,7 +158,7 @@ function action(mode, type, selection) {
 function generateSelectionMenu(array) {
     var menu = "";
     for (var i = 0; i < array.length; i++) {
-        menu += "#L" + i + "# Change " + array[i] + "#l\r\n";
+        menu += "#L" + i + "# " + array[i] + "#l\r\n";
     }
     return menu;
 }
@@ -162,13 +166,13 @@ function generateSelectionMenu(array) {
 // helper that grabs a new list of all hairs from the NPC handbook.
 function generateHairStyleListFromCurrentHair() {
     var CharacterCosmeticsFetcher = Java.type('tools.mapletools.CharacterCosmeticsFetcher');
-    return CharacterCosmeticsFetcher.getAvailableHairsExcludingCurrent(cm.getPlayer().getHair());
+    return CharacterCosmeticsFetcher.getAvailableHairsForCurrentColor(cm.getPlayer().getHair());
 }
 
 // helper that grabs a new list of all hair colors from the NPC handbook.
 function generateHairColorListFromCurrentHair() {
     var CharacterCosmeticsFetcher = Java.type('tools.mapletools.CharacterCosmeticsFetcher');
-    return CharacterCosmeticsFetcher.getAvailableHairColorsExcludingCurrent(cm.getPlayer().getHair());
+    return CharacterCosmeticsFetcher.getAvailableHairColorsForCurrentStyle(cm.getPlayer().getHair());
 }
 
 // helper that grabs a new list of all faces from the NPC handbook.

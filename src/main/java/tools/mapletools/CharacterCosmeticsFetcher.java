@@ -9,54 +9,52 @@ public class CharacterCosmeticsFetcher {
     static final String HANDBOOK_SKIN_PAGE = ToolConstants.HANDBOOK_PATH + "/Equip/Skin.txt";
 
     // ******************** HAIR ********************
-    public static Map<String, Map<Integer, Integer>> parseHandbookHairs() {
-        List<String> hairEntries = sortLinesByIdAscending(readFile(HANDBOOK_HAIR_PAGE));
+    public static Map<Integer, Integer> parseHandbookHairs() {
+        return parseHairs(sortLinesByIdAscending(readFile(HANDBOOK_HAIR_PAGE)));
+    }
+
+    /*
+    * Returns a Map<Hair ID, Number of Hair Color Variants>
+     */
+    public static Map<Integer, Integer> parseHairs(List<String> hairEntries){
 
         // Initialize the result map: Map<Hair Name, Map<Hair Id, Number of colors>>
-        Map<String, Map<Integer, Integer>> result = new HashMap<>();
+        Map<Integer, Integer> result = new HashMap<>();
 
         // Variables to track the current group
-        String currentHairName = "";
         Integer currentHairId = null;
         int currentHairColorRangeCount = 0;
 
         // Process each line
-        for (String hairs : hairEntries) {
-            hairs = hairs.trim();
+        for (String hair : hairEntries) {
+            hair = hair.trim();
 
-            if (!hairs.isEmpty()) {
+            if (!hair.isEmpty()) {
                 // Regular expression to match the pattern: Number - Color Name - description
-                String[] parts = hairs.split(" - ");
+                String[] parts = hair.split(" - ");
 
+                // Skip logic if the formatting is incorrect
                 if (parts.length == 3) {
                     try {
-                        int number = Integer.parseInt(parts[0].trim());
-                        String colorAndName = parts[1].trim();
-                        // String description = parts[2].trim(); // can be used in the future if descriptions exist... ?
+                        int hairId = Integer.parseInt(parts[0].trim());
 
-                        // Remove the color part (first word before the space)
-                        String[] nameParts = colorAndName.split(" ", 2);
-                        String name = (nameParts.length > 1) ? nameParts[1] : nameParts[0];
-
-                        // Check if this number ends with a "0" (e.g., 0, 100, 110, etc.)
-                        if (number % 10 == 0) {
+                        // Check if this number ends with a "0" (e.g., 11040, 82100, 54110, etc.)
+                        if (hairId % 10 == 0) {
                             // If there was a previous entry, add it to the result map
                             if (currentHairId != null) {
-                                Map<Integer, Integer> innerMap = result.computeIfAbsent(currentHairName, k -> new HashMap<>());
-                                innerMap.put(currentHairId, currentHairColorRangeCount);
+                                result.put(currentHairId ,currentHairColorRangeCount);
                             }
 
                             // Update the current key and range count
-                            currentHairId = number;
+                            currentHairId = hairId;
                             currentHairColorRangeCount = 0;
-                            currentHairName = name;
                         } else {
                             // Increment the range count for numbers between two numbers ending in "0"
                             currentHairColorRangeCount++;
                         }
                     } catch (NumberFormatException e) {
                         // Skip any malformed lines
-                        System.out.println("Skipping invalid line: " + hairs);
+                        System.out.println("Skipping invalid line: " + hair);
                     }
                 }
             }
@@ -64,8 +62,7 @@ public class CharacterCosmeticsFetcher {
 
         // After the loop, add the last range to the result map
         if (currentHairId != null) {
-            Map<Integer, Integer> innerMap = result.computeIfAbsent(currentHairName, k -> new HashMap<>());
-            innerMap.put(currentHairId, currentHairColorRangeCount);
+            result.put(currentHairId ,currentHairColorRangeCount);
         }
 
         return result;
@@ -74,8 +71,8 @@ public class CharacterCosmeticsFetcher {
     /*
     * This returns a list of all hair ids that share a color with the current hair.
      */
-    public static List<Integer> getAvailableHairsExcludingCurrent(int currentHairId) {
-        Map<String, Map<Integer, Integer>> parsedHairData = parseHandbookHairs();
+    public static List<Integer> getAvailableHairsForCurrentColor(int currentHairId) {
+        Map<Integer, Integer> parsedHairData = parseHandbookHairs();
 
         // Get the last digit of the current hair ID, indicating color
         int targetColor = currentHairId % 10;
@@ -84,23 +81,10 @@ public class CharacterCosmeticsFetcher {
         List<Integer> hairIds = new ArrayList<>();
 
         // Iterate through the parsed data
-        for (Map.Entry<String, Map<Integer, Integer>> group : parsedHairData.entrySet()) {
-            String hairName = group.getKey();
-            Map<Integer, Integer> ranges = group.getValue();
-
-            for (Map.Entry<Integer, Integer> range : ranges.entrySet()) {
-                int baseId = range.getKey(); // ID ending in 0
-                int rangeCount = range.getValue(); // Number of IDs in the range
-
-                // Check all IDs in the range
-                for (int i = 0; i <= rangeCount; i++) {
-                    int hairId = baseId + i;
-
-                    // Check if this ID has the same color and is not the current hair ID
-                    if (hairId % 10 == targetColor && hairId != currentHairId) {
-                        hairIds.add(hairId);
-                    }
-                }
+        for (Map.Entry<Integer, Integer> hair : parsedHairData.entrySet()) {
+            Integer hairId = hair.getKey();
+            if(hairId + targetColor != currentHairId && targetColor < hair.getValue() + 1) {
+                hairIds.add(hairId + targetColor);
             }
         }
 
@@ -110,24 +94,9 @@ public class CharacterCosmeticsFetcher {
     /*
      * This returns a list of all hair ids for different colors of the current hair.
      */
-    public static List<Integer> getAvailableHairColorsExcludingCurrent(int currentHairId) {
-        Map<String, Map<Integer, Integer>> parsedHairData = parseHandbookHairs();
-
-        // Result list to store matching hair IDs
-        HashSet<Integer> colorVariants = new HashSet<>();
-
-        // Iterate through the parsed data
-        for (Map.Entry<String, Map<Integer, Integer>> group : parsedHairData.entrySet()) {
-            Map<Integer, Integer> ranges = group.getValue();
-
-            for (Map.Entry<Integer, Integer> range : ranges.entrySet()) {
-                int baseId = range.getKey(); // ID ending in 0
-                int rangeCount = range.getValue(); // Number of IDs in the range
-
-                colorVariants.addAll(buildHairColorVariantList(baseId, rangeCount));
-            }
-        }
-        return colorVariants.stream().toList();
+    public static List<Integer> getAvailableHairColorsForCurrentStyle(int currentHairId) {
+        Map<Integer, Integer> parsedHairData = parseHandbookHairs();
+        return buildHairColorVariantList(currentHairId, parsedHairData.get(calculateHairIdNoColor(currentHairId)));
     }
 
     /*
@@ -139,7 +108,7 @@ public class CharacterCosmeticsFetcher {
         List<Integer> colorVariants = new ArrayList<>();
         int targetStyle = calculateHairIdNoColor(currentHairId);
         // Check all IDs in the range
-        for (int i = 0; i <= rangeCount; i++) { // Include `0` in the range
+        for (int i = 0; i < rangeCount + 1; i++) { // Include `0` in the range
             int hairId = targetStyle + i;
 
             // Check if this ID has the same color and is not the current hair ID
