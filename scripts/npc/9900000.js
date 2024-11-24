@@ -5,11 +5,13 @@
 */
 
 var status;
-var hairnew = Array();
+var styleOptions = Array();
+var style;
 
 // The beginning of the conversation, on interact
 function start() {
     status = -1;
+    style = -1;
     var options0 = Array(
         "Appearance",
         "Nothing"
@@ -62,38 +64,48 @@ function action(mode, type, selection) {
                 switch (selection) {
                     // Hair Style
                     case 0:
-                        hairNew = generateHairStyleListFromCurrentHair();
-                        cm.sendStyle("Pick a hair style.", hairNew);
+                        style = 0;
+                        styleOptions = generateHairStyleListFromCurrentHair();
+                        cm.sendStyle("Pick a hair style.", styleOptions);
                         break;
 
                     // Hair Color
                     case 1:
-                        cm.sendNext("case " + selection);
+                        style = 0;
+                        styleOptions = generateHairColorListFromCurrentHair();
+                        cm.sendStyle("Pick a hair color.", styleOptions);
                         break;
 
                     // Eye Shape
                     case 2:
-                        cm.sendNext("case " + selection);
+                        style = 1;
+                        styleOptions = generateFaceListFromCurrentEyeColor();
+                        cm.sendStyle("Pick a new face.", styleOptions);
                         break;
 
                     // Eye Color
                     case 3:
-                        cm.sendNext("case " + selection);
+                        style = 1;
+                        styleOptions = generateEyeColorListFromCurrentFace();
+                        cm.sendStyle("Pick a contact color.", styleOptions);
                         break;
 
                     // Skin Color
                     case 4:
+                        style = 2;
                         cm.sendNext("case " + selection);
                         break;
 
                     // Randomize Appearance
                     case 5:
+                        style = 3;
                         cm.sendNext("case " + selection);
                         break;
 
                     // Gender
                     case 6:
-                        cm.sendNext("case " + selection);
+                        style = 4;
+                        cm.sendOk("Welcome to Claire's, here is your free gender surgery.");
                         break;
 
                     // Exit
@@ -103,6 +115,36 @@ function action(mode, type, selection) {
                 break;
 
             case 2:
+                if (style < 0) {
+                    endConversation(status, selection);
+                }
+                // hair
+                else if (style == 0) {
+                    cm.setHair(styleOptions[selection]);
+                }
+                // face
+                 else if (style == 1) {
+                    cm.setFace(styleOptions[selection]);
+                }
+                // skin
+                 else if (style == 2) {
+                    cm.sendOk("Ayo? Skin color change?");
+                }
+                // randomize appearance
+                else if (style == 3) {
+                    cm.sendOk("You're very brave!");
+                }
+                // change gender
+                else if (style == 4) {
+                    if(cm.getPlayer().getGender() == 0){
+                        cm.getPlayer().setGender(1);
+                    } else if(cm.getPlayer().getGender() == 1){
+                        cm.getPlayer().setGender(0);
+                    }
+                }
+                cm.dispose();
+
+            default:
                 endConversation(status, selection);
         }
     }
@@ -123,6 +165,24 @@ function generateHairStyleListFromCurrentHair() {
     return CharacterCosmeticsFetcher.getAvailableHairsExcludingCurrent(cm.getPlayer().getHair());
 }
 
+// helper that grabs a new list of all hairs from the NPC handbook.
+function generateHairColorListFromCurrentHair() {
+    var CharacterCosmeticsFetcher = Java.type('tools.mapletools.CharacterCosmeticsFetcher');
+    return CharacterCosmeticsFetcher.getAvailableHairColorsExcludingCurrent(cm.getPlayer().getHair());
+}
+
+// helper that grabs a new list of all hairs from the NPC handbook.
+function generateFaceListFromCurrentEyeColor() {
+    var CharacterCosmeticsFetcher = Java.type('tools.mapletools.CharacterCosmeticsFetcher');
+    return CharacterCosmeticsFetcher.getFacesForCurrentEyeColor(cm.getPlayer().getHair());
+}
+
+// helper that grabs a new list of all hairs from the NPC handbook.
+function generateEyeColorListFromCurrentFace() {
+    var CharacterCosmeticsFetcher = Java.type('tools.mapletools.CharacterCosmeticsFetcher');
+    return CharacterCosmeticsFetcher.getEyeColorsForCurrentFace(cm.getPlayer().getHair());
+}
+
 // Handles different goodbyes (for fun. Didn't need to do all this tbh.)
 function endConversation(bye, selection) {
     switch(bye) {
@@ -133,7 +193,6 @@ function endConversation(bye, selection) {
             cm.sendOk("Too scared? It's okay, maybe one day.");
             break;
         case 2:
-            cm.setHair(hairnew[selection]);
             cm.sendOk("Have a glamorous day!");
             break;
         default:
