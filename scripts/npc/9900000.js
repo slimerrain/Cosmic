@@ -165,22 +165,22 @@ function generateHairStyleListFromCurrentHair() {
     return CharacterCosmeticsFetcher.getAvailableHairsExcludingCurrent(cm.getPlayer().getHair());
 }
 
-// helper that grabs a new list of all hairs from the NPC handbook.
+// helper that grabs a new list of all hair colors from the NPC handbook.
 function generateHairColorListFromCurrentHair() {
     var CharacterCosmeticsFetcher = Java.type('tools.mapletools.CharacterCosmeticsFetcher');
     return CharacterCosmeticsFetcher.getAvailableHairColorsExcludingCurrent(cm.getPlayer().getHair());
 }
 
-// helper that grabs a new list of all hairs from the NPC handbook.
+// helper that grabs a new list of all faces from the NPC handbook.
 function generateFaceListFromCurrentEyeColor() {
     var CharacterCosmeticsFetcher = Java.type('tools.mapletools.CharacterCosmeticsFetcher');
-    return CharacterCosmeticsFetcher.getFacesForCurrentEyeColor(cm.getPlayer().getHair());
+    return CharacterCosmeticsFetcher.getFacesForCurrentEyeColor(cm.getPlayer().getFace());
 }
 
-// helper that grabs a new list of all hairs from the NPC handbook.
+// helper that grabs a new list of all eye colors from the NPC handbook.
 function generateEyeColorListFromCurrentFace() {
     var CharacterCosmeticsFetcher = Java.type('tools.mapletools.CharacterCosmeticsFetcher');
-    return CharacterCosmeticsFetcher.getEyeColorsForCurrentFace(cm.getPlayer().getHair());
+    return CharacterCosmeticsFetcher.getEyeColorsForCurrentFace(cm.getPlayer().getFace());
 }
 
 // Handles different goodbyes (for fun. Didn't need to do all this tbh.)

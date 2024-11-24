@@ -77,11 +77,11 @@ public class CharacterCosmeticsFetcher {
     public static List<Integer> getAvailableHairsExcludingCurrent(int currentHairId) {
         Map<String, Map<Integer, Integer>> parsedHairData = parseHandbookHairs();
 
-        // Get the last digit of the current hair ID
+        // Get the last digit of the current hair ID, indicating color
         int targetColor = currentHairId % 10;
 
         // Result list to store matching hair IDs
-        List<Integer> matchingHairIds = new ArrayList<>();
+        List<Integer> hairIds = new ArrayList<>();
 
         // Iterate through the parsed data
         for (Map.Entry<String, Map<Integer, Integer>> group : parsedHairData.entrySet()) {
@@ -98,12 +98,13 @@ public class CharacterCosmeticsFetcher {
 
                     // Check if this ID has the same color and is not the current hair ID
                     if (hairId % 10 == targetColor && hairId != currentHairId) {
-                        matchingHairIds.add(hairId);
+                        hairIds.add(hairId);
                     }
                 }
             }
         }
-        return matchingHairIds;
+
+        return hairIds;
     }
 
     /*
@@ -112,11 +113,8 @@ public class CharacterCosmeticsFetcher {
     public static List<Integer> getAvailableHairColorsExcludingCurrent(int currentHairId) {
         Map<String, Map<Integer, Integer>> parsedHairData = parseHandbookHairs();
 
-        // Remove the last digit of the current hair ID (color code)
-        int targetStyle = currentHairId / 10;
-
         // Result list to store matching hair IDs
-        HashSet<Integer> matchingHairIds = new HashSet<>();
+        HashSet<Integer> colorVariants = new HashSet<>();
 
         // Iterate through the parsed data
         for (Map.Entry<String, Map<Integer, Integer>> group : parsedHairData.entrySet()) {
@@ -126,110 +124,193 @@ public class CharacterCosmeticsFetcher {
                 int baseId = range.getKey(); // ID ending in 0
                 int rangeCount = range.getValue(); // Number of IDs in the range
 
-                // Check all IDs in the range
-                for (int i = 0; i <= rangeCount; i++) { // Include `0` in the range
-                    int hairId = baseId + i;
-
-                    // Check if this ID has the same color and is not the current hair ID
-                    if (hairId / 10 == targetStyle && hairId != currentHairId) {
-                        matchingHairIds.add(hairId);
-                    }
-                }
+                colorVariants.addAll(buildHairColorVariantList(baseId, rangeCount));
             }
         }
-        return matchingHairIds.stream().toList();
+        return colorVariants.stream().toList();
+    }
+
+    /*
+     * Builds a list of eye colors based on how many colors there are.
+     *
+     * Assumes colors are sequential: (##0##, ##1##, ##2##, etc)
+     */
+    private static List<Integer> buildHairColorVariantList(int currentHairId, int rangeCount) {
+        List<Integer> colorVariants = new ArrayList<>();
+        int targetStyle = calculateHairIdNoColor(currentHairId);
+        // Check all IDs in the range
+        for (int i = 0; i <= rangeCount; i++) { // Include `0` in the range
+            int hairId = targetStyle + i;
+
+            // Check if this ID has the same color and is not the current hair ID
+            if (hairId != currentHairId) {
+                colorVariants.add(hairId);
+            }
+        }
+        return colorVariants;
+    }
+
+    /*
+     * Removes color from hair id
+     * Ex. 12345 -> 12340, 23754 -> 23750, etc
+     */
+    private static int calculateHairIdNoColor(int id) {
+        return (id / 10) * 10;
+    }
+
+    /*
+     * Extracts color from hair id
+     * Ex. 12345 -> 5, 23754 -> 4, etc
+     */
+    private static int calculateHairColor(int id) {
+        return id % 10;
     }
 
     // ******************** FACES ********************
     /*
-    * returns a list of all available faces for current eye color, except current face
+    * Returns a list of all available faces for current eye color, except current face
      */
-    public static Map<String, Map<Integer, Integer>> parseHandbookFaces() {
-        List<String> faceEntries = sortFacesAscending(readFile(HANDBOOK_FACE_PAGE));
+    public static Map<Integer, Integer> parseHandbookFaces() {
+        return parseFaceEntries(sortFacesAscending(readFile(HANDBOOK_FACE_PAGE)));
+    }
 
-        // Initialize the result map: Map<Face Name, Map<Face Id, Number of colors>>
-        Map<String, Map<Integer, Integer>> result = new HashMap<>();
+    /*
+     * Takes in a list of handbook-formatted face entries
+     * ( `ID - Name (Color) - description` )
+     *
+     * Returns a Map<Base Face ID, Number of eye color variants>
+     *
+     * Assumes that the list of entries is sorted by outer 4 digits ( XX%XX ), ignoring the center digit.
+     * ( see sortFacesAscending() )
+     */
+    private static Map<Integer, Integer> parseFaceEntries (List<String> faceEntries) {
+        // Initialize the result map: Map<Face ID, Number of eye color variants>
+        Map<Integer, Integer> result = new HashMap<>();
 
-        // Variables to track the current group
-        String currentFaceName = "";
+        // Variables to track the current face calculations
         Integer currentFaceId = null;
         int currentEyeColorRangeCount = 0;
 
         for (String face : faceEntries) {
             face = face.trim();
             if (!face.isEmpty()) {
-                // Regex to extract the pattern: ID - Name (Color) - (description)
+                // Regex to extract the pattern: ID - Name (Color) - description
                 String[] parts = face.split(" - ");
 
+                // Only will process properly formatted entries. Skips all other entries.
                 if (parts.length == 3) {
                     try {
-                        int number = Integer.parseInt(parts[0].trim());
-                        String nameAndColor = parts[1].trim();
-                        // String description = parts[2].trim(); // can be used in the future if descriptions exist... ?
+                        // Extract ID from current entry iteration.
+                        int id = Integer.parseInt(parts[0].trim());
 
-                        // Remove the color part
-                        String[] nameParts = nameAndColor.split("\\(", 2);
-                        String name = nameParts[0];
-
-                        // Check if this number's center digit is a "0" (e.g., 0, 100, 110, etc.)
-                        if ((number / 100) % 10 == 0) {
-                            // If there was a previous entry, add it to the result map
+                        // Check if this id is a base face id and not a color variant
+                        // (aka new set of faces to start counting.)
+                        if (calculateEyeColor(id) == 0) {
+                            // Put final result of color count into map (unless this is the first ID.)
                             if (currentFaceId != null) {
-                                Map<Integer, Integer> innerMap = result.computeIfAbsent(currentFaceName, k -> new HashMap<>());
-                                innerMap.put(currentFaceId, currentEyeColorRangeCount);
+                                result.put(currentFaceId, currentEyeColorRangeCount);
                             }
 
-                            // Update the current key and range count
-                            currentFaceId = number;
+                            // Reset the current key and range count
                             currentEyeColorRangeCount = 0;
-                            currentFaceName = name;
+                            currentFaceId = id;
                         } else {
-                            // Increment the range count for numbers between two numbers ending in "0"
                             currentEyeColorRangeCount++;
                         }
                     } catch (NumberFormatException e) {
-                        // Skip any malformed lines
                         System.out.println("Skipping invalid line: " + face);
                     }
                 }
             }
         }
+
+        // After the loop, add the last range to the result map
+        if (currentFaceId != null) {
+            result.put(currentFaceId, currentEyeColorRangeCount);
+        }
+
         return result;
     }
 
     /*
-     * returns a list of all available eye colors for current face, except current color
+     * Returns a list of all available eye colors for current face, except current color
      */
     public static List<Integer> getEyeColorsForCurrentFace(int currentFaceId) {
-        Map<String, Map<Integer, Integer>> faceEntries = parseHandbookFaces();
+        Map<Integer, Integer> faceEntries = parseHandbookFaces();
+        int targetStyle = calculateFaceIdNoColor(currentFaceId);
+        return buildEyeColorVariantList(currentFaceId, faceEntries.get(targetStyle));
+    }
 
-        int targetStyle = shiftedHundredsId(currentFaceId) / 10;
+    /*
+     * Returns a list of all available faces for current eye color, except current face
+     */
+    public static List<Integer> getFacesForCurrentEyeColor(int currentFaceId) {
+        Map<Integer, Integer> faceEntries = parseHandbookFaces();
+        int targetColor = calculateEyeColor(currentFaceId);
+        Set<Integer> baseFaceIds = faceEntries.keySet();
+        return buildFaceVariantList(currentFaceId, baseFaceIds, targetColor);
+    }
 
-        // Result list to store matching hair IDs
-        HashSet<Integer> matchingFaceIds = new HashSet<>();
+    // Sort lines numerically by the Face at the start of each line
+    private static List<String> sortFacesAscending(List<String> lines) {
+        lines.sort((line1, line2) -> {
+            try {
+                int id1 = Integer.parseInt(line1.split(" - ")[0].trim());
+                int id2 = Integer.parseInt(line2.split(" - ")[0].trim());
 
-        for (Map.Entry<String, Map<Integer, Integer>> group : faceEntries.entrySet()) {
-            Map<Integer, Integer> ranges = group.getValue();
+                return Integer.compare(calculateFaceIdNoColor(id1), calculateFaceIdNoColor(id2));
+            } catch (NumberFormatException e) {
+                return 0; // Keep the original order if parsing fails
+            }
+        });
+        return lines;
+    }
 
-            for (Map.Entry<Integer, Integer> range : ranges.entrySet()) {
-                int baseId = range.getKey(); // ID with 0 hundreds place
-                int rangeCount = range.getValue(); // Number of IDs in the range
+    /*
+     * Removes color from face id
+     * Ex. 12345 -> 12045, 23754 -> 23054, etc
+     */
+    private static int calculateFaceIdNoColor(int id) {
+        return (id / 1000) * 1000 + (id % 100);
+    }
 
-                // Check all IDs in the range
-                for (int i = 0; i <= rangeCount; i++) { // Include `0` in the range
-                    int faceId = baseId + (i * 100);
+    /*
+     * Extracts color from face id
+     * Ex. 12345 -> 3, 23754 -> 7, etc
+     */
+    private static int calculateEyeColor(int id) {
+        return (id / 100) % 10;
+    }
 
-                    // Check if this ID has the same color and is not the current hair ID
-                    if (shiftedHundredsId(faceId) / 10 == targetStyle && faceId != currentFaceId) {
-                        matchingFaceIds.add(faceId);
-                    }
-                }
+    /*
+     * Builds a list of eye colors based on how many colors there are.
+     *
+     * Assumes colors are sequential: (##0##, ##1##, ##2##, etc)
+     */
+    private static List<Integer> buildEyeColorVariantList(int currentFaceId, int colors) {
+        List<Integer> results = new ArrayList<>();
+        int baseFaceId = calculateFaceIdNoColor(currentFaceId);
+        for (int i = 0; i < colors + 1; i++) {
+            int eyeColorVariant = baseFaceId + (i * 100);
+            if (eyeColorVariant != currentFaceId) {
+                results.add(eyeColorVariant);
             }
         }
+        return results;
+    }
 
-        System.out.println();
-
-        return matchingFaceIds.stream().toList();
+    /*
+     * Builds a list of faces based on current eye color.
+     */
+    private static List<Integer> buildFaceVariantList(int currentFaceId, Set<Integer> baseFaceIds, int color) {
+        List<Integer> results = new ArrayList<>();
+        for (Integer baseFaceId : baseFaceIds) {
+            int faceId = baseFaceId + (color * 100);
+            if (faceId != currentFaceId) {
+                results.add(faceId);
+            }
+        }
+        return results;
     }
 
     // ******************** SKIN ********************
@@ -238,7 +319,7 @@ public class CharacterCosmeticsFetcher {
 
     // ******************** RANDOMIZER ********************
 
-    // ******************** HELPERS ********************
+    // ******************** GENERAL HELPERS ********************
     // Method to read the file and return a list of lines
     private static List<String> readFile(String fileName) {
         List<String> lines = new ArrayList<>();
@@ -265,27 +346,5 @@ public class CharacterCosmeticsFetcher {
             }
         });
         return lines;
-    }
-
-    // Sort lines numerically by the Face at the start of each line
-    private static List<String> sortFacesAscending(List<String> lines) {
-        lines.sort((line1, line2) -> {
-            try {
-                int id1 = Integer.parseInt(line1.split(" - ")[0].trim());
-                int id2 = Integer.parseInt(line2.split(" - ")[0].trim());
-
-                return Integer.compare(shiftedHundredsId(id1), shiftedHundredsId(id2));
-            } catch (NumberFormatException e) {
-                return 0; // Keep the original order if parsing fails
-            }
-        });
-        return lines;
-    }
-
-    private static int shiftedHundredsId(int id) { // ex. 23056
-        int hundredsDigit = (id / 100) % 10; // ex. 0
-        int right = (id % 100) * 10 + hundredsDigit; // ex. 560
-        int left = (id / 1000) * 1000; // ex. 23000
-        return left + right; // ex. 23560
     }
 }
