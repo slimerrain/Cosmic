@@ -133,7 +133,6 @@ function endConversation(bye, selection) {
             cm.sendOk("Too scared? It's okay, maybe one day.");
             break;
         case 2:
-            cm.dispose();
             cm.setHair(hairnew[selection]);
             cm.sendOk("Have a glamorous day!");
             break;
