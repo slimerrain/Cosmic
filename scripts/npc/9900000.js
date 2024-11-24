@@ -4,6 +4,8 @@
 * Author: slimerrain
 */
 
+var CharacterCosmeticsFetcher = Java.type('tools.mapletools.CharacterCosmeticsFetcher');
+
 var status;
 var styleOptions = Array();
 var style;
@@ -14,7 +16,7 @@ function start() {
     style = -1;
     var options0 = Array(
         "Change Appearance",
-        "Change Nothing"
+        "Do Nothing"
     )
     cm.sendSimple("What would you like to do? \r\n" + generateSelectionMenu(options0));
 }
@@ -134,6 +136,8 @@ function action(mode, type, selection) {
                 }
                 // randomize appearance
                 else if (style == 3) {
+                    cm.setHair(getRandomHairFromGmHandbook());
+                    cm.setFace(getRandomFaceFromGmHandbook());
                     cm.sendOk("Voila! You look... wow!");
                 }
                 // change gender
@@ -154,39 +158,6 @@ function action(mode, type, selection) {
     }
 }
 
-// helper that creates a selection list (prefixes each option with "Change")
-function generateSelectionMenu(array) {
-    var menu = "";
-    for (var i = 0; i < array.length; i++) {
-        menu += "#L" + i + "# " + array[i] + "#l\r\n";
-    }
-    return menu;
-}
-
-// helper that grabs a new list of all hairs from the NPC handbook.
-function generateHairStyleListFromCurrentHair() {
-    var CharacterCosmeticsFetcher = Java.type('tools.mapletools.CharacterCosmeticsFetcher');
-    return CharacterCosmeticsFetcher.getAvailableHairsForCurrentColor(cm.getPlayer().getHair());
-}
-
-// helper that grabs a new list of all hair colors from the NPC handbook.
-function generateHairColorListFromCurrentHair() {
-    var CharacterCosmeticsFetcher = Java.type('tools.mapletools.CharacterCosmeticsFetcher');
-    return CharacterCosmeticsFetcher.getAvailableHairColorsForCurrentStyle(cm.getPlayer().getHair());
-}
-
-// helper that grabs a new list of all faces from the NPC handbook.
-function generateFaceListFromCurrentEyeColor() {
-    var CharacterCosmeticsFetcher = Java.type('tools.mapletools.CharacterCosmeticsFetcher');
-    return CharacterCosmeticsFetcher.getFacesForCurrentEyeColor(cm.getPlayer().getFace());
-}
-
-// helper that grabs a new list of all eye colors from the NPC handbook.
-function generateEyeColorListFromCurrentFace() {
-    var CharacterCosmeticsFetcher = Java.type('tools.mapletools.CharacterCosmeticsFetcher');
-    return CharacterCosmeticsFetcher.getEyeColorsForCurrentFace(cm.getPlayer().getFace());
-}
-
 // Handles different goodbyes (for fun. Didn't need to do all this tbh.)
 function endConversation(bye, selection) {
     switch(bye) {
@@ -205,3 +176,47 @@ function endConversation(bye, selection) {
     }
     cm.dispose();
 }
+
+// helper that creates a selection list (prefixes each option with "Change")
+function generateSelectionMenu(array) {
+    var menu = "";
+    for (var i = 0; i < array.length; i++) {
+        menu += "#L" + i + "# " + array[i] + "#l\r\n";
+    }
+    return menu;
+}
+
+// helper that grabs a new list of all hairs from the NPC handbook.
+function generateHairStyleListFromCurrentHair() {
+    return CharacterCosmeticsFetcher.getAvailableHairsForCurrentColor(cm.getPlayer().getHair());
+}
+
+// helper that grabs a new list of all hair colors from the NPC handbook.
+function generateHairColorListFromCurrentHair() {
+    return CharacterCosmeticsFetcher.getAvailableHairColorsForCurrentStyle(cm.getPlayer().getHair());
+}
+
+// helper that grabs a new list of all faces from the NPC handbook.
+function generateFaceListFromCurrentEyeColor() {
+    return CharacterCosmeticsFetcher.getFacesForCurrentEyeColor(cm.getPlayer().getFace());
+}
+
+// helper that grabs a new list of all eye colors from the NPC handbook.
+function generateEyeColorListFromCurrentFace() {
+    return CharacterCosmeticsFetcher.getEyeColorsForCurrentFace(cm.getPlayer().getFace());
+}
+
+// helper that grabs a random hair from the entire list of hairs
+function getRandomHairFromGmHandbook() {
+    return CharacterCosmeticsFetcher.getRandomHairFromHandbook();
+}
+
+// helper that grabs a random face from the entire list of faces
+function getRandomFaceFromGmHandbook() {
+    return CharacterCosmeticsFetcher.getRandomFaceFromHandbook();
+}
+
+// helper that grabs a random skin color from the entire list of skins
+//function getRandomSkinFromGmHandbook() {
+//    return CharacterCosmeticsFetcher.getRandomSkinFromGmHandbook();
+//}

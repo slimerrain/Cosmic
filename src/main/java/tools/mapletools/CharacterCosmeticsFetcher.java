@@ -73,22 +73,8 @@ public class CharacterCosmeticsFetcher {
      */
     public static List<Integer> getAvailableHairsForCurrentColor(int currentHairId) {
         Map<Integer, Integer> parsedHairData = parseHandbookHairs();
-
-        // Get the last digit of the current hair ID, indicating color
-        int targetColor = currentHairId % 10;
-
-        // Result list to store matching hair IDs
-        List<Integer> hairIds = new ArrayList<>();
-
-        // Iterate through the parsed data
-        for (Map.Entry<Integer, Integer> hair : parsedHairData.entrySet()) {
-            Integer hairId = hair.getKey();
-            if(hairId + targetColor != currentHairId && targetColor < hair.getValue() + 1) {
-                hairIds.add(hairId + targetColor);
-            }
-        }
-
-        return hairIds;
+        Set<Integer> baseHairIds = parsedHairData.keySet();
+        return buildHairVariantList(currentHairId, baseHairIds, calculateHairColor(currentHairId));
     }
 
     /*
@@ -97,6 +83,20 @@ public class CharacterCosmeticsFetcher {
     public static List<Integer> getAvailableHairColorsForCurrentStyle(int currentHairId) {
         Map<Integer, Integer> parsedHairData = parseHandbookHairs();
         return buildHairColorVariantList(currentHairId, parsedHairData.get(calculateHairIdNoColor(currentHairId)));
+    }
+
+    /*
+     * This returns a random hair id from the handbook file.
+     */
+    public static Integer getRandomHairFromHandbook() {
+        Map<Integer, Integer> parsedHairs = parseHandbookHairs();
+        Set<Integer> baseHairIds = parsedHairs.keySet();
+
+        Random rand = new Random();
+        int randomIndex = rand.nextInt(baseHairIds.size());
+        int randomColor = rand.nextInt(parsedHairs.get(baseHairIds.stream().toList().get(randomIndex)));
+
+        return baseHairIds.stream().toList().get(randomIndex) + randomColor;
     }
 
     /*
@@ -117,6 +117,23 @@ public class CharacterCosmeticsFetcher {
             }
         }
         return colorVariants;
+    }
+
+    /*
+     * Builds a list of hairs based on current hair color.
+     */
+    private static List<Integer> buildHairVariantList(int currentHairId, Set<Integer> baseHairIds, int color) {
+        // Result list to store matching hair IDs
+        List<Integer> hairIds = new ArrayList<>();
+
+        // Iterate through the parsed data
+        for (Integer hair : baseHairIds) {
+            Integer hairId = hair + color;
+            if(currentHairId != hairId){
+                hairIds.add(hairId);
+            }
+        }
+        return hairIds;
     }
 
     /*
@@ -218,6 +235,20 @@ public class CharacterCosmeticsFetcher {
         int targetColor = calculateEyeColor(currentFaceId);
         Set<Integer> baseFaceIds = faceEntries.keySet();
         return buildFaceVariantList(currentFaceId, baseFaceIds, targetColor);
+    }
+
+    /*
+     * This returns a random face id from the handbook file.
+     */
+    public static Integer getRandomFaceFromHandbook() {
+        Map<Integer, Integer> parsedFaces = parseHandbookFaces();
+        Set<Integer> baseFaceIds = parsedFaces.keySet();
+
+        Random rand = new Random();
+        int randomIndex = rand.nextInt(baseFaceIds.size());
+        int randomColor = rand.nextInt(parsedFaces.get(baseFaceIds.stream().toList().get(randomIndex)));
+
+        return baseFaceIds.stream().toList().get(randomIndex) + (randomColor*100);
     }
 
     // Sort lines numerically by the Face at the start of each line
