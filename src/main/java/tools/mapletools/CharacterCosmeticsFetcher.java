@@ -1,12 +1,23 @@
 package tools.mapletools;
 
+import client.Client;
+import client.SkinColor;
+import client.Stat;
+import scripting.AbstractPlayerInteraction;
+import tools.PacketCreator;
+import tools.Pair;
+
 import java.io.*;
 import java.util.*;
 
-public class CharacterCosmeticsFetcher {
+public class CharacterCosmeticsFetcher extends AbstractPlayerInteraction {
     static final String HANDBOOK_HAIR_PAGE = ToolConstants.HANDBOOK_PATH + "/Equip/Hair.txt";
     static final String HANDBOOK_FACE_PAGE = ToolConstants.HANDBOOK_PATH + "/Equip/Face.txt";
     static final String HANDBOOK_SKIN_PAGE = ToolConstants.HANDBOOK_PATH + "/Equip/Skin.txt";
+
+    public CharacterCosmeticsFetcher(Client c) {
+        super(c);
+    }
 
     // ******************** HAIR ********************
     public static Map<Integer, Integer> parseHandbookHairs() {
@@ -316,8 +327,6 @@ public class CharacterCosmeticsFetcher {
     // ******************** SKIN ********************
 
     // ******************** GENDER ********************
-
-    // ******************** RANDOMIZER ********************
 
     // ******************** GENERAL HELPERS ********************
     // Method to read the file and return a list of lines
