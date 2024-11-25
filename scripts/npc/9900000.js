@@ -143,9 +143,9 @@ function action(mode, type, selection) {
                 // change gender
                 else if (style == 4) {
                     if(cm.getPlayer().getGender() == 0){
-                        cm.getPlayer().setGender(1);
+                        CharacterCosmeticsFetcher.setGender(1, cm.getPlayer().getId());
                     } else if(cm.getPlayer().getGender() == 1){
-                        cm.getPlayer().setGender(0);
+                        CharacterCosmeticsFetcher.setGender(0, cm.getPlayer().getId());
                     }
                 }
                 cm.dispose();

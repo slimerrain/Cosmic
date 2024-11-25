@@ -1,23 +1,18 @@
 package tools.mapletools;
 
-import client.Client;
-import client.SkinColor;
-import client.Stat;
 import scripting.AbstractPlayerInteraction;
-import tools.PacketCreator;
-import tools.Pair;
+import tools.DatabaseConnection;
 
 import java.io.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.*;
 
-public class CharacterCosmeticsFetcher extends AbstractPlayerInteraction {
+public class CharacterCosmeticsFetcher {
     static final String HANDBOOK_HAIR_PAGE = ToolConstants.HANDBOOK_PATH + "/Equip/Hair.txt";
     static final String HANDBOOK_FACE_PAGE = ToolConstants.HANDBOOK_PATH + "/Equip/Face.txt";
     static final String HANDBOOK_SKIN_PAGE = ToolConstants.HANDBOOK_PATH + "/Equip/Skin.txt";
-
-    public CharacterCosmeticsFetcher(Client c) {
-        super(c);
-    }
 
     // ******************** HAIR ********************
     public static Map<Integer, Integer> parseHandbookHairs() {
@@ -327,6 +322,19 @@ public class CharacterCosmeticsFetcher extends AbstractPlayerInteraction {
     // ******************** SKIN ********************
 
     // ******************** GENDER ********************
+    public static boolean setGender(int genderId, int characterId) {
+        try {
+            Connection con = DatabaseConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement("UPDATE characters SET gender = ? WHERE id = ?");
+            ps.setInt(1, genderId);
+            ps.setInt(2, characterId);
+            ps.executeUpdate();
+            return true;
+        } catch (SQLException sqlException){
+            System.out.println("Could not establish database connection for gender change.");
+        }
+        return false;
+    }
 
     // ******************** GENERAL HELPERS ********************
     // Method to read the file and return a list of lines
