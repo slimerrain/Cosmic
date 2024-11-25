@@ -69,7 +69,7 @@ public class CharacterCosmeticsFetcher {
     }
 
     /*
-    * This returns a list of all hair ids that share a color with the current hair.
+    * Returns a list of all hair ids that share a color with the current hair.
      */
     public static List<Integer> getAvailableHairsForCurrentColor(int currentHairId) {
         Map<Integer, Integer> parsedHairData = parseHandbookHairs();
@@ -78,7 +78,7 @@ public class CharacterCosmeticsFetcher {
     }
 
     /*
-     * This returns a list of all hair ids for different colors of the current hair.
+     * Returns a list of all hair ids for different colors of the current hair.
      */
     public static List<Integer> getAvailableHairColorsForCurrentStyle(int currentHairId) {
         Map<Integer, Integer> parsedHairData = parseHandbookHairs();
@@ -86,7 +86,7 @@ public class CharacterCosmeticsFetcher {
     }
 
     /*
-     * This returns a random hair id from the handbook file.
+     * Returns a random hair id from the handbook file.
      */
     public static Integer getRandomHairFromHandbook() {
         Map<Integer, Integer> parsedHairs = parseHandbookHairs();
@@ -238,7 +238,7 @@ public class CharacterCosmeticsFetcher {
     }
 
     /*
-     * This returns a random face id from the handbook file.
+     * Returns a random face id from the handbook file.
      */
     public static Integer getRandomFaceFromHandbook() {
         Map<Integer, Integer> parsedFaces = parseHandbookFaces();
