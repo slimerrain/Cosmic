@@ -390,21 +390,6 @@ public class CharacterCosmeticsFetcher extends AbstractPlayerInteraction  {
         return baseSkinIds.stream().toList().get(randomIndex);
     }
 
-    // ******************** GENDER ********************
-    public static boolean setGender(int genderId, int characterId) {
-        try {
-            Connection con = DatabaseConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("UPDATE characters SET gender = ? WHERE id = ?");
-            ps.setInt(1, genderId);
-            ps.setInt(2, characterId);
-            ps.executeUpdate();
-            return true;
-        } catch (SQLException sqlException){
-            System.out.println("Could not establish database connection for gender change.");
-        }
-        return false;
-    }
-
     // ******************** GENERAL HELPERS ********************
     // Method to read the file and return a list of lines
     private static List<String> readFile(String fileName) {

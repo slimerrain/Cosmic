@@ -23,18 +23,10 @@ function start() {
 
 // Restart this function every time any option is selected.
 function action(mode, type, selection) {
-    if (mode == -1 || selection == -1) {
+    if (mode == -1) {
         cm.dispose();
-    } else {
-        // default mode when continuing conversation
-        if (mode == 1) {
-            status++;
-        // Mode 0? If end chat during status == 2 selections
-        } else {
-            cm.sendOk("Have a glamorous day!");
-            cm.dispose();
-        }
-
+    } else if(mode == 1) {
+        status++;
         switch (status) {
             // Choosing second appearance menu option
             case 0:
@@ -142,15 +134,15 @@ function action(mode, type, selection) {
                 else if (style == 3) {
                     cm.setHair(getRandomHairFromGmHandbook());
                     cm.setFace(getRandomFaceFromGmHandbook());
-                    cm.setFace(getRandomSkinFromGmHandbook());
+                    cm.setSkin(getRandomSkinFromGmHandbook());
                     cm.sendOk("Voila! You look... wow!");
                 }
                 // change gender
                 else if (style == 4) {
                     if(cm.getPlayer().getGender() == 0){
-                        CharacterCosmeticsFetcher.setGender(1, cm.getPlayer().getId());
+                        cm.getPlayer().setGender(1);
                     } else if(cm.getPlayer().getGender() == 1){
-                        CharacterCosmeticsFetcher.setGender(0, cm.getPlayer().getId());
+                        cm.getPlayer().setGender(0);
                     }
                 }
                 cm.dispose();
@@ -161,6 +153,9 @@ function action(mode, type, selection) {
                 cm.dispose();
                 break;
         }
+    }
+    else {
+        cm.dispose()
     }
 }
 
@@ -210,5 +205,5 @@ function getRandomFaceFromGmHandbook() {
 
 // helper that grabs a random skin color from the entire list of skins
 function getRandomSkinFromGmHandbook() {
-    return CharacterCosmeticsFetcher.getRandomSkinFromGmHandbook();
+    return CharacterCosmeticsFetcher.getRandomSkinFromHandbook();
 }
