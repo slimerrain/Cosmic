@@ -23,16 +23,16 @@ function start() {
 
 // Restart this function every time any option is selected.
 function action(mode, type, selection) {
-    // Mode -1 if end chat during status == 1 selections
-    if (mode == -1) {
-        endConversation(status, selection);
+    if (mode == -1 || selection == -1) {
+        cm.dispose();
     } else {
         // default mode when continuing conversation
         if (mode == 1) {
             status++;
         // Mode 0? If end chat during status == 2 selections
         } else {
-            endConversation(status, selection);
+            cm.sendOk("Have a glamorous day!");
+            cm.dispose();
         }
 
         switch (status) {
@@ -56,8 +56,9 @@ function action(mode, type, selection) {
                         break;
 
                     // Decided To Do Nothing
-                    case 1:
-                        endConversation(status, selection);
+                    default:
+                        cm.sendOk("K bye.");
+                        cm.dispose();
                         break;
                 }
                 break;
@@ -96,13 +97,14 @@ function action(mode, type, selection) {
                     // Skin Color
                     case 4:
                         style = 2;
-                        cm.sendNext("Pick a skin color." + selection);
+                        styleOptions = generateSkinColorListFromCurrentSkin();
+                        cm.sendStyle("Pick a skin color.", styleOptions);
                         break;
 
                     // Randomize Appearance
                     case 5:
                         style = 3;
-                        cm.sendYesNo("Suddenly I was hit with inspiration by your bravery! Can I do an experimental look on you?" + selection);
+                        cm.sendOk("Suddenly I was hit with inspiration by your bravery! Can I do an experimental look on you?" + selection);
                         break;
 
                     // Gender
@@ -112,15 +114,17 @@ function action(mode, type, selection) {
                         break;
 
                     // Exit
-                    case 7:
-                        endConversation(status, selection);
+                    default:
+                        cm.sendOk("Too scared? That's okay...");
+                        cm.dispose();
                         break;
                 }
                 break;
 
             case 2:
                 if (style < 0) {
-                    endConversation(status, selection);
+                    cm.sendOk("Too scared? That's okay...");
+                    cm.dispose();
                 }
                 // hair
                 else if (style == 0) {
@@ -132,12 +136,13 @@ function action(mode, type, selection) {
                 }
                 // skin
                  else if (style == 2) {
-                    cm.sendOk("Ayo? Skin color change?");
+                    cm.setSkin(styleOptions[selection]);
                 }
                 // randomize appearance
                 else if (style == 3) {
                     cm.setHair(getRandomHairFromGmHandbook());
                     cm.setFace(getRandomFaceFromGmHandbook());
+                    cm.setFace(getRandomSkinFromGmHandbook());
                     cm.sendOk("Voila! You look... wow!");
                 }
                 // change gender
@@ -152,29 +157,11 @@ function action(mode, type, selection) {
                 break;
 
             default:
-                endConversation(status, selection);
+                cm.sendOk("See ya.");
+                cm.dispose();
                 break;
         }
     }
-}
-
-// Handles different goodbyes (for fun. Didn't need to do all this tbh.)
-function endConversation(bye, selection) {
-    switch(bye) {
-        case 0:
-            cm.sendOk("See ya.");
-            break;
-        case 1:
-            cm.sendOk("Too scared? It's okay, maybe one day.");
-            break;
-        case 2:
-            cm.sendOk("Have a glamorous day!");
-            break;
-        default:
-            cm.sendOk("Have an interesting day~");
-            break;
-    }
-    cm.dispose();
 }
 
 // helper that creates a selection list (prefixes each option with "Change")
@@ -206,6 +193,11 @@ function generateEyeColorListFromCurrentFace() {
     return CharacterCosmeticsFetcher.getEyeColorsForCurrentFace(cm.getPlayer().getFace());
 }
 
+// helper that grabs a new list of all eye colors from the NPC handbook.
+function generateSkinColorListFromCurrentSkin() {
+    return CharacterCosmeticsFetcher.getOtherSkinColors(cm.getPlayer().getSkinColor());
+}
+
 // helper that grabs a random hair from the entire list of hairs
 function getRandomHairFromGmHandbook() {
     return CharacterCosmeticsFetcher.getRandomHairFromHandbook();
@@ -217,6 +209,6 @@ function getRandomFaceFromGmHandbook() {
 }
 
 // helper that grabs a random skin color from the entire list of skins
-//function getRandomSkinFromGmHandbook() {
-//    return CharacterCosmeticsFetcher.getRandomSkinFromGmHandbook();
-//}
+function getRandomSkinFromGmHandbook() {
+    return CharacterCosmeticsFetcher.getRandomSkinFromGmHandbook();
+}

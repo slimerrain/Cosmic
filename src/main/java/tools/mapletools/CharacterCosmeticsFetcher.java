@@ -1,5 +1,7 @@
 package tools.mapletools;
 
+import client.Client;
+import client.SkinColor;
 import scripting.AbstractPlayerInteraction;
 import tools.DatabaseConnection;
 
@@ -9,10 +11,14 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.*;
 
-public class CharacterCosmeticsFetcher {
+public class CharacterCosmeticsFetcher extends AbstractPlayerInteraction  {
     static final String HANDBOOK_HAIR_PAGE = ToolConstants.HANDBOOK_PATH + "/Equip/Hair.txt";
     static final String HANDBOOK_FACE_PAGE = ToolConstants.HANDBOOK_PATH + "/Equip/Face.txt";
     static final String HANDBOOK_SKIN_PAGE = ToolConstants.HANDBOOK_PATH + "/Equip/Skin.txt";
+
+    public CharacterCosmeticsFetcher(Client c) {
+        super(c);
+    }
 
     // ******************** HAIR ********************
     public static Map<Integer, Integer> parseHandbookHairs() {
@@ -320,6 +326,69 @@ public class CharacterCosmeticsFetcher {
     }
 
     // ******************** SKIN ********************
+    public static Map<Integer, String> parseHandbookSkins() {
+        return parseSkins(sortLinesByIdAscending(readFile(HANDBOOK_SKIN_PAGE)));
+    }
+
+    /*
+     * Returns a Map<Hair ID, Number of Hair Color Variants>
+     */
+    public static Map<Integer, String> parseSkins(List<String> skinEntries){
+        // Initialize the result map: Map<Skin Id, Skin Name>
+        Map<Integer, String> result = new HashMap<>();
+
+        // Process each line
+        for (String skin : skinEntries) {
+            skin = skin.trim();
+
+            if (!skin.isEmpty()) {
+                // Regular expression to match the pattern: Number - Color Name - description
+                String[] parts = skin.split(" - ");
+
+                // Skip logic if the formatting is incorrect
+                if (parts.length == 3) {
+                    try {
+                        int skinId = Integer.parseInt(parts[0].trim());
+                        String skinName = parts[1].trim();
+                        // Add it to the result map
+                        if (skinName != null) {
+                            result.put(skinId, skinName);
+                        }
+                    } catch (NumberFormatException e) {
+                        // Skip any malformed lines
+                        System.out.println("Skipping invalid line: " + skin);
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
+
+    /*
+     * Returns a random skin id from the handbook file.
+     */
+    public static List<Integer> getOtherSkinColors(SkinColor currentSkin) {
+        Map<Integer, String> parsedSkins = parseHandbookSkins();
+        Set<Integer> skinIds = parsedSkins.keySet();
+
+        skinIds.removeIf(skinId -> skinId == currentSkin.getId());
+
+        return skinIds.stream().toList();
+    }
+
+    /*
+     * Returns a random skin id from the handbook file.
+     */
+    public static Integer getRandomSkinFromHandbook() {
+        Map<Integer, String> parsedSkins = parseHandbookSkins();
+        Set<Integer> baseSkinIds = parsedSkins.keySet();
+
+        Random rand = new Random();
+        int randomIndex = rand.nextInt(baseSkinIds.size());
+
+        return baseSkinIds.stream().toList().get(randomIndex);
+    }
 
     // ******************** GENDER ********************
     public static boolean setGender(int genderId, int characterId) {

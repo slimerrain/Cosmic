@@ -6797,8 +6797,8 @@ public class PacketCreator {
 
             p.writeShort(1);
             p.writeInt(chr.getRelationshipId());
-            p.writeInt(chr.getGender() == 0 ? chr.getId() : chr.getPartnerId());
-            p.writeInt(chr.getGender() == 0 ? chr.getPartnerId() : chr.getId());
+            p.writeInt(chr.getId());
+            p.writeInt(chr.getPartnerId());
             p.writeShort((marriageRing != null) ? 3 : 1);
             if (marriageRing != null) {
                 p.writeInt(marriageRing.getItemId());
@@ -6807,8 +6807,8 @@ public class PacketCreator {
                 p.writeInt(ItemId.WEDDING_RING_MOONSTONE); // Engagement Ring's Outcome (doesn't matter for engagement)
                 p.writeInt(ItemId.WEDDING_RING_MOONSTONE); // Engagement Ring's Outcome (doesn't matter for engagement)
             }
-            p.writeFixedString(StringUtil.getRightPaddedStr(chr.getGender() == 0 ? chr.getName() : Character.getNameById(chr.getPartnerId()), '\0', 13));
-            p.writeFixedString(StringUtil.getRightPaddedStr(chr.getGender() == 0 ? Character.getNameById(chr.getPartnerId()) : chr.getName(), '\0', 13));
+            p.writeFixedString(StringUtil.getRightPaddedStr(chr.getName(), '\0', 13));
+            p.writeFixedString(StringUtil.getRightPaddedStr(Character.getNameById(chr.getPartnerId()), '\0', 13));
         } else {
             p.writeShort(0);
         }
