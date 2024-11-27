@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <imgdir name="Curse.img">
-  <string name="0" value="1esb1an"/>
   <string name="1" value="455h0Ie"/>
   <string name="2" value="455h0le"/>
   <string name="3" value="455m45ter"/>
@@ -25,11 +24,7 @@
   <string name="22" value="5h1z"/>
   <string name="23" value="5hibaI"/>
   <string name="24" value="5hibal"/>
-  <string name="25" value="5hit"/>
-  <string name="26" value="5hiz"/>
   <string name="27" value="5hlbal"/>
-  <string name="28" value="5hlt"/>
-  <string name="29" value="5hlz"/>
   <string name="30" value="a55h0Ie"/>
   <string name="31" value="a55h0le"/>
   <string name="32" value="a55ma5ter"/>
@@ -40,11 +35,6 @@
   <string name="37" value="anal"/>
   <string name="38" value="anal5ex"/>
   <string name="39" value="analsex"/>
-  <string name="40" value="assh0Ie"/>
-  <string name="41" value="assh0le"/>
-  <string name="42" value="asshole"/>
-  <string name="43" value="asslover"/>
-  <string name="44" value="ass-lover"/>
   <string name="45" value="assmaster"/>
   <string name="46" value="assmuch"/>
   <string name="47" value="assmunch"/>
@@ -60,11 +50,7 @@
   <string name="57" value="b1zn4tch"/>
   <string name="58" value="b1znatch"/>
   <string name="59" value="b45t4rd"/>
-  <string name="60" value="b4IIz"/>
-  <string name="61" value="b4llz"/>
   <string name="62" value="b4st4rd"/>
-  <string name="63" value="balls"/>
-  <string name="64" value="ballz"/>
   <string name="65" value="bastard"/>
   <string name="66" value="beeeech"/>
   <string name="67" value="beeotch"/>
@@ -72,12 +58,6 @@
   <string name="69" value="beyotch"/>
   <string name="70" value="bI0wj0b"/>
   <string name="71" value="bI0wme"/>
-  <string name="72" value="bi4tch"/>
-  <string name="73" value="biaatch"/>
-  <string name="74" value="biatch"/>
-  <string name="75" value="biiiiitch"/>
-  <string name="76" value="biiiitch"/>
-  <string name="77" value="biiitch"/>
   <string name="78" value="biitch"/>
   <string name="79" value="biotch"/>
   <string name="80" value="bitch"/>
@@ -85,18 +65,16 @@
   <string name="82" value="bitcha55"/>
   <string name="83" value="bitchass"/>
   <string name="84" value="bittch"/>
-  <string name="85" value="biy0tch"/>
-  <string name="86" value="biyaaatch"/>
-  <string name="87" value="biyatch"/>
-  <string name="88" value="biyotch"/>
+  <string name="85" value="h3il"/>
+  <string name="85" value="he1l"/>
   <string name="89" value="biz4tch"/>
   <string name="90" value="bizatch"/>
   <string name="91" value="bizn4tch"/>
   <string name="92" value="biznatch"/>
   <string name="93" value="bl0wj0b"/>
   <string name="94" value="bl0wme"/>
-  <string name="95" value="bl4tch"/>
-  <string name="96" value="blatch"/>
+  <string name="95" value="heil"/>
+  <string name="96" value="blltch"/>
   <string name="97" value="bllltch"/>
   <string name="98" value="blotch"/>
   <string name="99" value="blowjob"/>
@@ -119,23 +97,13 @@
   <string name="116" value="ch00chle"/>
   <string name="117" value="ch1nk"/>
   <string name="118" value="chink"/>
+  <string name="118" value="chlnk"/>
   <string name="119" value="choochie"/>
-  <string name="120" value="cI1t0r1s"/>
-  <string name="121" value="cIit"/>
-  <string name="122" value="cIit0ri5"/>
-  <string name="123" value="cIit0ris"/>
-  <string name="124" value="cl1t0r1s"/>
-  <string name="125" value="clit"/>
-  <string name="126" value="clit0ri5"/>
-  <string name="127" value="clit0ris"/>
-  <string name="128" value="clitoris"/>
-  <string name="129" value="cllt"/>
-  <string name="130" value="cllt0rl5"/>
-  <string name="131" value="cllt0rls"/>
   <string name="132" value="cock"/>
   <string name="133" value="condom"/>
   <string name="134" value="cottonpick"/>
   <string name="135" value="cum"/>
+  <string name="40" value="curn"/>
   <string name="136" value="cunnt"/>
   <string name="137" value="cunt"/>
   <string name="138" value="d0ggy5tyIe"/>
@@ -158,21 +126,13 @@
   <string name="155" value="dyke"/>
   <string name="156" value="eatme"/>
   <string name="157" value="fag"/>
+  <string name="157" value="f@g"/>
   <string name="158" value="fagg0t"/>
   <string name="159" value="faggot"/>
+  <string name="158" value="f@gg0t"/>
+  <string name="159" value="f@ggot"/>
   <string name="160" value="fetish"/>
-  <string name="161" value="fucker"/>
-  <string name="162" value="fuck"/>
-  <string name="163" value="fuc"/>
-  <string name="164" value="fuker"/>
-  <string name="165" value="fukkin"/>
-  <string name="166" value="fuk"/>
-  <string name="167" value="fuuk"/>
   <string name="168" value="g00k"/>
-  <string name="169" value="g4y"/>
-  <string name="170" value="gaaay"/>
-  <string name="171" value="gaay"/>
-  <string name="172" value="gay"/>
   <string name="173" value="gizay"/>
   <string name="174" value="goddamn"/>
   <string name="175" value="goddmamn"/>
@@ -194,7 +154,6 @@
   <string name="191" value="jizm"/>
   <string name="192" value="kike"/>
   <string name="193" value="lesb0"/>
-  <string name="194" value="lesbian"/>
   <string name="195" value="lesbo"/>
   <string name="196" value="lezbo"/>
   <string name="197" value="m1ss10nary"/>
@@ -221,12 +180,9 @@
   <string name="218" value="nigger"/>
   <string name="219" value="nipple"/>
   <string name="220" value="nlgger"/>
-  <string name="221" value="nutsack"/>
   <string name="222" value="orgasm"/>
   <string name="223" value="orgy"/>
   <string name="224" value="p0rn"/>
-  <string name="225" value="pen15"/>
-  <string name="226" value="penis"/>
   <string name="227" value="phuck"/>
   <string name="228" value="porn"/>
   <string name="229" value="porno"/>
@@ -238,28 +194,17 @@
   <string name="235" value="schlong"/>
   <string name="236" value="sexfreak"/>
   <string name="237" value="sexmachine"/>
-  <string name="238" value="sexual"/>
   <string name="239" value="sexwith"/>
-  <string name="240" value="sh1t"/>
   <string name="241" value="shibal"/>
-  <string name="242" value="shiiiiiit"/>
-  <string name="243" value="shit"/>
-  <string name="244" value="shiz"/>
-  <string name="245" value="shlt"/>
   <string name="246" value="spank"/>
   <string name="247" value="sperm"/>
   <string name="248" value="spum"/>
-  <string name="249" value="ssh1t"/>
-  <string name="250" value="sshit"/>
-  <string name="251" value="sshlt"/>
   <string name="252" value="suckme"/>
   <string name="253" value="suckmy"/>
   <string name="254" value="titty"/>
   <string name="255" value="tltty"/>
   <string name="256" value="tw4t"/>
   <string name="257" value="twat"/>
-  <string name="258" value="v4g1n4"/>
-  <string name="259" value="vagina"/>
   <string name="260" value="w4nker"/>
   <string name="261" value="wackoff"/>
   <string name="262" value="wack-off"/>
@@ -283,7 +228,6 @@
   <string name="280" value="nazzi"/>
   <string name="281" value="Nazi"/>
   <string name="282" value="Adolph Hitler"/>
-  <string name="283" value="fuck&apos;"/>
   <string name="284" value="Gestapo"/>
   <string name="285" value="Fuhrer"/>
   <string name="286" value="F?rer"/>
@@ -298,10 +242,6 @@
   <string name="295" value="Skeezer"/>
   <string name="296" value="Whore"/>
   <string name="297" value="drivebitch"/>
-  <string name="298" value="fuckgm"/>
-  <string name="299" value="fuckugm"/>
-  <string name="300" value="fukugm"/>
-  <string name="301" value="fucugm"/>
   <string name="302" value="motherfuckin&apos;"/>
   <string name="303" value="move bitch"/>
   <string name="304" value="movebitch"/>
@@ -314,7 +254,6 @@
   <string name="311" value="asshole&apos;"/>
   <string name="312" value="dick&apos;"/>
   <string name="313" value="titties"/>
-  <string name="314" value="assface"/>
   <string name="315" value="douche"/>
   <string name="316" value="doosh"/>
   <string name="317" value="dooshe"/>
@@ -326,13 +265,14 @@
   <string name="323" value="jigaboo"/>
   <string name="324" value="pecker"/>
   <string name="325" value="peckerwood"/>
-  <string name="326" value="fck&apos;"/>
   <string name="327" value="ragheaD"/>
   <string name="328" value="wetback"/>
   <string name="329" value="masturbate"/>
-  <string name="330" value="fck"/>
-  <string name="331" value="sht"/>
   <string name="332" value="rape"/>
+  <string name="41" value="rap3"/>
+  <string name="42" value="r@pe"/>
+  <string name="43" value="r@p3"/>
+  <string name="44" value="raype"/>
   <string name="333" value="brogamecom"/>
   <string name="334" value="freewebscomnxking"/>
   <string name="335" value="gamekoocom"/>
@@ -481,9 +421,6 @@
   <string name="478" value="friskgamecom"/>
   <string name="479" value="fr1skgamecom"/>
   <string name="480" value="frlskgamecom"/>
-  <string name="481" value="m3so"/>
-  <string name="482" value="mes0"/>
-  <string name="483" value="m3s0"/>
   <string name="484" value="n3xon"/>
   <string name="485" value="nex0n"/>
   <string name="486" value="n3x0n"/>
@@ -509,8 +446,6 @@
   <string name="506" value="i01game"/>
   <string name="507" value="ioigame"/>
   <string name="508" value="i0igame"/>
-  <string name="509" value="g4me"/>
-  <string name="510" value="g4m3"/>
   <string name="511" value="itemratecom"/>
   <string name="512" value="ratecom"/>
   <string name="513" value="r4tecom"/>
@@ -528,14 +463,11 @@
   <string name="525" value="xxclty"/>
   <string name="526" value="xxc1ty"/>
   <string name="527" value="Thsalecom"/>
-  <string name="528" value="fvck"/>
   <string name="529" value="thefirststorycom"/>
   <string name="530" value="wow4scom"/>
   <string name="531" value="mapleftptk"/>
   <string name="532" value="mapieftptk"/>
   <string name="533" value="thsaiecom"/>
-  <string name="534" value="fuuck"/>
-  <string name="535" value="Shiit"/>
   <string name="536" value="saiecom"/>
   <string name="537" value="sa1ecom"/>
   <string name="538" value="5alecom"/>
@@ -572,4 +504,11 @@
   <string name="569" value="2girls1cup"/>
   <string name="570" value="Niqqer"/>
   <string name="571" value="itgamebidcom"/>
+  <string name="572" value="rayp3"/>
+  <string name="573" value="r@ype"/>
+  <string name="574" value="r@yp3"/>
+  <string name="575" value="rayp"/>
+  <string name="576" value="reyp"/>
+  <string name="577" value="r@yp"/>
+  <string name="578" value="r3yp"/>
 </imgdir>

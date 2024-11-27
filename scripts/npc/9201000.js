@@ -80,11 +80,6 @@ function action(mode, type, selection) {
                         cm.dispose();
                         return;
                     }
-                    if (cm.getPlayer().getGender() != 0) {
-                        cm.sendOk("Sorry, but the ring box is currently available only for males.");
-                        cm.dispose();
-                        return;
-                    }
 
                     state = 1;
                     options = ["Moonstone", "Star Gem", "Golden Heart", "Silver Swan"];
