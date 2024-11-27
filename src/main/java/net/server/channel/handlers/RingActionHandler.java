@@ -370,7 +370,7 @@ public final class RingActionHandler extends AbstractPacketHandler {
                         log.error("Error with engagement", e);
                     }
                 } else {
-                    source.dropMessage(1, "She has politely declined your engagement request.");
+                    source.dropMessage(1, "Your crush has politely declined your engagement request.");
                     source.sendPacket(WeddingPackets.OnMarriageResult((byte) 0));
 
                     source.setMarriageItemId(-1);

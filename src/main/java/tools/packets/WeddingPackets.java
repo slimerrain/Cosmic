@@ -283,8 +283,8 @@ public class WeddingPackets extends PacketCreator {
         OutPacket p = OutPacket.create(SendOpcode.MARRIAGE_RESULT);
         p.writeByte(11);
         p.writeInt(marriageId);
-        p.writeInt(chr.getId());
-        p.writeInt(chr.getPartnerId());
+        p.writeInt(chr.getGender() == 0 ? chr.getId() : chr.getPartnerId());
+        p.writeInt(chr.getGender() == 0 ? chr.getPartnerId() : chr.getId());
         p.writeShort(wedding ? 3 : 1);
         if (wedding) {
             p.writeInt(chr.getMarriageItemId());
@@ -293,8 +293,8 @@ public class WeddingPackets extends PacketCreator {
             p.writeInt(ItemId.WEDDING_RING_MOONSTONE); // Engagement Ring's Outcome (doesn't matter for engagement)
             p.writeInt(ItemId.WEDDING_RING_MOONSTONE); // Engagement Ring's Outcome (doesn't matter for engagement)
         }
-        p.writeFixedString(StringUtil.getRightPaddedStr(chr.getName(), '\0', 13));
-        p.writeFixedString(StringUtil.getRightPaddedStr(Character.getNameById(chr.getPartnerId()), '\0', 13));
+        p.writeFixedString(StringUtil.getRightPaddedStr(chr.getGender() == 0 ? chr.getName() : Character.getNameById(chr.getPartnerId()), '\0', 13));
+        p.writeFixedString(StringUtil.getRightPaddedStr(chr.getGender() == 0 ? Character.getNameById(chr.getPartnerId()) : chr.getName(), '\0', 13));
 
         return p;
     }
