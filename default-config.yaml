@@ -6,7 +6,7 @@ worlds:
   - flag: 0
     server_message: Welcome to Scania!
     event_message: Scania!
-    why_am_i_recommended: Welcome to Scania!
+    why_am_i_recommended: High Rate World!
     channels: 3
     exp_rate: 3000
     meso_rate: 750
@@ -20,7 +20,7 @@ worlds:
   - flag: 0
     server_message: Welcome to Bera!
     event_message: Bera!
-    why_am_i_recommended: Welcome to Bera!
+    why_am_i_recommended: Low Rate World!
     channels: 3
     exp_rate: 5
     meso_rate: 10
@@ -372,7 +372,7 @@ server:
     USE_PERFECT_PITCH: true         #For lvl 30 or above, each lvlup grants player 1 perfect pitch.
 
     #Quest Configuration
-    USE_QUEST_RATE: false           #Exp/Meso gained by quests uses fixed server exp/meso rate times quest rate as multiplier, instead of player rates.
+    USE_QUEST_RATE: true           #Exp/Meso gained by quests uses fixed server exp/meso rate times quest rate as multiplier, instead of player rates.
 
     #Quest Points Configuration
     QUEST_POINT_REPEATABLE_INTERVAL: 25  #Minimum interval between repeatable quest completions for quest points to be awarded.
