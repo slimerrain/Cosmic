@@ -3,13 +3,10 @@ package tools.mapletools;
 import client.Client;
 import client.SkinColor;
 import scripting.AbstractPlayerInteraction;
-import tools.DatabaseConnection;
 
 import java.io.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class CharacterCosmeticsFetcher extends AbstractPlayerInteraction  {
     static final String HANDBOOK_HAIR_PAGE = ToolConstants.HANDBOOK_PATH + "/Equip/Hair.txt";
@@ -74,7 +71,7 @@ public class CharacterCosmeticsFetcher extends AbstractPlayerInteraction  {
 
         // After the loop, add the last range to the result map
         if (currentHairId != null) {
-            result.put(currentHairId ,currentHairColorRangeCount);
+            result.put(currentHairId, currentHairColorRangeCount);
         }
 
         return result;
@@ -84,9 +81,12 @@ public class CharacterCosmeticsFetcher extends AbstractPlayerInteraction  {
     * Returns a list of all hair ids that share a color with the current hair.
      */
     public static List<Integer> getAvailableHairsForCurrentColor(int currentHairId) {
-        Map<Integer, Integer> parsedHairData = parseHandbookHairs();
+        int currentHairColor = calculateHairColor(currentHairId);
+        Map<Integer, Integer> parsedHairData = parseHandbookHairs().entrySet().stream()
+                .filter(entry -> entry.getValue() >= currentHairColor)
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
         Set<Integer> baseHairIds = parsedHairData.keySet();
-        return buildHairVariantList(currentHairId, baseHairIds, calculateHairColor(currentHairId));
+        return buildHairVariantList(currentHairId, baseHairIds, currentHairColor);
     }
 
     /*
@@ -112,7 +112,7 @@ public class CharacterCosmeticsFetcher extends AbstractPlayerInteraction  {
     }
 
     /*
-     * Builds a list of eye colors based on how many colors there are.
+     * Builds a list of hair colors based on how many colors there are.
      *
      * Assumes colors are sequential: (##0##, ##1##, ##2##, etc)
      */
@@ -128,6 +128,7 @@ public class CharacterCosmeticsFetcher extends AbstractPlayerInteraction  {
                 colorVariants.add(hairId);
             }
         }
+
         return colorVariants;
     }
 
@@ -145,6 +146,9 @@ public class CharacterCosmeticsFetcher extends AbstractPlayerInteraction  {
                 hairIds.add(hairId);
             }
         }
+
+        Collections.sort(hairIds);
+
         return hairIds;
     }
 
@@ -169,7 +173,7 @@ public class CharacterCosmeticsFetcher extends AbstractPlayerInteraction  {
     * Returns a list of all available faces for current eye color, except current face
      */
     public static Map<Integer, Integer> parseHandbookFaces() {
-        return parseFaceEntries(sortFacesAscending(readFile(HANDBOOK_FACE_PAGE)));
+        return parseFaceEntries(sortFacesAscending(sortLinesByIdAscending(readFile(HANDBOOK_FACE_PAGE))));
     }
 
     /*
@@ -308,6 +312,7 @@ public class CharacterCosmeticsFetcher extends AbstractPlayerInteraction  {
                 results.add(eyeColorVariant);
             }
         }
+
         return results;
     }
 
@@ -322,6 +327,7 @@ public class CharacterCosmeticsFetcher extends AbstractPlayerInteraction  {
                 results.add(faceId);
             }
         }
+
         return results;
     }
 
