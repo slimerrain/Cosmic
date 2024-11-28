@@ -21,7 +21,7 @@
 /*
    @Author: Arthur L - Refactored command content into modules
 */
-package client.command.commands.gm2;
+package client.command.commands.gm0;
 
 import client.Character;
 import client.Client;
@@ -41,6 +41,12 @@ public class MaxSkillCommand extends Command {
     @Override
     public void execute(Client c, String[] params) {
         Character player = c.getPlayer();
+        int world = player.getWorld();
+        System.out.println(world);
+        if(world > 0) {
+            player.yellowMessage("Only available in Scania.");
+            return;
+        }
         for (Data skill_ : DataProviderFactory.getDataProvider(WZFiles.STRING).getData("Skill.img").getChildren()) {
             try {
                 Skill skill = SkillFactory.getSkill(Integer.parseInt(skill_.getName()));

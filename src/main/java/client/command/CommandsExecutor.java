@@ -76,7 +76,7 @@ import client.command.commands.gm2.JobCommand;
 import client.command.commands.gm2.LevelCommand;
 import client.command.commands.gm2.LevelProCommand;
 import client.command.commands.gm2.LootCommand;
-import client.command.commands.gm2.MaxSkillCommand;
+import client.command.commands.gm0.MaxSkillCommand;
 import client.command.commands.gm2.MaxStatCommand;
 import client.command.commands.gm2.MobSkillCommand;
 import client.command.commands.gm2.ReachCommand;
@@ -367,6 +367,7 @@ public class CommandsExecutor {
         addCommand("mylawn", MapOwnerClaimCommand.class);
         addCommand("bosshp", BossHpCommand.class);
         addCommand("mobhp", MobHpCommand.class);
+        addCommand(new String[]{"maxskill", "maxskills"}, 2, MaxSkillCommand.class);
 
         commandsNameDesc.add(levelCommandsCursor);
     }
@@ -413,7 +414,6 @@ public class CommandsExecutor {
         addCommand("setslot", 2, SetSlotCommand.class);
         addCommand("setstat", 2, SetStatCommand.class);
         addCommand("maxstat", 2, MaxStatCommand.class);
-        addCommand("maxskill", 2, MaxSkillCommand.class);
         addCommand("resetskill", 2, ResetSkillCommand.class);
         addCommand("search", 2, SearchCommand.class);
         addCommand("jail", 2, JailCommand.class);
