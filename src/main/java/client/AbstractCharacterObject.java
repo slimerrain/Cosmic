@@ -699,6 +699,10 @@ public abstract class AbstractCharacterObject extends AbstractAnimatedMapObject 
         updateStrDexIntLuk(x, x, x, x, -1);
     }
 
+    public void updateStrDexIntLuk(int x, int remainingAp) {
+        updateStrDexIntLuk(x, x, x, x, remainingAp);
+    }
+
     public void changeRemainingAp(int x, boolean silent) {
         effLock.lock();
         statWlock.lock();
