@@ -42,7 +42,7 @@ public class StatStrCommand extends Command {
             try {
                 amount = Math.min(Integer.parseInt(params[0]), remainingAp);
             } catch (NumberFormatException e) {
-                player.dropMessage("That is not a valid number!");
+                player.dropMessage("Please put a valid number!");
                 return;
             }
         } else {

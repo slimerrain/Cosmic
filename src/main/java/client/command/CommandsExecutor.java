@@ -367,7 +367,7 @@ public class CommandsExecutor {
         addCommand("mylawn", MapOwnerClaimCommand.class);
         addCommand("bosshp", BossHpCommand.class);
         addCommand("mobhp", MobHpCommand.class);
-        addCommand(new String[]{"maxskill", "maxskills"}, 2, MaxSkillCommand.class);
+        addCommand(new String[]{"maxskill", "maxskills"}, MaxSkillCommand.class);
 
         commandsNameDesc.add(levelCommandsCursor);
     }
