@@ -1,4 +1,4 @@
 @echo off
 @title MapleSlime
-java -Xmx2048m -Dwz-path=wz -jar target\Cosmic.jar
+java -Xmx4096m -Dwz-path=wz -jar target\Cosmic.jar
 pause
