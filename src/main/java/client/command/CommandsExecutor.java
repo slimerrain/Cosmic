@@ -342,34 +342,40 @@ public class CommandsExecutor {
         levelCommandsCursor = new Pair<>(new ArrayList<String>(), new ArrayList<String>());
 
         addCommand(new String[]{"help", "commands"}, HelpCommand.class);
-        addCommand("droplimit", DropLimitCommand.class);
-        addCommand("time", TimeCommand.class);
-        addCommand("credits", StaffCommand.class);
-        addCommand("uptime", UptimeCommand.class);
-        addCommand("gacha", GachaCommand.class);
-        addCommand("dispose", DisposeCommand.class);
-        addCommand("changel", ChangeLanguageCommand.class);
-        addCommand("equiplv", EquipLvCommand.class);
-        addCommand("showrates", ShowRatesCommand.class);
-        addCommand("rates", RatesCommand.class);
-        addCommand("online", OnlineCommand.class);
-        addCommand("gm", GmCommand.class);
-        addCommand("reportbug", ReportBugCommand.class);
-        addCommand("points", ReadPointsCommand.class);
-        addCommand("joinevent", JoinEventCommand.class);
-        addCommand("leaveevent", LeaveEventCommand.class);
-        addCommand("ranks", RanksCommand.class);
+        addCommand(new String[]{"goto", "go"}, GotoCommand.class);
+
+        addCommand(new String[]{"maxskill", "maxskills"}, MaxSkillCommand.class);
+        addCommand(new String[]{"statreset", "resetstats", "apreset", "resetap"},  ResetStatsCommand.class);
         addCommand("str", StatStrCommand.class);
         addCommand("dex", StatDexCommand.class);
         addCommand("int", StatIntCommand.class);
         addCommand("luk", StatLukCommand.class);
-        addCommand("enableauth", EnableAuthCommand.class);
         addCommand("toggleexp", ToggleExpCommand.class);
+
+        addCommand("dispose", DisposeCommand.class);
+        addCommand("changel", ChangeLanguageCommand.class);
         addCommand("mylawn", MapOwnerClaimCommand.class);
         addCommand("bosshp", BossHpCommand.class);
         addCommand("mobhp", MobHpCommand.class);
-        addCommand(new String[]{"maxskill", "maxskills"}, MaxSkillCommand.class);
-        addCommand(new String[]{"statreset", "resetstats", "apreset", "resetap"},  ResetStatsCommand.class);
+
+        addCommand("gacha", GachaCommand.class);
+        addCommand("equiplv", EquipLvCommand.class);
+        addCommand("points", ReadPointsCommand.class);
+        addCommand("joinevent", JoinEventCommand.class);
+        addCommand("leaveevent", LeaveEventCommand.class);
+
+        addCommand("showrates", ShowRatesCommand.class);
+        addCommand("ranks", RanksCommand.class);
+        addCommand("enableauth", EnableAuthCommand.class);
+        addCommand("gm", GmCommand.class);
+        addCommand("reportbug", ReportBugCommand.class);
+        addCommand("droplimit", DropLimitCommand.class);
+        addCommand("time", TimeCommand.class);
+        addCommand("uptime", UptimeCommand.class);
+
+        addCommand("rates", RatesCommand.class);
+        addCommand("online", OnlineCommand.class);
+        addCommand("credits", StaffCommand.class);
 
         commandsNameDesc.add(levelCommandsCursor);
     }
@@ -381,7 +387,6 @@ public class CommandsExecutor {
         addCommand("whatdropsfrom", 1, WhatDropsFromCommand.class);
         addCommand("whodrops", 1, WhoDropsCommand.class);
         addCommand("buffme", 1, BuffMeCommand.class);
-        addCommand("goto", 1, GotoCommand.class);
 
         commandsNameDesc.add(levelCommandsCursor);
     }
