@@ -40,6 +40,7 @@ import client.command.commands.gm0.RanksCommand;
 import client.command.commands.gm0.RatesCommand;
 import client.command.commands.gm0.ReadPointsCommand;
 import client.command.commands.gm0.ReportBugCommand;
+import client.command.commands.gm0.ResetStatsCommand;
 import client.command.commands.gm0.ShowRatesCommand;
 import client.command.commands.gm0.StaffCommand;
 import client.command.commands.gm0.StatDexCommand;
@@ -368,6 +369,7 @@ public class CommandsExecutor {
         addCommand("bosshp", BossHpCommand.class);
         addCommand("mobhp", MobHpCommand.class);
         addCommand(new String[]{"maxskill", "maxskills"}, MaxSkillCommand.class);
+        addCommand(new String[]{"statreset", "resetstats", "apreset", "resetap"},  ResetStatsCommand.class);
 
         commandsNameDesc.add(levelCommandsCursor);
     }
