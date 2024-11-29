@@ -98,7 +98,6 @@ public class Expedition {
     private final MapleMap startMap;
     private final List<String> bossLogs;
     private ScheduledFuture<?> schedule;
-    private final Map<Integer, String> members = new ConcurrentHashMap<>();
     private final List<Integer> banned = new CopyOnWriteArrayList<>();
     private long startTime;
     private final Properties props = new Properties();

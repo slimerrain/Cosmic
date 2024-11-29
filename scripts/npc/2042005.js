@@ -42,7 +42,7 @@ function action(mode, type, selection) {
                 var lvlOk = 0;
                 var isOutMap = 0;
                 for (var i = 0; i < party.size(); i++) {
-                    if (party.get(i).getLevel() >= cpqMinLvl && party.get(i).getLevel() <= cpqMaxLvl) {
+                    if (party.get(i).getLevel() >= cpqMinLvl) {
                         lvlOk++;
 
                         if (party.get(i).getPlayer().getMapId() != leaderMapid) {

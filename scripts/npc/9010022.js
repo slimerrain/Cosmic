@@ -25,7 +25,7 @@ function action(mode, type, selection) {
                 cm.dispose();
             } else {
                 var selStr = "";
-                if (cm.getLevel() >= 20 && cm.getLevel() <= 30) {
+                if (cm.getLevel() >= 20) {
                     selStr += "#0# Ariant Coliseum";
                 }
 
@@ -33,11 +33,11 @@ function action(mode, type, selection) {
                     selStr += "#1# Mu Lung Dojo";
                 }
 
-                if (cm.getLevel() >= 30 && cm.getLevel() <= 50) {   // MC 1 & 2 recalled thanks to ---
+                if (cm.getLevel() >= 30) {   // MC 1 & 2 recalled thanks to ---
                     selStr += "#2# Monster Carnival 1";
                 }
 
-                if (cm.getLevel() >= 51 && cm.getLevel() <= 70) {
+                if (cm.getLevel() >= 51) {
                     selStr += "#3# Monster Carnival 2";
                 }
 
