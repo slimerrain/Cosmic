@@ -128,12 +128,12 @@ function action(mode, type, selection) {
             if (status == 0) {
                 var gotTheBombs = expedicao.getProperty("gotBomb" + cm.getChar().getId());
                 if (gotTheBombs != null) {
-                    var hasRocks = cm.hasItem(2270002);
-                    var hasBombs = cm.hasItem(2100067);
-                    if(!hasRocks || !hasBombs) {
-                        hasRocks? null :  cm.gainItem(2270002, 50);
-                        hasBombs? null :  cm.gainItem(2100067, 5);
-                        cm.sendOk("I have given you a refill on your supplies, now get out there and");
+                    var rocks = cm.getItemQuantity(2270002);
+                    var bombs = cm.getItemQuantity(2100067);
+                    if(rocks < 50 || bombs < 5) {
+                        cm.gainItem(2270002, 50-rocks);
+                        cm.gainItem(2100067, 5-bombs);
+                        cm.sendOk("I have given you a refill on your supplies, now get out there and get some Spirit Jewels!");
                     } else {
                         cm.sendOk("I already gave you supplies, please capture the #bScorpion#ks now!");
                     }
