@@ -35,7 +35,7 @@ import provider.wz.WZFiles;
 
 public class MaxSkillCommand extends Command {
     {
-        setDescription("Max out all job skills.");
+        setDescription("Max out all job skills. Only available in Scania.");
     }
 
     @Override
