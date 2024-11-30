@@ -11,9 +11,8 @@ public class ChannelServer extends AbstractServer {
     private final int channel;
     private Channel nettyChannel;
 
-    // each world uses the next set of ports, so 75XX is world 1, 76XX is world 2, etc
     public ChannelServer(int port, int world, int channel) {
-        super(port + (world * 100));
+        super(port);
         this.world = world;
         this.channel = channel;
     }
