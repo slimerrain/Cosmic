@@ -39,6 +39,7 @@ import client.command.commands.gm0.OnlineCommand;
 import client.command.commands.gm0.RanksCommand;
 import client.command.commands.gm0.RatesCommand;
 import client.command.commands.gm0.ReadPointsCommand;
+import client.command.commands.gm0.RebirthCommand;
 import client.command.commands.gm0.ReportBugCommand;
 import client.command.commands.gm0.ResetStatsCommand;
 import client.command.commands.gm0.ShowRatesCommand;
@@ -350,6 +351,7 @@ public class CommandsExecutor {
         addCommand("dex", StatDexCommand.class);
         addCommand("int", StatIntCommand.class);
         addCommand("luk", StatLukCommand.class);
+        addCommand(new String[]{"rebirth", "rb"}, RebirthCommand.class);
         addCommand("toggleexp", ToggleExpCommand.class);
 
         addCommand("dispose", DisposeCommand.class);
