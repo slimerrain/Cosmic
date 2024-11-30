@@ -516,6 +516,10 @@ public class Character extends AbstractCharacterObject {
         return awayFromWorld.get();
     }
 
+    public boolean isInChannel(int desiredChannel) { return client.getChannel() == desiredChannel; }
+
+    public int getChannel() { return client.getChannel(); }
+
     public void setEnteredChannelWorld() {
         awayFromWorld.set(false);
         client.getChannelServer().removePlayerAway(id);
