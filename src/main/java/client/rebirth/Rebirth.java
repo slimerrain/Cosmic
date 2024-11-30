@@ -27,6 +27,15 @@ public class Rebirth {
     public static void rebirthToJob (Character chr, int jobId) {
         chr.setLevel(1);
         chr.setJob(Job.getById(jobId));
+
+        chr.setLuk(4);
+        chr.setInt(4);
+        chr.setDex(4);
+        chr.setStr(4);
+
+        chr.addRebirth();
+        chr.setRemainingAp(chr.getRebirthCount() * 100);
+
         chr.saveCharToDB();
     }
 }
