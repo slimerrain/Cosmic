@@ -29,7 +29,8 @@ public enum SkinColor {
     BLUE(4),
     GREEN(5),
     WHITE(9),
-    PINK(10);
+    PINK(10),
+    LIGHT_BROWN(11);
 
     final int id;
 
