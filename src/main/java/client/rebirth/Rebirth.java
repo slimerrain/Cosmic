@@ -41,7 +41,7 @@ public class Rebirth {
         List<Pair<Stat, Integer>> statup = new ArrayList<>(1);
         statup.add(new Pair<>(Stat.LEVEL, 1));
         chr.getClient().sendPacket(PacketCreator.updatePlayerStats(statup, true, chr));
-        chr.updateStrDexIntLuk(4,chr.getRebirthCount() * 100);
+        chr.updateStrDexIntLuk(4, chr.getRebirthCount() * 100);
     }
 
     public static void addCharacterRebirths(Character chr) {
