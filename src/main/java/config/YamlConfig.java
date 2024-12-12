@@ -11,7 +11,7 @@ import java.util.List;
 
 
 public class YamlConfig {
-    public static final String CONFIG_FILE_NAME = "config.yaml";
+    public static final String CONFIG_FILE_NAME = "default-config.yaml";
     public static final YamlConfig config = loadConfig();
 
     public List<WorldConfig> worlds;
