@@ -128,18 +128,24 @@ function action(mode, type, selection) {
             if (status == 0) {
                 var gotTheBombs = expedicao.getProperty("gotBomb" + cm.getChar().getId());
                 if (gotTheBombs != null) {
-                    cm.sendOk("I already gave you the bomb, please kill the #bScorpio#k now!");
-                    cm.dispose();
+                    var rocks = cm.getItemQuantity(2270002);
+                    var bombs = cm.getItemQuantity(2100067);
+                    if(rocks < 50 || bombs < 5) {
+                        cm.gainItem(2270002, 50-rocks);
+                        cm.gainItem(2100067, 5-bombs);
+                        cm.sendOk("I have given you a refill on your supplies, now get out there and get some Spirit Jewels!");
+                    } else {
+                        cm.sendOk("I already gave you supplies, please capture the #bScorpion#ks now!");
+                    }
                 } else if (cm.canHoldAll([2270002, 2100067], [50, 5])) {
                     cm.sendOk("I have given you (5) #b#eBombs#k#n and (50) #b#eElement Rock#k#n.\r\nUse the Elementary Rocks to capture the scorpions for #r#eSpirit Jewels#k#n!");
                     expedicao.setProperty("gotBomb" + cm.getChar().getId(), "1");
                     cm.gainItem(2270002, 50);
                     cm.gainItem(2100067, 5);
-                    cm.dispose();
                 } else {
                     cm.sendOk("It seems that your inventory is full.");
-                    cm.dispose();
                 }
+                cm.dispose();
             }
         } else {
             cm.sendOk("Hi there, have you heard of the Ariant Coliseum Battle Arena, it's a competitive event available to players between level 20 to 30!");
