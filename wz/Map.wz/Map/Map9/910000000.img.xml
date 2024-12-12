@@ -4172,6 +4172,14 @@
                     <int name="prev" value="16"/>
                     <int name="next" value="19"/>
                 </imgdir>
+                <imgdir name="19">
+                    <int name="x1" value="765"/>
+                    <int name="y1" value="-536"/>
+                    <int name="x2" value="855"/>
+                    <int name="y2" value="-536"/>
+                    <int name="prev" value="17"/>
+                    <int name="next" value="18"/>
+                </imgdir>
                 <imgdir name="114">
                     <int name="x1" value="-705"/>
                     <int name="y1" value="-716"/>
@@ -4317,14 +4325,6 @@
                     <int name="y2" value="-536"/>
                     <int name="prev" value="19"/>
                     <int name="next" value="21"/>
-                </imgdir>
-                <imgdir name="19">
-                    <int name="x1" value="765"/>
-                    <int name="y1" value="-536"/>
-                    <int name="x2" value="855"/>
-                    <int name="y2" value="-536"/>
-                    <int name="prev" value="17"/>
-                    <int name="next" value="18"/>
                 </imgdir>
                 <imgdir name="20">
                     <int name="x1" value="1215"/>
@@ -5092,21 +5092,22 @@
     <imgdir name="life">
         <imgdir name="0">
             <string name="id" value="9030000"/>
-            <int name="x" value="83"/>
+            <int name="x" value="79"/>
             <int name="y" value="-179"/>
             <int name="cy" value="-176"/>
-            <int name="rx0" value="33"/>
-            <int name="rx1" value="133"/>
+            <int name="rx0" value="30"/>
+            <int name="rx1" value="130"/>
+            <int name="f" value="1"/>
             <string name="type" value="n"/>
             <int name="fh" value="29"/>
         </imgdir>
         <imgdir name="1">
             <string name="id" value="9030100"/>
-            <int name="x" value="288"/>
+            <int name="x" value="314"/>
             <int name="y" value="-181"/>
             <int name="cy" value="-176"/>
-            <int name="rx0" value="238"/>
-            <int name="rx1" value="333"/>
+            <int name="rx0" value="264"/>
+            <int name="rx1" value="359"/>
             <string name="type" value="n"/>
             <int name="fh" value="33"/>
         </imgdir>
@@ -5115,12 +5116,22 @@
             <int name="x" value="97"/>
             <int name="y" value="-332"/>
             <int name="cy" value="-326"/>
-            <int name="rx0" value="36"/>
-            <int name="rx1" value="111"/>
+            <int name="rx0" value="30"/>
+            <int name="rx1" value="105"/>
             <int name="f" value="1"/>
             <string name="type" value="n"/>
             <string name="limitedname" value="buroo"/>
             <int name="fh" value="106"/>
+        </imgdir>
+        <imgdir name="3">
+            <string name="id" value="9900000"/>
+            <int name="x" value="262"/>
+            <int name="y" value="-334"/>
+            <int name="cy" value="-326"/>
+            <int name="rx0" value="242"/>
+            <int name="rx1" value="282"/>
+            <string name="type" value="n"/>
+            <int name="fh" value="107"/>
         </imgdir>
     </imgdir>
 </imgdir>
