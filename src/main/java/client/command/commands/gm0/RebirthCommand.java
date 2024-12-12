@@ -36,15 +36,15 @@ public class RebirthCommand extends Command {
     }
 
     private boolean toExplorer (String param) {
-        return (param.equalsIgnoreCase("explorer") || param.equalsIgnoreCase("beginner"));
+        return (param.equalsIgnoreCase("e") || param.equalsIgnoreCase("explorer") || param.equalsIgnoreCase("beginner"));
     }
 
     private boolean toCygnus (String param) {
-        return (param.equalsIgnoreCase("cygnus") || param.equalsIgnoreCase("noblesse"));
+        return (param.equalsIgnoreCase("c") || param.equalsIgnoreCase("cygnus") || param.equalsIgnoreCase("noblesse"));
     }
 
     private boolean toAran (String param) {
-        return (param.equalsIgnoreCase("aran") || param.equalsIgnoreCase("legend"));
+        return (param.equalsIgnoreCase("a") || param.equalsIgnoreCase("aran") || param.equalsIgnoreCase("legend"));
 
     }
 }
