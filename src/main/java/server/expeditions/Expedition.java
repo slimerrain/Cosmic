@@ -335,7 +335,7 @@ public class Expedition {
         List<Character> activeMembers = new LinkedList<>();
         for (Integer chrid : getMembers().keySet()) {
             Character chr = ps.getCharacterById(chrid);
-            if (chr != null && chr.isLoggedinWorld()) {
+            if (chr != null && chr.isLoggedinWorld() && chr.isInChannel(leader.getChannel())) {
                 activeMembers.add(chr);
             }
         }
