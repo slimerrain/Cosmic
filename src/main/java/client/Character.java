@@ -356,6 +356,7 @@ public class Character extends AbstractCharacterObject {
     private boolean pendingNameChange; //only used to change name on logout, not to be relied upon elsewhere
     private long loginTime;
     private boolean chasing = false;
+    private int rebirths;
 
     private Character() {
         super.setListener(new AbstractCharacterListener() {
@@ -11149,4 +11150,8 @@ public class Character extends AbstractCharacterObject {
     public void setChasing(boolean chasing) {
         this.chasing = chasing;
     }
+
+    public int getRebirthCount() { return rebirths; }
+
+    public void addRebirth() { rebirths++; }
 }
