@@ -45,6 +45,5 @@ public class RebirthCommand extends Command {
 
     private boolean toAran (String param) {
         return (param.equalsIgnoreCase("a") || param.equalsIgnoreCase("aran") || param.equalsIgnoreCase("legend"));
-
     }
 }
