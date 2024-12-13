@@ -41,7 +41,7 @@ public class MaxSkillCommand extends Command {
     @Override
     public void execute(Client c, String[] params) {
         Character player = c.getPlayer();
-        if(player.getWorld() > 0) {
+        if(player.getWorld() > 0 && !player.isGM()) {
             player.yellowMessage("Only available in Scania.");
             return;
         }
