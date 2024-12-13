@@ -35,13 +35,13 @@ import provider.wz.WZFiles;
 
 public class MaxSkillCommand extends Command {
     {
-        setDescription("Max out all job skills.");
+        setDescription("Max out all job skills. Only available in Scania.");
     }
 
     @Override
     public void execute(Client c, String[] params) {
         Character player = c.getPlayer();
-        if(player.getWorld() > 0 && !player.isGM()) {
+        if(player.getWorld() > 0) {
             player.yellowMessage("Only available in Scania.");
             return;
         }

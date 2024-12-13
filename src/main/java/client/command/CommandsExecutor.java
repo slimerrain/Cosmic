@@ -24,10 +24,36 @@
 package client.command;
 
 import client.Client;
-import client.command.commands.gm0.*;
+import client.command.commands.gm0.ChangeLanguageCommand;
+import client.command.commands.gm0.DisposeCommand;
+import client.command.commands.gm0.DropLimitCommand;
+import client.command.commands.gm0.EnableAuthCommand;
+import client.command.commands.gm0.EquipLvCommand;
+import client.command.commands.gm0.GachaCommand;
+import client.command.commands.gm0.GmCommand;
+import client.command.commands.gm0.HelpCommand;
+import client.command.commands.gm0.JoinEventCommand;
+import client.command.commands.gm0.LeaveEventCommand;
+import client.command.commands.gm0.MapOwnerClaimCommand;
+import client.command.commands.gm0.OnlineCommand;
+import client.command.commands.gm0.RanksCommand;
+import client.command.commands.gm0.RatesCommand;
+import client.command.commands.gm0.ReadPointsCommand;
+import client.command.commands.gm0.RebirthCommand;
+import client.command.commands.gm0.ReportBugCommand;
+import client.command.commands.gm0.ResetStatsCommand;
+import client.command.commands.gm0.ShowRatesCommand;
+import client.command.commands.gm0.StaffCommand;
+import client.command.commands.gm0.StatDexCommand;
+import client.command.commands.gm0.StatIntCommand;
+import client.command.commands.gm0.StatLukCommand;
+import client.command.commands.gm0.StatStrCommand;
+import client.command.commands.gm0.TimeCommand;
+import client.command.commands.gm0.ToggleExpCommand;
+import client.command.commands.gm0.UptimeCommand;
 import client.command.commands.gm1.BossHpCommand;
 import client.command.commands.gm1.BuffMeCommand;
-import client.command.commands.gm1.GotoCommand;
+import client.command.commands.gm0.GotoCommand;
 import client.command.commands.gm1.MobHpCommand;
 import client.command.commands.gm1.WhatDropsFromCommand;
 import client.command.commands.gm1.WhoDropsCommand;
@@ -52,6 +78,7 @@ import client.command.commands.gm2.JobCommand;
 import client.command.commands.gm2.LevelCommand;
 import client.command.commands.gm2.LevelProCommand;
 import client.command.commands.gm2.LootCommand;
+import client.command.commands.gm0.MaxSkillCommand;
 import client.command.commands.gm2.MaxStatCommand;
 import client.command.commands.gm2.MobSkillCommand;
 import client.command.commands.gm2.ReachCommand;
@@ -315,40 +342,41 @@ public class CommandsExecutor {
     private void registerLv0Commands() {
         levelCommandsCursor = new Pair<>(new ArrayList<String>(), new ArrayList<String>());
 
-        // help
         addCommand(new String[]{"help", "commands"}, HelpCommand.class);
+        addCommand(new String[]{"goto", "go"}, GotoCommand.class);
 
-        // character
+        addCommand(new String[]{"maxskill", "maxskills"}, MaxSkillCommand.class);
+        addCommand(new String[]{"statreset", "resetstats", "apreset", "resetap"},  ResetStatsCommand.class);
         addCommand("str", StatStrCommand.class);
         addCommand("dex", StatDexCommand.class);
         addCommand("int", StatIntCommand.class);
         addCommand("luk", StatLukCommand.class);
-        addCommand(new String[]{"maxskills", "maxskill"}, MaxSkillCommand.class);
-        addCommand("points", ReadPointsCommand.class);
-        addCommand("equiplv", EquipLvCommand.class);
-        addCommand("rebirth", RebirthCommand.class);
-
-        // useful
-        addCommand(new String[]{"go", "goto"}, 1, GotoCommand.class);
+        addCommand(new String[]{"rebirth", "rb"}, RebirthCommand.class);
         addCommand("toggleexp", ToggleExpCommand.class);
+
         addCommand("dispose", DisposeCommand.class);
-        addCommand(new String[]{"language", "changel"}, ChangeLanguageCommand.class);
-
-        // gm
-        addCommand("joinevent", JoinEventCommand.class);
-        addCommand("leaveevent", LeaveEventCommand.class);
-        addCommand("reportbug", ReportBugCommand.class);
-        addCommand("gm", GmCommand.class);
-
-        // info
-        addCommand("online", OnlineCommand.class);
-        addCommand("ranks", RanksCommand.class);
-        addCommand("rates", RatesCommand.class);
-        addCommand("uptime", UptimeCommand.class);
-        addCommand("time", TimeCommand.class);
-        addCommand("gacha", GachaCommand.class);
+        addCommand("changel", ChangeLanguageCommand.class);
+        addCommand("mylawn", MapOwnerClaimCommand.class);
         addCommand("bosshp", BossHpCommand.class);
         addCommand("mobhp", MobHpCommand.class);
+
+        addCommand("gacha", GachaCommand.class);
+        addCommand("equiplv", EquipLvCommand.class);
+        addCommand("points", ReadPointsCommand.class);
+        addCommand("joinevent", JoinEventCommand.class);
+        addCommand("leaveevent", LeaveEventCommand.class);
+
+        addCommand("showrates", ShowRatesCommand.class);
+        addCommand("ranks", RanksCommand.class);
+        addCommand("enableauth", EnableAuthCommand.class);
+        addCommand("gm", GmCommand.class);
+        addCommand("reportbug", ReportBugCommand.class);
+        addCommand("droplimit", DropLimitCommand.class);
+        addCommand("time", TimeCommand.class);
+        addCommand("uptime", UptimeCommand.class);
+
+        addCommand("rates", RatesCommand.class);
+        addCommand("online", OnlineCommand.class);
         addCommand("credits", StaffCommand.class);
 
         commandsNameDesc.add(levelCommandsCursor);
