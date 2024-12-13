@@ -150,11 +150,6 @@ function action(mode, type, selection) {
                     cm.dispose();
                     return;
                 }
-                if (selection < 3 && cm.getPlayer().getLevel() > 60) {
-                    cm.sendOk("Only Hell mode is avaible for players that are over Lv. 60.");
-                    cm.dispose();
-                    return;
-                }
                 if (selection == 1) {
                     mode = "NORMAL";
                 } else if (selection == 2) {

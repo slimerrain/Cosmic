@@ -35,12 +35,6 @@ function action(mode, type, selection) {
             status--;
         }
         if (cm.getPlayer().getMapId() == 980010000) {
-            if (cm.getLevel() > 30) {
-                cm.sendOk("You are already over #rlevel 30#k, therefore you can't participate in this instance anymore.");
-                cm.dispose();
-                return;
-            }
-
             if (status == 0) {
                 var expedicao = cm.getExpedition(exped);
                 var expedicao1 = cm.getExpedition(exped1);
