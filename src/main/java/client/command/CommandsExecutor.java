@@ -346,35 +346,32 @@ public class CommandsExecutor {
         addCommand(new String[]{"goto", "go"}, GotoCommand.class);
 
         addCommand(new String[]{"maxskill", "maxskills"}, MaxSkillCommand.class);
-        addCommand(new String[]{"statreset", "resetstats", "apreset", "resetap"},  ResetStatsCommand.class);
         addCommand("str", StatStrCommand.class);
         addCommand("dex", StatDexCommand.class);
         addCommand("int", StatIntCommand.class);
         addCommand("luk", StatLukCommand.class);
+        addCommand(new String[]{"statreset", "resetstats", "apreset", "resetap"},  ResetStatsCommand.class);
+        addCommand("resetskill", ResetSkillCommand.class);
         addCommand(new String[]{"rebirth", "rb"}, RebirthCommand.class);
         addCommand("toggleexp", ToggleExpCommand.class);
 
-        addCommand("dispose", DisposeCommand.class);
-        addCommand("changel", ChangeLanguageCommand.class);
-        addCommand("mylawn", MapOwnerClaimCommand.class);
-        addCommand("bosshp", BossHpCommand.class);
-        addCommand("mobhp", MobHpCommand.class);
-
-        addCommand("gacha", GachaCommand.class);
-        addCommand("equiplv", EquipLvCommand.class);
-        addCommand("points", ReadPointsCommand.class);
+        addCommand("gm", GmCommand.class);
+        addCommand("reportbug", ReportBugCommand.class);
         addCommand("joinevent", JoinEventCommand.class);
         addCommand("leaveevent", LeaveEventCommand.class);
 
-        addCommand("showrates", ShowRatesCommand.class);
+        addCommand("dispose", DisposeCommand.class);
+        addCommand("language", ChangeLanguageCommand.class);
+
+        addCommand("points", ReadPointsCommand.class);
         addCommand("ranks", RanksCommand.class);
-        addCommand("enableauth", EnableAuthCommand.class);
-        addCommand("gm", GmCommand.class);
-        addCommand("reportbug", ReportBugCommand.class);
+        addCommand("bosshp", BossHpCommand.class);
+        addCommand("mobhp", MobHpCommand.class);
+        addCommand("gacha", GachaCommand.class);
         addCommand("droplimit", DropLimitCommand.class);
+
         addCommand("time", TimeCommand.class);
         addCommand("uptime", UptimeCommand.class);
-
         addCommand("rates", RatesCommand.class);
         addCommand("online", OnlineCommand.class);
         addCommand("credits", StaffCommand.class);
@@ -397,41 +394,46 @@ public class CommandsExecutor {
     private void registerLv2Commands() {
         levelCommandsCursor = new Pair<>(new ArrayList<String>(), new ArrayList<String>());
 
-        addCommand("recharge", 2, RechargeCommand.class);
-        addCommand("whereami", 2, WhereaMiCommand.class);
-        addCommand("hide", 2, HideCommand.class);
-        addCommand("unhide", 2, UnHideCommand.class);
-        addCommand("sp", 2, SpCommand.class);
-        addCommand("ap", 2, ApCommand.class);
-        addCommand("empowerme", 2, EmpowerMeCommand.class);
-        addCommand("buffmap", 2, BuffMapCommand.class);
-        addCommand("buff", 2, BuffCommand.class);
-        addCommand("bomb", 2, BombCommand.class);
-        addCommand("dc", 2, DcCommand.class);
-        addCommand("cleardrops", 2, ClearDropsCommand.class);
-        addCommand("clearslot", 2, ClearSlotCommand.class);
-        addCommand("clearsavelocs", 2, ClearSavedLocationsCommand.class);
         addCommand("warp", 2, WarpCommand.class);
         addCommand(new String[]{"warphere", "summon"}, 2, SummonCommand.class);
         addCommand(new String[]{"warpto", "reach", "follow"}, 2, ReachCommand.class);
-        addCommand("gmshop", 2, GmShopCommand.class);
+        addCommand("whereami", 2, WhereaMiCommand.class);
+        addCommand("loot", LootCommand.class);
+
+        addCommand("buff", 2, BuffCommand.class);
+        addCommand("empowerme", 2, EmpowerMeCommand.class);
+        addCommand("buffmap", 2, BuffMapCommand.class);
         addCommand("heal", 2, HealCommand.class);
-        addCommand("item", 2, ItemCommand.class);
-        addCommand("drop", 2, ItemDropCommand.class);
-        addCommand("level", 2, LevelCommand.class);
-        addCommand("levelpro", 2, LevelProCommand.class);
+
         addCommand("setslot", 2, SetSlotCommand.class);
+        addCommand("sp", 2, SpCommand.class);
+        addCommand("ap", 2, ApCommand.class);
         addCommand("setstat", 2, SetStatCommand.class);
         addCommand("maxstat", 2, MaxStatCommand.class);
-        addCommand("resetskill", 2, ResetSkillCommand.class);
+        addCommand("level", 2, LevelCommand.class);
+        addCommand("levelpro", 2, LevelProCommand.class);
+        addCommand("job", 2, JobCommand.class);
         addCommand("search", 2, SearchCommand.class);
+        addCommand("clearsavelocs", 2, ClearSavedLocationsCommand.class);
+
+        addCommand("id", 2, IdCommand.class);
+        addCommand("item", 2, ItemCommand.class);
+        addCommand("clearslot", 2, ClearSlotCommand.class);
+        addCommand("recharge", 2, RechargeCommand.class);
+
+        addCommand("drop", 2, ItemDropCommand.class);
+        addCommand("cleardrops", 2, ClearDropsCommand.class);
+
+        addCommand("hide", 2, HideCommand.class);
+        addCommand("unhide", 2, UnHideCommand.class);
+        addCommand("dc", 2, DcCommand.class);
         addCommand("jail", 2, JailCommand.class);
         addCommand("unjail", 2, UnJailCommand.class);
-        addCommand("job", 2, JobCommand.class);
         addCommand("unbug", 2, UnBugCommand.class);
-        addCommand("id", 2, IdCommand.class);
+        addCommand("bomb", 2, BombCommand.class);
+
+        addCommand("gmshop", 2, GmShopCommand.class);
         addCommand("gachalist", GachaListCommand.class);
-        addCommand("loot", LootCommand.class);
         addCommand("mobskill", MobSkillCommand.class);
 
         commandsNameDesc.add(levelCommandsCursor);

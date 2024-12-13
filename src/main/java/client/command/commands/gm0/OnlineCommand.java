@@ -40,7 +40,7 @@ public class OnlineCommand extends Command {
         for (Channel ch : Server.getInstance().getChannelsFromWorld(player.getWorld())) {
             player.yellowMessage("Players in Channel " + ch.getId() + ":");
             for (Character chr : ch.getPlayerStorage().getAllCharacters()) {
-                if (!chr.isGM()) {
+                if (!chr.isGM() || player.isGM()) {
                     player.message(" >> " + Character.makeMapleReadable(chr.getName()) + " is at " + chr.getMap().getMapName() + ".");
                 }
             }
