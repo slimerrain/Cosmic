@@ -130,11 +130,7 @@ public final class RingActionHandler extends AbstractPacketHandler {
             source.dropMessage(1, "You can't propose while holding a marriage ring!");
             source.sendPacket(WeddingPackets.OnMarriageResult((byte) 0));
             return;
-        } else if (target.getGender() == source.getGender()) {
-            source.dropMessage(1, "You may only propose to a " + (source.getGender() == 1 ? "male" : "female") + "!");
-            source.sendPacket(WeddingPackets.OnMarriageResult((byte) 0));
-            return;
-        } else if (!InventoryManipulator.checkSpace(c, newBoxId, 1, "")) {
+        }  else if (!InventoryManipulator.checkSpace(c, newBoxId, 1, "")) {
             source.dropMessage(5, "You don't have a ETC slot available right now!");
             source.sendPacket(WeddingPackets.OnMarriageResult((byte) 0));
             return;
@@ -374,7 +370,7 @@ public final class RingActionHandler extends AbstractPacketHandler {
                         log.error("Error with engagement", e);
                     }
                 } else {
-                    source.dropMessage(1, "She has politely declined your engagement request.");
+                    source.dropMessage(1, "Your crush has politely declined your engagement request.");
                     source.sendPacket(WeddingPackets.OnMarriageResult((byte) 0));
 
                     source.setMarriageItemId(-1);
