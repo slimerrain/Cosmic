@@ -131,7 +131,7 @@ function sendWeddingAction(eim, type) {
     var chr = eim.getLeader();
 
     const Wedding = Java.type('tools.packets.Wedding');
-    if (chr.getId().equals(eim.getIntProperty("groomId")) {
+    if (chr.getId().equals(eim.getIntProperty("groomId"))) {
         chr.getMap().broadcastMessage(Wedding.OnWeddingProgress(type == 2, eim.getIntProperty("groomId"), eim.getIntProperty("brideId"), type + 1));
     } else {
         chr.getMap().broadcastMessage(Wedding.OnWeddingProgress(type == 2, eim.getIntProperty("brideId"), eim.getIntProperty("groomId"), type + 1));
