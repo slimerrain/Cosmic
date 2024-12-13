@@ -148,7 +148,7 @@ function action(mode, type, selection) {
                 cm.dispose();
             }
         } else {
-            cm.sendOk("Hi there, have you heard of the Ariant Coliseum Battle Arena, it's a competitive event available to players between level 20 to 30!");
+            cm.sendOk("Hi there, have you heard of the Ariant Coliseum Battle Arena, it's a competitive event available to players level 20+!");
             cm.dispose();
         }
     }

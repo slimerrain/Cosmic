@@ -16,7 +16,7 @@ var n5 = 20; //50
 
 var cpqMap = 980000000;
 var cpqMinLvl = 30;
-var cpqMaxLvl = 50;
+var cpqMaxLvl = 255;
 var cpqMinAmt = 2;
 var cpqMaxAmt = 6;
 
@@ -245,7 +245,7 @@ function action(mode, type, selection) {
                 cm.sendSimple(talk);
             } else if (status == 1) {
                 if (selection == 0) {
-                    if ((cm.getLevel() > 29 && cm.getLevel() < 51) || cm.getPlayer().isGM()) {
+                    if (cm.getLevel() > 29 || cm.getPlayer().isGM()) {
                         cm.getChar().saveLocation("MONSTER_CARNIVAL");
                         cm.warp(980000000, 0);
                         cm.dispose();
@@ -255,7 +255,7 @@ function action(mode, type, selection) {
                         cm.dispose();
 
                     } else {
-                        cm.sendOk("I'm sorry, but only players of level 30 ~ 50 can participate in the Monster Carnival.");
+                        cm.sendOk("I'm sorry, but only players of level 30+ can participate in the Monster Carnival.");
                         cm.dispose();
 
                     }

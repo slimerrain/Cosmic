@@ -718,10 +718,10 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
 
         if (lobby.isCPQLobby()) {
             cpqMinLvl = 30;
-            cpqMaxLvl = 50;
+            cpqMaxLvl = 255;
         } else {
             cpqMinLvl = 51;
-            cpqMaxLvl = 70;
+            cpqMaxLvl = 255;
         }
 
         List<PartyCharacter> partyMembers = party.getPartyMembers();

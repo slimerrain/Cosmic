@@ -30,8 +30,8 @@
 status = -1;
 
 function start() {
-    if ((cm.getPlayer().getLevel() < 19 || cm.getPlayer().getLevel() > 30) && !cm.getPlayer().isGM()) {
-        cm.sendNext("You're not between level 20 and 30. Sorry, you may not participate.");
+    if ((cm.getPlayer().getLevel() < 19) && !cm.getPlayer().isGM()) {
+        cm.sendNext("You're not at least level 20. Sorry, you may not participate.");
         cm.dispose();
         return;
     }
