@@ -17,7 +17,7 @@
         <int name="VRBottom" value="132"/>
     </imgdir>
     <imgdir name="miniMap">
-        <canvas name="canvas" width="158" height="92" pixFormat="1" magLevel="0" bytedata="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">
+        <canvas name="canvas" width="158" height="92" pixFormat="1" magLevel="0" bytedata="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">
         </canvas>
         <int name="width" value="2524"/>
         <int name="height" value="1465"/>
@@ -521,6 +521,39 @@
                 <string name="l0" value="minar"/>
                 <string name="l1" value="nature2"/>
                 <string name="l2" value="29"/>
+                <int name="f" value="0"/>
+                <int name="zM" value="4"/>
+            </imgdir>
+            <imgdir name="45">
+                <int name="x" value="338"/>
+                <int name="y" value="37"/>
+                <int name="z" value="179"/>
+                <string name="oS" value="acc7"/>
+                <string name="l0" value="mureungSchool"/>
+                <string name="l1" value="spa"/>
+                <string name="l2" value="3"/>
+                <int name="f" value="0"/>
+                <int name="zM" value="4"/>
+            </imgdir>
+            <imgdir name="46">
+                <int name="x" value="-382"/>
+                <int name="y" value="-699"/>
+                <int name="z" value="0"/>
+                <string name="oS" value="acc7"/>
+                <string name="l0" value="mureungTW"/>
+                <string name="l1" value="stone"/>
+                <string name="l2" value="2"/>
+                <int name="f" value="0"/>
+                <int name="zM" value="4"/>
+            </imgdir>
+            <imgdir name="47">
+                <int name="x" value="89"/>
+                <int name="y" value="-267"/>
+                <int name="z" value="177"/>
+                <string name="oS" value="acc7"/>
+                <string name="l0" value="mureungTW"/>
+                <string name="l1" value="stone"/>
+                <string name="l2" value="6"/>
                 <int name="f" value="0"/>
                 <int name="zM" value="4"/>
             </imgdir>
@@ -1445,17 +1478,6 @@
                 <int name="zM" value="29"/>
             </imgdir>
             <imgdir name="35">
-                <int name="x" value="-381"/>
-                <int name="y" value="-698"/>
-                <int name="z" value="0"/>
-                <string name="oS" value="acc7"/>
-                <string name="l0" value="mureungTW"/>
-                <string name="l1" value="stone"/>
-                <string name="l2" value="2"/>
-                <int name="f" value="0"/>
-                <int name="zM" value="29"/>
-            </imgdir>
-            <imgdir name="36">
                 <int name="x" value="89"/>
                 <int name="y" value="-191"/>
                 <int name="z" value="170"/>
@@ -1466,7 +1488,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="13"/>
             </imgdir>
-            <imgdir name="37">
+            <imgdir name="36">
                 <int name="x" value="258"/>
                 <int name="y" value="-197"/>
                 <int name="z" value="170"/>
@@ -1477,7 +1499,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="13"/>
             </imgdir>
-            <imgdir name="38">
+            <imgdir name="37">
                 <int name="x" value="402"/>
                 <int name="y" value="-725"/>
                 <int name="z" value="170"/>
@@ -1488,7 +1510,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="29"/>
             </imgdir>
-            <imgdir name="39">
+            <imgdir name="38">
                 <int name="x" value="347"/>
                 <int name="y" value="-758"/>
                 <int name="z" value="0"/>
@@ -1499,7 +1521,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="29"/>
             </imgdir>
-            <imgdir name="40">
+            <imgdir name="39">
                 <int name="x" value="-595"/>
                 <int name="y" value="-781"/>
                 <int name="z" value="170"/>
@@ -1510,7 +1532,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="29"/>
             </imgdir>
-            <imgdir name="41">
+            <imgdir name="40">
                 <int name="x" value="176"/>
                 <int name="y" value="-579"/>
                 <int name="z" value="170"/>
@@ -1521,7 +1543,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="29"/>
             </imgdir>
-            <imgdir name="42">
+            <imgdir name="41">
                 <int name="x" value="-188"/>
                 <int name="y" value="-736"/>
                 <int name="z" value="171"/>
@@ -1532,7 +1554,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="29"/>
             </imgdir>
-            <imgdir name="43">
+            <imgdir name="42">
                 <int name="x" value="-534"/>
                 <int name="y" value="-736"/>
                 <int name="z" value="171"/>
@@ -1543,7 +1565,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="29"/>
             </imgdir>
-            <imgdir name="44">
+            <imgdir name="43">
                 <int name="x" value="331"/>
                 <int name="y" value="-592"/>
                 <int name="z" value="171"/>
@@ -1554,7 +1576,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="29"/>
             </imgdir>
-            <imgdir name="45">
+            <imgdir name="44">
                 <int name="x" value="-491"/>
                 <int name="y" value="-772"/>
                 <int name="z" value="171"/>
@@ -1565,7 +1587,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="29"/>
             </imgdir>
-            <imgdir name="46">
+            <imgdir name="45">
                 <int name="x" value="44"/>
                 <int name="y" value="-622"/>
                 <int name="z" value="171"/>
@@ -1576,7 +1598,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="29"/>
             </imgdir>
-            <imgdir name="47">
+            <imgdir name="46">
                 <int name="x" value="68"/>
                 <int name="y" value="-608"/>
                 <int name="z" value="171"/>
@@ -1587,7 +1609,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="29"/>
             </imgdir>
-            <imgdir name="48">
+            <imgdir name="47">
                 <int name="x" value="135"/>
                 <int name="y" value="-566"/>
                 <int name="z" value="171"/>
@@ -1598,7 +1620,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="29"/>
             </imgdir>
-            <imgdir name="49">
+            <imgdir name="48">
                 <int name="x" value="81"/>
                 <int name="y" value="-937"/>
                 <int name="z" value="171"/>
@@ -1609,7 +1631,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="29"/>
             </imgdir>
-            <imgdir name="50">
+            <imgdir name="49">
                 <int name="x" value="-69"/>
                 <int name="y" value="-775"/>
                 <int name="z" value="171"/>
@@ -1620,7 +1642,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="29"/>
             </imgdir>
-            <imgdir name="51">
+            <imgdir name="50">
                 <int name="x" value="-17"/>
                 <int name="y" value="-702"/>
                 <int name="z" value="171"/>
@@ -1631,7 +1653,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="29"/>
             </imgdir>
-            <imgdir name="52">
+            <imgdir name="51">
                 <int name="x" value="278"/>
                 <int name="y" value="-824"/>
                 <int name="z" value="171"/>
@@ -2454,15 +2476,26 @@
                 <int name="zM" value="17"/>
             </imgdir>
             <imgdir name="29">
-                <int name="x" value="-362"/>
+                <int name="x" value="-368"/>
+                <int name="y" value="-288"/>
+                <int name="z" value="180"/>
+                <string name="oS" value="acc7"/>
+                <string name="l0" value="mureungTW"/>
+                <string name="l1" value="stone"/>
+                <string name="l2" value="3"/>
+                <int name="f" value="0"/>
+                <int name="zM" value="3"/>
+            </imgdir>
+            <imgdir name="30">
+                <int name="x" value="-363"/>
                 <int name="y" value="-574"/>
-                <int name="z" value="166"/>
+                <int name="z" value="0"/>
                 <string name="oS" value="acc7"/>
                 <string name="l0" value="mureungTW"/>
                 <string name="l1" value="stone"/>
                 <string name="l2" value="1"/>
                 <int name="f" value="0"/>
-                <int name="zM" value="17"/>
+                <int name="zM" value="3"/>
             </imgdir>
         </imgdir>
         <imgdir name="tile">
@@ -3030,17 +3063,6 @@
                 <int name="zM" value="2"/>
             </imgdir>
             <imgdir name="34">
-                <int name="x" value="-368"/>
-                <int name="y" value="-287"/>
-                <int name="z" value="167"/>
-                <string name="oS" value="acc7"/>
-                <string name="l0" value="mureungTW"/>
-                <string name="l1" value="stone"/>
-                <string name="l2" value="3"/>
-                <int name="f" value="0"/>
-                <int name="zM" value="2"/>
-            </imgdir>
-            <imgdir name="35">
                 <int name="x" value="1470"/>
                 <int name="y" value="-66"/>
                 <int name="z" value="170"/>
@@ -3049,6 +3071,17 @@
                 <string name="l1" value="acc"/>
                 <string name="l2" value="9"/>
                 <int name="f" value="0"/>
+                <int name="zM" value="2"/>
+            </imgdir>
+            <imgdir name="35">
+                <int name="x" value="-362"/>
+                <int name="y" value="-69"/>
+                <int name="z" value="181"/>
+                <string name="oS" value="acc7"/>
+                <string name="l0" value="mureungTW"/>
+                <string name="l1" value="stone"/>
+                <string name="l2" value="0"/>
+                <int name="f" value="1"/>
                 <int name="zM" value="2"/>
             </imgdir>
         </imgdir>
@@ -3257,28 +3290,6 @@
         </imgdir>
         <imgdir name="obj">
             <imgdir name="0">
-                <int name="x" value="90"/>
-                <int name="y" value="-266"/>
-                <int name="z" value="168"/>
-                <string name="oS" value="acc7"/>
-                <string name="l0" value="mureungTW"/>
-                <string name="l1" value="stone"/>
-                <string name="l2" value="6"/>
-                <int name="f" value="0"/>
-                <int name="zM" value="0"/>
-            </imgdir>
-            <imgdir name="1">
-                <int name="x" value="-361"/>
-                <int name="y" value="-68"/>
-                <int name="z" value="168"/>
-                <string name="oS" value="acc7"/>
-                <string name="l0" value="mureungTW"/>
-                <string name="l1" value="stone"/>
-                <string name="l2" value="0"/>
-                <int name="f" value="1"/>
-                <int name="zM" value="0"/>
-            </imgdir>
-            <imgdir name="2">
                 <int name="x" value="-443"/>
                 <int name="y" value="13"/>
                 <int name="z" value="169"/>
@@ -3289,7 +3300,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="25"/>
             </imgdir>
-            <imgdir name="3">
+            <imgdir name="1">
                 <int name="x" value="235"/>
                 <int name="y" value="11"/>
                 <int name="z" value="170"/>
@@ -3300,7 +3311,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="25"/>
             </imgdir>
-            <imgdir name="4">
+            <imgdir name="2">
                 <int name="x" value="-654"/>
                 <int name="y" value="-52"/>
                 <int name="z" value="0"/>
@@ -3311,7 +3322,7 @@
                 <int name="f" value="1"/>
                 <int name="zM" value="25"/>
             </imgdir>
-            <imgdir name="5">
+            <imgdir name="3">
                 <int name="x" value="-652"/>
                 <int name="y" value="-36"/>
                 <int name="z" value="170"/>
@@ -3322,29 +3333,7 @@
                 <int name="f" value="1"/>
                 <int name="zM" value="25"/>
             </imgdir>
-            <imgdir name="6">
-                <int name="x" value="339"/>
-                <int name="y" value="38"/>
-                <int name="z" value="170"/>
-                <string name="oS" value="acc7"/>
-                <string name="l0" value="mureungSchool"/>
-                <string name="l1" value="spa"/>
-                <string name="l2" value="3"/>
-                <int name="f" value="0"/>
-                <int name="zM" value="0"/>
-            </imgdir>
-            <imgdir name="7">
-                <int name="x" value="-537"/>
-                <int name="y" value="29"/>
-                <int name="z" value="171"/>
-                <string name="oS" value="acc5"/>
-                <string name="l0" value="ghostShip"/>
-                <string name="l1" value="portal"/>
-                <string name="l2" value="0"/>
-                <int name="f" value="0"/>
-                <int name="zM" value="0"/>
-            </imgdir>
-            <imgdir name="8">
+            <imgdir name="4">
                 <int name="x" value="1334"/>
                 <int name="y" value="25"/>
                 <int name="z" value="171"/>
@@ -3355,7 +3344,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="0"/>
             </imgdir>
-            <imgdir name="9">
+            <imgdir name="5">
                 <int name="x" value="1243"/>
                 <int name="y" value="9"/>
                 <int name="z" value="171"/>
@@ -3366,7 +3355,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="0"/>
             </imgdir>
-            <imgdir name="10">
+            <imgdir name="6">
                 <int name="x" value="461"/>
                 <int name="y" value="0"/>
                 <int name="z" value="171"/>
@@ -3377,7 +3366,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="0"/>
             </imgdir>
-            <imgdir name="11">
+            <imgdir name="7">
                 <int name="x" value="709"/>
                 <int name="y" value="18"/>
                 <int name="z" value="171"/>
@@ -3388,7 +3377,7 @@
                 <int name="f" value="0"/>
                 <int name="zM" value="0"/>
             </imgdir>
-            <imgdir name="12">
+            <imgdir name="8">
                 <int name="x" value="774"/>
                 <int name="y" value="20"/>
                 <int name="z" value="171"/>
@@ -4712,7 +4701,7 @@
     <imgdir name="portal">
         <imgdir name="0">
             <int name="x" value="-444"/>
-            <int name="y" value="-54"/>
+            <int name="y" value="-77"/>
             <int name="pt" value="0"/>
             <int name="tm" value="999999999"/>
             <string name="tn" value=""/>
@@ -4996,64 +4985,200 @@
     </imgdir>
     <imgdir name="back">
         <imgdir name="0">
-            <int name="x" value="0"/>
-            <int name="y" value="0"/>
-            <int name="rx" value="0"/>
-            <int name="ry" value="0"/>
+            <int name="x" value="822"/>
+            <int name="y" value="-350"/>
+            <int name="rx" value="-5"/>
+            <int name="ry" value="-5"/>
             <int name="cx" value="0"/>
             <int name="cy" value="0"/>
             <int name="a" value="255"/>
             <int name="type" value="3"/>
-            <string name="bS" value="grassySoil"/>
+            <string name="bS" value="backcho"/>
             <int name="no" value="0"/>
         </imgdir>
         <imgdir name="1">
-            <int name="x" value="-50"/>
-            <int name="y" value="-136"/>
+            <int name="x" value="921"/>
+            <int name="y" value="549"/>
             <int name="rx" value="-5"/>
-            <int name="ry" value="-4"/>
+            <int name="ry" value="-5"/>
             <int name="cx" value="0"/>
             <int name="cy" value="0"/>
             <int name="a" value="255"/>
-            <int name="type" value="4"/>
-            <string name="bS" value="grassySoil"/>
-            <int name="no" value="1"/>
+            <int name="type" value="1"/>
+            <string name="bS" value="backcho"/>
+            <int name="no" value="20"/>
         </imgdir>
         <imgdir name="2">
-            <int name="x" value="338"/>
-            <int name="y" value="112"/>
-            <int name="rx" value="-16"/>
+            <int name="x" value="919"/>
+            <int name="y" value="492"/>
+            <int name="rx" value="-5"/>
             <int name="ry" value="-5"/>
             <int name="cx" value="0"/>
             <int name="cy" value="0"/>
             <int name="a" value="255"/>
-            <int name="type" value="0"/>
-            <string name="bS" value="grassySoil"/>
-            <int name="no" value="2"/>
+            <int name="type" value="1"/>
+            <string name="bS" value="backcho"/>
+            <int name="no" value="20"/>
         </imgdir>
         <imgdir name="3">
-            <int name="x" value="217"/>
-            <int name="y" value="-192"/>
-            <int name="rx" value="-16"/>
+            <int name="x" value="919"/>
+            <int name="y" value="139"/>
+            <int name="rx" value="-5"/>
             <int name="ry" value="-5"/>
             <int name="cx" value="0"/>
             <int name="cy" value="0"/>
             <int name="a" value="255"/>
-            <int name="type" value="0"/>
-            <string name="bS" value="grassySoil"/>
-            <int name="no" value="3"/>
+            <int name="type" value="1"/>
+            <string name="bS" value="backcho"/>
+            <int name="no" value="1"/>
         </imgdir>
         <imgdir name="4">
-            <int name="x" value="6"/>
-            <int name="y" value="143"/>
-            <int name="rx" value="-30"/>
+            <int name="x" value="992"/>
+            <int name="y" value="181"/>
+            <int name="rx" value="-5"/>
+            <int name="ry" value="-5"/>
+            <int name="cx" value="0"/>
+            <int name="cy" value="0"/>
+            <int name="a" value="255"/>
+            <int name="type" value="1"/>
+            <string name="bS" value="backcho"/>
+            <int name="no" value="2"/>
+        </imgdir>
+        <imgdir name="5">
+            <int name="x" value="714"/>
+            <int name="y" value="238"/>
+            <int name="rx" value="-20"/>
+            <int name="ry" value="-10"/>
+            <int name="cx" value="0"/>
+            <int name="cy" value="0"/>
+            <int name="a" value="255"/>
+            <int name="type" value="0"/>
+            <string name="bS" value="backcho"/>
+            <int name="no" value="3"/>
+        </imgdir>
+        <imgdir name="6">
+            <int name="x" value="-391"/>
+            <int name="y" value="248"/>
+            <int name="rx" value="-20"/>
+            <int name="ry" value="-10"/>
+            <int name="cx" value="0"/>
+            <int name="cy" value="0"/>
+            <int name="a" value="255"/>
+            <int name="type" value="0"/>
+            <int name="f" value="1"/>
+            <string name="bS" value="backcho"/>
+            <int name="no" value="3"/>
+        </imgdir>
+        <imgdir name="7">
+            <int name="x" value="1592"/>
+            <int name="y" value="75"/>
+            <int name="rx" value="-40"/>
             <int name="ry" value="-30"/>
             <int name="cx" value="0"/>
             <int name="cy" value="0"/>
             <int name="a" value="255"/>
             <int name="type" value="1"/>
-            <string name="bS" value="grassySoil"/>
+            <string name="bS" value="backcho"/>
             <int name="no" value="4"/>
+        </imgdir>
+        <imgdir name="8">
+            <int name="x" value="-417"/>
+            <int name="y" value="-530"/>
+            <int name="rx" value="-5"/>
+            <int name="ry" value="-5"/>
+            <int name="cx" value="0"/>
+            <int name="cy" value="0"/>
+            <int name="a" value="255"/>
+            <int name="type" value="0"/>
+            <string name="bS" value="backcho"/>
+            <int name="no" value="9"/>
+        </imgdir>
+        <imgdir name="9">
+            <int name="x" value="753"/>
+            <int name="y" value="-302"/>
+            <int name="rx" value="-5"/>
+            <int name="ry" value="-5"/>
+            <int name="cx" value="0"/>
+            <int name="cy" value="0"/>
+            <int name="a" value="255"/>
+            <int name="type" value="0"/>
+            <string name="bS" value="backcho"/>
+            <int name="no" value="9"/>
+        </imgdir>
+        <imgdir name="10">
+            <int name="x" value="-283"/>
+            <int name="y" value="-166"/>
+            <int name="rx" value="-5"/>
+            <int name="ry" value="-5"/>
+            <int name="cx" value="0"/>
+            <int name="cy" value="0"/>
+            <int name="a" value="255"/>
+            <int name="type" value="0"/>
+            <string name="bS" value="backcho"/>
+            <int name="no" value="11"/>
+        </imgdir>
+        <imgdir name="11">
+            <int name="x" value="317"/>
+            <int name="y" value="-590"/>
+            <int name="rx" value="-5"/>
+            <int name="ry" value="-5"/>
+            <int name="cx" value="0"/>
+            <int name="cy" value="0"/>
+            <int name="a" value="255"/>
+            <int name="type" value="0"/>
+            <string name="bS" value="backcho"/>
+            <int name="no" value="11"/>
+        </imgdir>
+        <imgdir name="12">
+            <int name="x" value="-81"/>
+            <int name="y" value="-908"/>
+            <int name="rx" value="-5"/>
+            <int name="ry" value="-5"/>
+            <int name="cx" value="0"/>
+            <int name="cy" value="0"/>
+            <int name="a" value="255"/>
+            <int name="type" value="0"/>
+            <string name="bS" value="backcho"/>
+            <int name="no" value="11"/>
+        </imgdir>
+        <imgdir name="13">
+            <int name="x" value="491"/>
+            <int name="y" value="30"/>
+            <int name="rx" value="-20"/>
+            <int name="ry" value="-100"/>
+            <int name="cx" value="0"/>
+            <int name="cy" value="0"/>
+            <int name="a" value="255"/>
+            <int name="type" value="4"/>
+            <string name="bS" value="backcho"/>
+            <int name="no" value="9"/>
+        </imgdir>
+        <imgdir name="14">
+            <int name="x" value="-577"/>
+            <int name="y" value="218"/>
+            <int name="rx" value="-15"/>
+            <int name="ry" value="-75"/>
+            <int name="cx" value="0"/>
+            <int name="cy" value="0"/>
+            <int name="a" value="255"/>
+            <int name="type" value="4"/>
+            <int name="front" value="1"/>
+            <string name="bS" value="boatquay2SG"/>
+            <int name="no" value="16"/>
+        </imgdir>
+        <imgdir name="15">
+            <int name="x" value="-606"/>
+            <int name="y" value="133"/>
+            <int name="rx" value="5"/>
+            <int name="ry" value="-75"/>
+            <int name="cx" value="0"/>
+            <int name="cy" value="0"/>
+            <int name="a" value="255"/>
+            <int name="type" value="4"/>
+            <int name="front" value="1"/>
+            <int name="f" value="1"/>
+            <string name="bS" value="backcho"/>
+            <int name="no" value="19"/>
         </imgdir>
     </imgdir>
     <imgdir name="foothold">
@@ -5745,7 +5870,7 @@
                     <int name="x2" value="-537"/>
                     <int name="y2" value="-787"/>
                     <int name="prev" value="222"/>
-                    <int name="next" value="392"/>
+                    <int name="next" value="383"/>
                 </imgdir>
                 <imgdir name="222">
                     <int name="x1" value="-569"/>
@@ -6251,20 +6376,20 @@
                     <int name="prev" value="285"/>
                     <int name="next" value="284"/>
                 </imgdir>
-                <imgdir name="392">
+                <imgdir name="383">
                     <int name="x1" value="-537"/>
                     <int name="y1" value="-787"/>
                     <int name="x2" value="-526"/>
                     <int name="y2" value="-773"/>
                     <int name="prev" value="221"/>
-                    <int name="next" value="421"/>
+                    <int name="next" value="406"/>
                 </imgdir>
-                <imgdir name="421">
+                <imgdir name="406">
                     <int name="x1" value="-526"/>
                     <int name="y1" value="-773"/>
                     <int name="x2" value="-526"/>
                     <int name="y2" value="-765"/>
-                    <int name="prev" value="392"/>
+                    <int name="prev" value="383"/>
                     <int name="next" value="0"/>
                 </imgdir>
             </imgdir>
@@ -6598,7 +6723,7 @@
                     <int name="y1" value="-477"/>
                     <int name="x2" value="-435"/>
                     <int name="y2" value="-463"/>
-                    <int name="prev" value="400"/>
+                    <int name="prev" value="390"/>
                     <int name="next" value="306"/>
                 </imgdir>
                 <imgdir name="308">
@@ -6615,7 +6740,7 @@
                     <int name="x2" value="-280"/>
                     <int name="y2" value="-456"/>
                     <int name="prev" value="303"/>
-                    <int name="next" value="399"/>
+                    <int name="next" value="389"/>
                 </imgdir>
                 <imgdir name="346">
                     <int name="x1" value="-324"/>
@@ -6647,33 +6772,33 @@
                     <int name="x2" value="-470"/>
                     <int name="y2" value="-463"/>
                     <int name="prev" value="348"/>
-                    <int name="next" value="400"/>
+                    <int name="next" value="390"/>
                 </imgdir>
-                <imgdir name="397">
+                <imgdir name="387">
                     <int name="x1" value="-253"/>
                     <int name="y1" value="-430"/>
                     <int name="x2" value="-242"/>
                     <int name="y2" value="-412"/>
-                    <int name="prev" value="398"/>
+                    <int name="prev" value="388"/>
                     <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="398">
+                <imgdir name="388">
                     <int name="x1" value="-270"/>
                     <int name="y1" value="-437"/>
                     <int name="x2" value="-253"/>
                     <int name="y2" value="-430"/>
-                    <int name="prev" value="399"/>
-                    <int name="next" value="397"/>
+                    <int name="prev" value="389"/>
+                    <int name="next" value="387"/>
                 </imgdir>
-                <imgdir name="399">
+                <imgdir name="389">
                     <int name="x1" value="-280"/>
                     <int name="y1" value="-456"/>
                     <int name="x2" value="-270"/>
                     <int name="y2" value="-437"/>
                     <int name="prev" value="309"/>
-                    <int name="next" value="398"/>
+                    <int name="next" value="388"/>
                 </imgdir>
-                <imgdir name="400">
+                <imgdir name="390">
                     <int name="x1" value="-470"/>
                     <int name="y1" value="-463"/>
                     <int name="x2" value="-448"/>
@@ -6978,7 +7103,7 @@
                     <int name="y1" value="-174"/>
                     <int name="x2" value="26"/>
                     <int name="y2" value="-157"/>
-                    <int name="prev" value="384"/>
+                    <int name="prev" value="377"/>
                     <int name="next" value="228"/>
                 </imgdir>
                 <imgdir name="275">
@@ -6986,16 +7111,16 @@
                     <int name="y1" value="-205"/>
                     <int name="x2" value="-477"/>
                     <int name="y2" value="-178"/>
-                    <int name="prev" value="394"/>
-                    <int name="next" value="391"/>
+                    <int name="prev" value="385"/>
+                    <int name="next" value="382"/>
                 </imgdir>
                 <imgdir name="276">
                     <int name="x1" value="12"/>
                     <int name="y1" value="-202"/>
                     <int name="x2" value="18"/>
                     <int name="y2" value="-177"/>
-                    <int name="prev" value="368"/>
-                    <int name="next" value="384"/>
+                    <int name="prev" value="361"/>
+                    <int name="next" value="377"/>
                 </imgdir>
                 <imgdir name="290">
                     <int name="x1" value="-301"/>
@@ -7151,7 +7276,7 @@
                 </imgdir>
                 <imgdir name="350">
                     <int name="x1" value="-270"/>
-                    <int name="y1" value="-33"/>
+                    <int name="y1" value="-34"/>
                     <int name="x2" value="-338"/>
                     <int name="y2" value="-34"/>
                     <int name="prev" value="0"/>
@@ -7159,7 +7284,7 @@
                 </imgdir>
                 <imgdir name="351">
                     <int name="x1" value="-276"/>
-                    <int name="y1" value="-53"/>
+                    <int name="y1" value="-54"/>
                     <int name="x2" value="-344"/>
                     <int name="y2" value="-54"/>
                     <int name="prev" value="0"/>
@@ -7167,7 +7292,7 @@
                 </imgdir>
                 <imgdir name="352">
                     <int name="x1" value="-286"/>
-                    <int name="y1" value="-72"/>
+                    <int name="y1" value="-73"/>
                     <int name="x2" value="-354"/>
                     <int name="y2" value="-73"/>
                     <int name="prev" value="0"/>
@@ -7175,101 +7300,45 @@
                 </imgdir>
                 <imgdir name="353">
                     <int name="x1" value="-292"/>
-                    <int name="y1" value="-95"/>
+                    <int name="y1" value="-96"/>
                     <int name="x2" value="-360"/>
                     <int name="y2" value="-96"/>
                     <int name="prev" value="0"/>
                     <int name="next" value="0"/>
                 </imgdir>
                 <imgdir name="354">
-                    <int name="x1" value="-257"/>
-                    <int name="y1" value="-104"/>
-                    <int name="x2" value="-257"/>
-                    <int name="y2" value="-88"/>
-                    <int name="prev" value="355"/>
-                    <int name="next" value="0"/>
-                </imgdir>
-                <imgdir name="355">
-                    <int name="x1" value="-261"/>
-                    <int name="y1" value="-106"/>
-                    <int name="x2" value="-257"/>
-                    <int name="y2" value="-104"/>
-                    <int name="prev" value="357"/>
-                    <int name="next" value="354"/>
-                </imgdir>
-                <imgdir name="356">
                     <int name="x1" value="-249"/>
-                    <int name="y1" value="-3"/>
+                    <int name="y1" value="-4"/>
                     <int name="x2" value="-328"/>
                     <int name="y2" value="-4"/>
                     <int name="prev" value="0"/>
                     <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="357">
-                    <int name="x1" value="-255"/>
-                    <int name="y1" value="-126"/>
-                    <int name="x2" value="-261"/>
-                    <int name="y2" value="-106"/>
-                    <int name="prev" value="364"/>
-                    <int name="next" value="355"/>
-                </imgdir>
-                <imgdir name="358">
+                <imgdir name="355">
                     <int name="x1" value="-284"/>
                     <int name="y1" value="-126"/>
                     <int name="x2" value="-269"/>
                     <int name="y2" value="-135"/>
-                    <int name="prev" value="359"/>
-                    <int name="next" value="364"/>
+                    <int name="prev" value="0"/>
+                    <int name="next" value="357"/>
                 </imgdir>
-                <imgdir name="359">
-                    <int name="x1" value="-284"/>
-                    <int name="y1" value="-117"/>
-                    <int name="x2" value="-284"/>
-                    <int name="y2" value="-126"/>
-                    <int name="prev" value="360"/>
-                    <int name="next" value="358"/>
-                </imgdir>
-                <imgdir name="360">
-                    <int name="x1" value="-293"/>
-                    <int name="y1" value="-114"/>
-                    <int name="x2" value="-284"/>
-                    <int name="y2" value="-117"/>
-                    <int name="prev" value="361"/>
-                    <int name="next" value="359"/>
-                </imgdir>
-                <imgdir name="361">
-                    <int name="x1" value="-291"/>
-                    <int name="y1" value="-115"/>
-                    <int name="x2" value="-293"/>
-                    <int name="y2" value="-114"/>
-                    <int name="prev" value="403"/>
-                    <int name="next" value="360"/>
-                </imgdir>
-                <imgdir name="362">
-                    <int name="x1" value="-311"/>
-                    <int name="y1" value="-108"/>
-                    <int name="x2" value="-291"/>
-                    <int name="y2" value="-115"/>
-                    <int name="prev" value="363"/>
-                    <int name="next" value="403"/>
-                </imgdir>
-                <imgdir name="363">
+                <imgdir name="356">
                     <int name="x1" value="-370"/>
                     <int name="y1" value="-114"/>
                     <int name="x2" value="-311"/>
                     <int name="y2" value="-108"/>
-                    <int name="prev" value="383"/>
-                    <int name="next" value="362"/>
+                    <int name="prev" value="376"/>
+                    <int name="next" value="407"/>
                 </imgdir>
-                <imgdir name="364">
+                <imgdir name="357">
                     <int name="x1" value="-269"/>
                     <int name="y1" value="-135"/>
                     <int name="x2" value="-255"/>
                     <int name="y2" value="-126"/>
-                    <int name="prev" value="358"/>
-                    <int name="next" value="357"/>
+                    <int name="prev" value="355"/>
+                    <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="365">
+                <imgdir name="358">
                     <int name="x1" value="-558"/>
                     <int name="y1" value="-9"/>
                     <int name="x2" value="-374"/>
@@ -7277,7 +7346,7 @@
                     <int name="prev" value="0"/>
                     <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="366">
+                <imgdir name="359">
                     <int name="x1" value="-228"/>
                     <int name="y1" value="-9"/>
                     <int name="x2" value="-163"/>
@@ -7285,15 +7354,15 @@
                     <int name="prev" value="0"/>
                     <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="367">
+                <imgdir name="360">
                     <int name="x1" value="-559"/>
-                    <int name="y1" value="-17"/>
+                    <int name="y1" value="-18"/>
                     <int name="x2" value="-544"/>
                     <int name="y2" value="-18"/>
                     <int name="prev" value="0"/>
                     <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="368">
+                <imgdir name="361">
                     <int name="x1" value="-3"/>
                     <int name="y1" value="-216"/>
                     <int name="x2" value="12"/>
@@ -7301,63 +7370,63 @@
                     <int name="prev" value="0"/>
                     <int name="next" value="276"/>
                 </imgdir>
-                <imgdir name="369">
+                <imgdir name="362">
                     <int name="x1" value="-102"/>
                     <int name="y1" value="-244"/>
                     <int name="x2" value="-96"/>
                     <int name="y2" value="-237"/>
-                    <int name="prev" value="370"/>
+                    <int name="prev" value="363"/>
                     <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="370">
+                <imgdir name="363">
                     <int name="x1" value="-106"/>
                     <int name="y1" value="-245"/>
                     <int name="x2" value="-102"/>
                     <int name="y2" value="-244"/>
-                    <int name="prev" value="371"/>
-                    <int name="next" value="369"/>
+                    <int name="prev" value="364"/>
+                    <int name="next" value="362"/>
                 </imgdir>
-                <imgdir name="371">
+                <imgdir name="364">
                     <int name="x1" value="-118"/>
                     <int name="y1" value="-242"/>
                     <int name="x2" value="-106"/>
                     <int name="y2" value="-245"/>
-                    <int name="prev" value="372"/>
-                    <int name="next" value="370"/>
+                    <int name="prev" value="365"/>
+                    <int name="next" value="363"/>
                 </imgdir>
-                <imgdir name="372">
+                <imgdir name="365">
                     <int name="x1" value="-118"/>
                     <int name="y1" value="-235"/>
                     <int name="x2" value="-118"/>
                     <int name="y2" value="-242"/>
                     <int name="prev" value="0"/>
-                    <int name="next" value="371"/>
+                    <int name="next" value="364"/>
                 </imgdir>
-                <imgdir name="373">
+                <imgdir name="366">
                     <int name="x1" value="-79"/>
                     <int name="y1" value="-254"/>
                     <int name="x2" value="-58"/>
                     <int name="y2" value="-234"/>
-                    <int name="prev" value="374"/>
+                    <int name="prev" value="367"/>
                     <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="374">
+                <imgdir name="367">
                     <int name="x1" value="-93"/>
                     <int name="y1" value="-269"/>
                     <int name="x2" value="-79"/>
                     <int name="y2" value="-254"/>
-                    <int name="prev" value="375"/>
-                    <int name="next" value="373"/>
+                    <int name="prev" value="368"/>
+                    <int name="next" value="366"/>
                 </imgdir>
-                <imgdir name="375">
+                <imgdir name="368">
                     <int name="x1" value="-108"/>
                     <int name="y1" value="-262"/>
                     <int name="x2" value="-93"/>
                     <int name="y2" value="-269"/>
                     <int name="prev" value="0"/>
-                    <int name="next" value="374"/>
+                    <int name="next" value="367"/>
                 </imgdir>
-                <imgdir name="376">
+                <imgdir name="369">
                     <int name="x1" value="-178"/>
                     <int name="y1" value="-15"/>
                     <int name="x2" value="-163"/>
@@ -7365,7 +7434,7 @@
                     <int name="prev" value="0"/>
                     <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="377">
+                <imgdir name="370">
                     <int name="x1" value="-215"/>
                     <int name="y1" value="-14"/>
                     <int name="x2" value="-200"/>
@@ -7373,55 +7442,55 @@
                     <int name="prev" value="0"/>
                     <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="378">
+                <imgdir name="371">
                     <int name="x1" value="-230"/>
-                    <int name="y1" value="-15"/>
+                    <int name="y1" value="-16"/>
                     <int name="x2" value="-215"/>
                     <int name="y2" value="-16"/>
                     <int name="prev" value="0"/>
                     <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="379">
+                <imgdir name="372">
                     <int name="x1" value="-387"/>
-                    <int name="y1" value="-14"/>
+                    <int name="y1" value="-15"/>
                     <int name="x2" value="-372"/>
                     <int name="y2" value="-15"/>
                     <int name="prev" value="0"/>
                     <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="380">
+                <imgdir name="373">
                     <int name="x1" value="-444"/>
-                    <int name="y1" value="-15"/>
+                    <int name="y1" value="-16"/>
                     <int name="x2" value="-429"/>
                     <int name="y2" value="-16"/>
                     <int name="prev" value="0"/>
                     <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="381">
+                <imgdir name="374">
                     <int name="x1" value="-485"/>
-                    <int name="y1" value="-15"/>
+                    <int name="y1" value="-16"/>
                     <int name="x2" value="-470"/>
                     <int name="y2" value="-16"/>
                     <int name="prev" value="0"/>
                     <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="382">
+                <imgdir name="375">
                     <int name="x1" value="-522"/>
-                    <int name="y1" value="-16"/>
+                    <int name="y1" value="-17"/>
                     <int name="x2" value="-507"/>
                     <int name="y2" value="-17"/>
                     <int name="prev" value="0"/>
                     <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="383">
+                <imgdir name="376">
                     <int name="x1" value="-378"/>
                     <int name="y1" value="-112"/>
                     <int name="x2" value="-370"/>
                     <int name="y2" value="-114"/>
-                    <int name="prev" value="385"/>
-                    <int name="next" value="363"/>
+                    <int name="prev" value="378"/>
+                    <int name="next" value="356"/>
                 </imgdir>
-                <imgdir name="384">
+                <imgdir name="377">
                     <int name="x1" value="18"/>
                     <int name="y1" value="-177"/>
                     <int name="x2" value="24"/>
@@ -7429,253 +7498,197 @@
                     <int name="prev" value="276"/>
                     <int name="next" value="274"/>
                 </imgdir>
-                <imgdir name="385">
+                <imgdir name="378">
                     <int name="x1" value="-390"/>
                     <int name="y1" value="-117"/>
                     <int name="x2" value="-378"/>
                     <int name="y2" value="-112"/>
-                    <int name="prev" value="420"/>
-                    <int name="next" value="383"/>
+                    <int name="prev" value="405"/>
+                    <int name="next" value="376"/>
                 </imgdir>
-                <imgdir name="386">
+                <imgdir name="379">
                     <int name="x1" value="-410"/>
                     <int name="y1" value="-119"/>
                     <int name="x2" value="-401"/>
                     <int name="y2" value="-123"/>
-                    <int name="prev" value="405"/>
-                    <int name="next" value="420"/>
+                    <int name="prev" value="394"/>
+                    <int name="next" value="405"/>
                 </imgdir>
-                <imgdir name="387">
+                <imgdir name="380">
                     <int name="x1" value="-340"/>
                     <int name="y1" value="-183"/>
                     <int name="x2" value="-324"/>
                     <int name="y2" value="-180"/>
                     <int name="prev" value="0"/>
-                    <int name="next" value="393"/>
+                    <int name="next" value="384"/>
                 </imgdir>
-                <imgdir name="388">
-                    <int name="x1" value="-502"/>
-                    <int name="y1" value="-149"/>
-                    <int name="x2" value="-511"/>
-                    <int name="y2" value="-144"/>
-                    <int name="prev" value="389"/>
-                    <int name="next" value="0"/>
-                </imgdir>
-                <imgdir name="389">
-                    <int name="x1" value="-502"/>
-                    <int name="y1" value="-156"/>
-                    <int name="x2" value="-502"/>
-                    <int name="y2" value="-149"/>
-                    <int name="prev" value="390"/>
-                    <int name="next" value="388"/>
-                </imgdir>
-                <imgdir name="390">
+                <imgdir name="381">
                     <int name="x1" value="-477"/>
                     <int name="y1" value="-167"/>
-                    <int name="x2" value="-502"/>
-                    <int name="y2" value="-156"/>
-                    <int name="prev" value="391"/>
-                    <int name="next" value="389"/>
+                    <int name="x2" value="-489"/>
+                    <int name="y2" value="-166"/>
+                    <int name="prev" value="382"/>
+                    <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="391">
+                <imgdir name="382">
                     <int name="x1" value="-477"/>
                     <int name="y1" value="-178"/>
                     <int name="x2" value="-477"/>
                     <int name="y2" value="-167"/>
                     <int name="prev" value="275"/>
-                    <int name="next" value="390"/>
+                    <int name="next" value="381"/>
                 </imgdir>
-                <imgdir name="393">
+                <imgdir name="384">
                     <int name="x1" value="-324"/>
                     <int name="y1" value="-180"/>
                     <int name="x2" value="-314"/>
                     <int name="y2" value="-138"/>
-                    <int name="prev" value="387"/>
-                    <int name="next" value="402"/>
+                    <int name="prev" value="380"/>
+                    <int name="next" value="392"/>
                 </imgdir>
-                <imgdir name="394">
+                <imgdir name="385">
                     <int name="x1" value="-432"/>
                     <int name="y1" value="-207"/>
                     <int name="x2" value="-446"/>
                     <int name="y2" value="-205"/>
-                    <int name="prev" value="401"/>
+                    <int name="prev" value="391"/>
                     <int name="next" value="275"/>
                 </imgdir>
-                <imgdir name="395">
+                <imgdir name="386">
                     <int name="x1" value="-401"/>
                     <int name="y1" value="-261"/>
                     <int name="x2" value="-417"/>
                     <int name="y2" value="-248"/>
                     <int name="prev" value="0"/>
-                    <int name="next" value="401"/>
+                    <int name="next" value="391"/>
                 </imgdir>
-                <imgdir name="396">
-                    <int name="x1" value="-353"/>
-                    <int name="y1" value="-283"/>
-                    <int name="x2" value="-365"/>
-                    <int name="y2" value="-275"/>
-                    <int name="prev" value="0"/>
-                    <int name="next" value="0"/>
-                </imgdir>
-                <imgdir name="401">
+                <imgdir name="391">
                     <int name="x1" value="-417"/>
                     <int name="y1" value="-248"/>
                     <int name="x2" value="-432"/>
                     <int name="y2" value="-207"/>
-                    <int name="prev" value="395"/>
-                    <int name="next" value="394"/>
+                    <int name="prev" value="386"/>
+                    <int name="next" value="385"/>
                 </imgdir>
-                <imgdir name="402">
+                <imgdir name="392">
                     <int name="x1" value="-314"/>
                     <int name="y1" value="-138"/>
                     <int name="x2" value="-296"/>
                     <int name="y2" value="-131"/>
-                    <int name="prev" value="393"/>
-                    <int name="next" value="403"/>
+                    <int name="prev" value="384"/>
+                    <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="403">
-                    <int name="x1" value="-296"/>
-                    <int name="y1" value="-131"/>
-                    <int name="x2" value="-291"/>
-                    <int name="y2" value="-115"/>
-                    <int name="prev" value="402"/>
-                    <int name="next" value="362"/>
-                </imgdir>
-                <imgdir name="404">
+                <imgdir name="393">
                     <int name="x1" value="-561"/>
                     <int name="y1" value="-123"/>
                     <int name="x2" value="-557"/>
                     <int name="y2" value="-135"/>
                     <int name="prev" value="0"/>
-                    <int name="next" value="419"/>
+                    <int name="next" value="404"/>
                 </imgdir>
-                <imgdir name="405">
+                <imgdir name="394">
                     <int name="x1" value="-422"/>
                     <int name="y1" value="-117"/>
                     <int name="x2" value="-410"/>
                     <int name="y2" value="-119"/>
-                    <int name="prev" value="406"/>
-                    <int name="next" value="386"/>
+                    <int name="prev" value="395"/>
+                    <int name="next" value="379"/>
                 </imgdir>
-                <imgdir name="406">
+                <imgdir name="395">
                     <int name="x1" value="-434"/>
                     <int name="y1" value="-104"/>
                     <int name="x2" value="-422"/>
                     <int name="y2" value="-117"/>
-                    <int name="prev" value="407"/>
-                    <int name="next" value="405"/>
+                    <int name="prev" value="396"/>
+                    <int name="next" value="394"/>
                 </imgdir>
-                <imgdir name="407">
+                <imgdir name="396">
                     <int name="x1" value="-458"/>
                     <int name="y1" value="-103"/>
                     <int name="x2" value="-434"/>
                     <int name="y2" value="-104"/>
-                    <int name="prev" value="408"/>
-                    <int name="next" value="406"/>
+                    <int name="prev" value="397"/>
+                    <int name="next" value="395"/>
                 </imgdir>
-                <imgdir name="408">
+                <imgdir name="397">
                     <int name="x1" value="-467"/>
                     <int name="y1" value="-108"/>
                     <int name="x2" value="-458"/>
                     <int name="y2" value="-103"/>
-                    <int name="prev" value="409"/>
-                    <int name="next" value="407"/>
+                    <int name="prev" value="398"/>
+                    <int name="next" value="396"/>
                 </imgdir>
-                <imgdir name="409">
+                <imgdir name="398">
                     <int name="x1" value="-485"/>
                     <int name="y1" value="-115"/>
                     <int name="x2" value="-467"/>
                     <int name="y2" value="-108"/>
-                    <int name="prev" value="410"/>
-                    <int name="next" value="408"/>
+                    <int name="prev" value="399"/>
+                    <int name="next" value="397"/>
                 </imgdir>
-                <imgdir name="410">
+                <imgdir name="399">
                     <int name="x1" value="-498"/>
                     <int name="y1" value="-128"/>
                     <int name="x2" value="-485"/>
                     <int name="y2" value="-115"/>
-                    <int name="prev" value="411"/>
-                    <int name="next" value="409"/>
+                    <int name="prev" value="400"/>
+                    <int name="next" value="398"/>
                 </imgdir>
-                <imgdir name="411">
+                <imgdir name="400">
                     <int name="x1" value="-504"/>
                     <int name="y1" value="-126"/>
                     <int name="x2" value="-498"/>
                     <int name="y2" value="-128"/>
-                    <int name="prev" value="412"/>
-                    <int name="next" value="410"/>
-                </imgdir>
-                <imgdir name="412">
-                    <int name="x1" value="-507"/>
-                    <int name="y1" value="-138"/>
-                    <int name="x2" value="-504"/>
-                    <int name="y2" value="-126"/>
                     <int name="prev" value="0"/>
-                    <int name="next" value="411"/>
+                    <int name="next" value="399"/>
                 </imgdir>
-                <imgdir name="413">
-                    <int name="x1" value="-507"/>
-                    <int name="y1" value="-162"/>
-                    <int name="x2" value="-509"/>
-                    <int name="y2" value="-150"/>
-                    <int name="prev" value="414"/>
-                    <int name="next" value="0"/>
-                </imgdir>
-                <imgdir name="414">
+                <imgdir name="401">
                     <int name="x1" value="-522"/>
                     <int name="y1" value="-171"/>
                     <int name="x2" value="-507"/>
                     <int name="y2" value="-162"/>
-                    <int name="prev" value="415"/>
-                    <int name="next" value="413"/>
+                    <int name="prev" value="402"/>
+                    <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="415">
+                <imgdir name="402">
                     <int name="x1" value="-536"/>
                     <int name="y1" value="-164"/>
                     <int name="x2" value="-522"/>
                     <int name="y2" value="-171"/>
-                    <int name="prev" value="416"/>
-                    <int name="next" value="414"/>
+                    <int name="prev" value="403"/>
+                    <int name="next" value="401"/>
                 </imgdir>
-                <imgdir name="416">
+                <imgdir name="403">
                     <int name="x1" value="-539"/>
                     <int name="y1" value="-155"/>
                     <int name="x2" value="-536"/>
                     <int name="y2" value="-164"/>
-                    <int name="prev" value="417"/>
-                    <int name="next" value="415"/>
+                    <int name="prev" value="0"/>
+                    <int name="next" value="402"/>
                 </imgdir>
-                <imgdir name="417">
-                    <int name="x1" value="-547"/>
-                    <int name="y1" value="-150"/>
-                    <int name="x2" value="-539"/>
-                    <int name="y2" value="-155"/>
-                    <int name="prev" value="418"/>
-                    <int name="next" value="416"/>
-                </imgdir>
-                <imgdir name="418">
-                    <int name="x1" value="-545"/>
-                    <int name="y1" value="-135"/>
-                    <int name="x2" value="-547"/>
-                    <int name="y2" value="-150"/>
-                    <int name="prev" value="419"/>
-                    <int name="next" value="417"/>
-                </imgdir>
-                <imgdir name="419">
+                <imgdir name="404">
                     <int name="x1" value="-557"/>
                     <int name="y1" value="-135"/>
                     <int name="x2" value="-545"/>
                     <int name="y2" value="-135"/>
-                    <int name="prev" value="404"/>
-                    <int name="next" value="418"/>
+                    <int name="prev" value="393"/>
+                    <int name="next" value="0"/>
                 </imgdir>
-                <imgdir name="420">
+                <imgdir name="405">
                     <int name="x1" value="-401"/>
                     <int name="y1" value="-123"/>
                     <int name="x2" value="-390"/>
                     <int name="y2" value="-117"/>
-                    <int name="prev" value="386"/>
-                    <int name="next" value="385"/>
+                    <int name="prev" value="379"/>
+                    <int name="next" value="378"/>
+                </imgdir>
+                <imgdir name="407">
+                    <int name="x1" value="-311"/>
+                    <int name="y1" value="-108"/>
+                    <int name="x2" value="-290"/>
+                    <int name="y2" value="-107"/>
+                    <int name="prev" value="356"/>
+                    <int name="next" value="0"/>
                 </imgdir>
             </imgdir>
         </imgdir>
@@ -8460,8 +8473,8 @@
             <int name="x" value="79"/>
             <int name="y" value="-179"/>
             <int name="cy" value="-176"/>
-            <int name="rx0" value="32"/>
-            <int name="rx1" value="132"/>
+            <int name="rx0" value="36"/>
+            <int name="rx1" value="136"/>
             <int name="f" value="1"/>
             <string name="type" value="n"/>
             <int name="fh" value="29"/>
@@ -8481,8 +8494,8 @@
             <int name="x" value="97"/>
             <int name="y" value="-332"/>
             <int name="cy" value="-326"/>
-            <int name="rx0" value="18"/>
-            <int name="rx1" value="93"/>
+            <int name="rx0" value="-6"/>
+            <int name="rx1" value="69"/>
             <int name="f" value="1"/>
             <string name="type" value="n"/>
             <string name="limitedname" value="buroo"/>
