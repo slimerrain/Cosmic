@@ -22,9 +22,9 @@
 package client;
 
 public enum SkinColor {
-    NORMAL(0),
-    DARK(1),
-    BLACK(2),
+    LIGHT(0),
+    TANNED(1),
+    DARK(2),
     PALE(3),
     BLUE(4),
     GREEN(5),
