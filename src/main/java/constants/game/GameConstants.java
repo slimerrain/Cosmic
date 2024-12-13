@@ -54,6 +54,7 @@ public class GameConstants {
 
     // "goto" command for players
     public static final Map<String, Integer> GOTO_TOWNS = new HashMap<>() {{
+        put("fm", MapId.FM_ENTRANCE);
         put("southperry", MapId.SOUTHPERRY);
         put("amherst", MapId.AMHERST);
         put("henesys", MapId.HENESYS);
@@ -112,7 +113,6 @@ public class GameConstants {
         put("keep", MapId.CRIMSONWOOD_KEEP);
         put("dojo", MapId.MU_LUNG_DOJO_HALL);
         put("bosspq", MapId.EXCLUSIVE_TRAINING_CENTER);
-        put("fm", MapId.FM_ENTRANCE);
     }};
 
     public static final List<String> GAME_SONGS = new ArrayList<>(170) {{
