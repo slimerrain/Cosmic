@@ -4447,8 +4447,8 @@
             <int name="y" value="-447"/>
             <int name="pt" value="2"/>
             <int name="tm" value="1000000"/>
-            <string name="tn" value="amToSnail"/>
-            <string name="pn" value="snailToAm"/>
+            <string name="tn" value="secret00"/>
+            <string name="pn" value="return00"/>
         </imgdir>
     </imgdir>
     <imgdir name="reactor">
@@ -4853,6 +4853,14 @@
                     <int name="y2" value="455"/>
                     <int name="prev" value="26"/>
                     <int name="next" value="176"/>
+                </imgdir>
+                <imgdir name="92">
+                    <int name="x1" value="-900"/>
+                    <int name="y1" value="-25"/>
+                    <int name="x2" value="-810"/>
+                    <int name="y2" value="-25"/>
+                    <int name="prev" value="175"/>
+                    <int name="next" value="89"/>
                 </imgdir>
                 <imgdir name="145">
                     <int name="x1" value="-939"/>
@@ -5541,14 +5549,6 @@
                     <int name="y2" value="0"/>
                     <int name="prev" value="90"/>
                     <int name="next" value="93"/>
-                </imgdir>
-                <imgdir name="92">
-                    <int name="x1" value="-900"/>
-                    <int name="y1" value="-25"/>
-                    <int name="x2" value="-810"/>
-                    <int name="y2" value="-25"/>
-                    <int name="prev" value="175"/>
-                    <int name="next" value="89"/>
                 </imgdir>
                 <imgdir name="93">
                     <int name="x1" value="-501"/>
