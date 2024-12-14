@@ -939,7 +939,7 @@
         </imgdir>
     </imgdir>
     <imgdir name="Skill">
-        <canvas name="backgrnd" width="175" height="289">
+        <canvas name="backgrnd" width="175" height="370">
             <vector name="origin" x="0" y="0"/>
         </canvas>
         <canvas name="skill0" width="141" height="35">
@@ -1783,7 +1783,7 @@
                 </canvas>
             </imgdir>
         </imgdir>
-        <canvas name="backgrnd" width="463" height="339">
+        <canvas name="backgrnd" width="463" height="499">
             <vector name="origin" x="0" y="0"/>
         </canvas>
     </imgdir>
@@ -6048,7 +6048,7 @@
         </imgdir>
     </imgdir>
     <imgdir name="Trunk">
-        <canvas name="backgrnd" width="463" height="318">
+        <canvas name="backgrnd" width="463" height="478">
             <vector name="origin" x="0" y="0"/>
         </canvas>
         <canvas name="select" width="162" height="35">
