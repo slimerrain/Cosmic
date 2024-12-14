@@ -2164,7 +2164,7 @@
                     <int name="next" value="0"/>
                 </imgdir>
                 <imgdir name="25">
-                    <int name="x1" value="-457"/>
+                    <int name="x1" value="-368"/>
                     <int name="y1" value="215"/>
                     <int name="x2" value="-270"/>
                     <int name="y2" value="215"/>
@@ -2228,9 +2228,9 @@
                     <int name="next" value="0"/>
                 </imgdir>
                 <imgdir name="33">
-                    <int name="x1" value="-457"/>
+                    <int name="x1" value="-368"/>
                     <int name="y1" value="215"/>
-                    <int name="x2" value="-457"/>
+                    <int name="x2" value="-368"/>
                     <int name="y2" value="317"/>
                     <int name="prev" value="25"/>
                     <int name="next" value="0"/>
