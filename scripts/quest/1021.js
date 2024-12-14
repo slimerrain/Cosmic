@@ -44,7 +44,7 @@ function start(mode, type, selection) {
         }
 
         if (status == 0) {
-            qm.sendNext("Hey, " + (qm.getPlayer().getGender() == 0 ? "Man" : "Miss") + "~ What's up? Haha! I am Roger who can teach you adorable new Maplers lots of information.");
+            qm.sendNext("Hey, " + (qm.getPlayer().getName()) + "~ What's up? Haha! I am Roger who can teach you adorable new Maplers lots of information.");
         } else if (status == 1) {
             qm.sendNextPrev("You are asking who made me do this? Ahahahaha!\r\nMyself! I wanted to do this and just be kind to you new travellers.");
         } else if (status == 2) {

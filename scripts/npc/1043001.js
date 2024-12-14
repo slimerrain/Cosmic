@@ -30,9 +30,9 @@ function start() {
     var choice = 0;
     for (var i = 0; i < chances.length; i++) {
         var itemGender = (Math.floor(prizes[i] / 1000) % 10);
-        if ((cm.getPlayer().getGender() != itemGender) && (itemGender != 2)) {
-            chances[i] = 0;
-        }
+//        if ((cm.getPlayer().getGender() != itemGender) && (itemGender != 2)) {
+//            chances[i] = 0;
+//        }
     }
     for (var i = 0; i < chances.length; i++) {
         totalodds += chances[i];

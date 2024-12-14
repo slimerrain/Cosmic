@@ -285,10 +285,6 @@ public class ItemAction extends AbstractQuestAction {
     }
 
     private boolean canGetItem(ItemData item, Character chr) {
-        if (item.getGender() != 2 && item.getGender() != chr.getGender()) {
-            return false;
-        }
-
         if (item.job > 0) {
             final List<Integer> code = getJobBy5ByteEncoding(item.getJob());
             boolean jobFound = false;
