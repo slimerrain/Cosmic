@@ -12,16 +12,16 @@
         <string name="mapMark" value="Amherst"/>
         <int name="fieldLimit" value="8196"/>
         <int name="VRLeft" value="-179"/>
-        <int name="VRRight" value="2515"/>
+        <int name="VRRight" value="3008"/>
         <int name="VRTop" value="-900"/>
-        <int name="VRBottom" value="453"/>
+        <int name="VRBottom" value="469"/>
         <string name="onUserEnter" value="go1000000"/>
     </imgdir>
     <imgdir name="miniMap">
-        <canvas name="canvas" width="175" height="67" pixFormat="1" magLevel="0" bytedata="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">
+        <canvas name="canvas" width="202" height="64" pixFormat="1" magLevel="0" bytedata="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">
         </canvas>
-        <int name="width" value="2805"/>
-        <int name="height" value="1068"/>
+        <int name="width" value="3236"/>
+        <int name="height" value="1025"/>
         <int name="centerX" value="228"/>
         <int name="centerY" value="518"/>
         <int name="mag" value="4"/>
@@ -1257,6 +1257,28 @@
                 <string name="l0" value="maple"/>
                 <string name="l1" value="board"/>
                 <string name="l2" value="1"/>
+                <int name="f" value="0"/>
+                <int name="zM" value="0"/>
+            </imgdir>
+            <imgdir name="55">
+                <int name="x" value="2891"/>
+                <int name="y" value="186"/>
+                <int name="z" value="193"/>
+                <string name="oS" value="acc1"/>
+                <string name="l0" value="grassySoil"/>
+                <string name="l1" value="market"/>
+                <string name="l2" value="15"/>
+                <int name="f" value="0"/>
+                <int name="zM" value="0"/>
+            </imgdir>
+            <imgdir name="56">
+                <int name="x" value="2701"/>
+                <int name="y" value="231"/>
+                <int name="z" value="193"/>
+                <string name="oS" value="acc1"/>
+                <string name="l0" value="grassySoil"/>
+                <string name="l1" value="market"/>
+                <string name="l2" value="17"/>
                 <int name="f" value="0"/>
                 <int name="zM" value="0"/>
             </imgdir>
@@ -2614,11 +2636,256 @@
                 <int name="no" value="3"/>
             </imgdir>
             <imgdir name="193">
+                <int name="x" value="2700"/>
+                <int name="y" value="420"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="4"/>
+            </imgdir>
+            <imgdir name="194">
+                <int name="x" value="2790"/>
+                <int name="y" value="420"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="2"/>
+            </imgdir>
+            <imgdir name="195">
+                <int name="x" value="2790"/>
+                <int name="y" value="360"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="0"/>
+            </imgdir>
+            <imgdir name="196">
+                <int name="x" value="2880"/>
+                <int name="y" value="360"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="1"/>
+            </imgdir>
+            <imgdir name="197">
+                <int name="x" value="2880"/>
+                <int name="y" value="420"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="3"/>
+            </imgdir>
+            <imgdir name="198">
+                <int name="x" value="2970"/>
+                <int name="y" value="420"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="2"/>
+            </imgdir>
+            <imgdir name="199">
+                <int name="x" value="2970"/>
+                <int name="y" value="360"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="2"/>
+            </imgdir>
+            <imgdir name="200">
+                <int name="x" value="3060"/>
+                <int name="y" value="300"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="enV1"/>
+                <int name="no" value="1"/>
+            </imgdir>
+            <imgdir name="201">
+                <int name="x" value="3060"/>
+                <int name="y" value="360"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="enV1"/>
+                <int name="no" value="0"/>
+            </imgdir>
+            <imgdir name="202">
+                <int name="x" value="3060"/>
+                <int name="y" value="420"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="enV1"/>
+                <int name="no" value="1"/>
+            </imgdir>
+            <imgdir name="203">
+                <int name="x" value="2520"/>
+                <int name="y" value="480"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="enH1"/>
+                <int name="no" value="1"/>
+            </imgdir>
+            <imgdir name="204">
+                <int name="x" value="2610"/>
+                <int name="y" value="480"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="enH1"/>
+                <int name="no" value="1"/>
+            </imgdir>
+            <imgdir name="205">
+                <int name="x" value="2700"/>
+                <int name="y" value="480"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="enH1"/>
+                <int name="no" value="2"/>
+            </imgdir>
+            <imgdir name="206">
+                <int name="x" value="2790"/>
+                <int name="y" value="480"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="enH1"/>
+                <int name="no" value="0"/>
+            </imgdir>
+            <imgdir name="207">
+                <int name="x" value="2880"/>
+                <int name="y" value="480"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="enH1"/>
+                <int name="no" value="1"/>
+            </imgdir>
+            <imgdir name="208">
+                <int name="x" value="2700"/>
+                <int name="y" value="360"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="0"/>
+            </imgdir>
+            <imgdir name="209">
+                <int name="x" value="2610"/>
+                <int name="y" value="360"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="3"/>
+            </imgdir>
+            <imgdir name="210">
+                <int name="x" value="3060"/>
+                <int name="y" value="300"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="edU"/>
+                <int name="no" value="0"/>
+            </imgdir>
+            <imgdir name="211">
+                <int name="x" value="2520"/>
+                <int name="y" value="420"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="1"/>
+            </imgdir>
+            <imgdir name="212">
                 <int name="x" value="1890"/>
                 <int name="y" value="-60"/>
                 <int name="zM" value="15"/>
                 <string name="u" value="enH0"/>
                 <int name="no" value="3"/>
+            </imgdir>
+            <imgdir name="213">
+                <int name="x" value="2520"/>
+                <int name="y" value="300"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="enH0"/>
+                <int name="no" value="2"/>
+            </imgdir>
+            <imgdir name="214">
+                <int name="x" value="2610"/>
+                <int name="y" value="300"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="enH0"/>
+                <int name="no" value="3"/>
+            </imgdir>
+            <imgdir name="215">
+                <int name="x" value="2700"/>
+                <int name="y" value="300"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="enH0"/>
+                <int name="no" value="1"/>
+            </imgdir>
+            <imgdir name="216">
+                <int name="x" value="2790"/>
+                <int name="y" value="300"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="enH0"/>
+                <int name="no" value="1"/>
+            </imgdir>
+            <imgdir name="217">
+                <int name="x" value="2880"/>
+                <int name="y" value="300"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="enH0"/>
+                <int name="no" value="0"/>
+            </imgdir>
+            <imgdir name="218">
+                <int name="x" value="2970"/>
+                <int name="y" value="300"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="enH0"/>
+                <int name="no" value="1"/>
+            </imgdir>
+            <imgdir name="219">
+                <int name="x" value="2970"/>
+                <int name="y" value="480"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="enH1"/>
+                <int name="no" value="0"/>
+            </imgdir>
+            <imgdir name="220">
+                <int name="x" value="2520"/>
+                <int name="y" value="300"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="4"/>
+            </imgdir>
+            <imgdir name="221">
+                <int name="x" value="2610"/>
+                <int name="y" value="300"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="2"/>
+            </imgdir>
+            <imgdir name="222">
+                <int name="x" value="2700"/>
+                <int name="y" value="300"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="3"/>
+            </imgdir>
+            <imgdir name="223">
+                <int name="x" value="2790"/>
+                <int name="y" value="300"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="3"/>
+            </imgdir>
+            <imgdir name="224">
+                <int name="x" value="2880"/>
+                <int name="y" value="300"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="1"/>
+            </imgdir>
+            <imgdir name="225">
+                <int name="x" value="2970"/>
+                <int name="y" value="300"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="2"/>
+            </imgdir>
+            <imgdir name="226">
+                <int name="x" value="2520"/>
+                <int name="y" value="360"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="4"/>
+            </imgdir>
+            <imgdir name="227">
+                <int name="x" value="2610"/>
+                <int name="y" value="420"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="bsc"/>
+                <int name="no" value="4"/>
+            </imgdir>
+            <imgdir name="228">
+                <int name="x" value="3060"/>
+                <int name="y" value="480"/>
+                <int name="zM" value="0"/>
+                <string name="u" value="edD"/>
+                <int name="no" value="0"/>
             </imgdir>
         </imgdir>
     </imgdir>
@@ -2895,6 +3162,14 @@
             <int name="tm" value="999999999"/>
             <string name="tn" value=""/>
             <string name="pn" value="tp"/>
+        </imgdir>
+        <imgdir name="13">
+            <int name="x" value="2849"/>
+            <int name="y" value="273"/>
+            <int name="pt" value="2"/>
+            <int name="tm" value="1010004"/>
+            <string name="tn" value="snailToAm"/>
+            <string name="pn" value="amToSnail"/>
         </imgdir>
     </imgdir>
     <imgdir name="reactor">
@@ -3475,7 +3750,7 @@
                     <int name="x2" value="2520"/>
                     <int name="y2" value="274"/>
                     <int name="prev" value="53"/>
-                    <int name="next" value="0"/>
+                    <int name="next" value="101"/>
                 </imgdir>
                 <imgdir name="57">
                     <int name="x1" value="0"/>
@@ -3532,6 +3807,198 @@
                     <int name="y2" value="154"/>
                     <int name="prev" value="48"/>
                     <int name="next" value="24"/>
+                </imgdir>
+                <imgdir name="80">
+                    <int name="x1" value="2977"/>
+                    <int name="y1" value="108"/>
+                    <int name="x2" value="2996"/>
+                    <int name="y2" value="110"/>
+                    <int name="prev" value="81"/>
+                    <int name="next" value="0"/>
+                </imgdir>
+                <imgdir name="81">
+                    <int name="x1" value="2972"/>
+                    <int name="y1" value="102"/>
+                    <int name="x2" value="2977"/>
+                    <int name="y2" value="108"/>
+                    <int name="prev" value="82"/>
+                    <int name="next" value="80"/>
+                </imgdir>
+                <imgdir name="82">
+                    <int name="x1" value="2923"/>
+                    <int name="y1" value="101"/>
+                    <int name="x2" value="2972"/>
+                    <int name="y2" value="102"/>
+                    <int name="prev" value="83"/>
+                    <int name="next" value="81"/>
+                </imgdir>
+                <imgdir name="83">
+                    <int name="x1" value="2918"/>
+                    <int name="y1" value="99"/>
+                    <int name="x2" value="2923"/>
+                    <int name="y2" value="101"/>
+                    <int name="prev" value="84"/>
+                    <int name="next" value="82"/>
+                </imgdir>
+                <imgdir name="84">
+                    <int name="x1" value="2912"/>
+                    <int name="y1" value="101"/>
+                    <int name="x2" value="2918"/>
+                    <int name="y2" value="99"/>
+                    <int name="prev" value="85"/>
+                    <int name="next" value="83"/>
+                </imgdir>
+                <imgdir name="85">
+                    <int name="x1" value="2875"/>
+                    <int name="y1" value="102"/>
+                    <int name="x2" value="2912"/>
+                    <int name="y2" value="101"/>
+                    <int name="prev" value="86"/>
+                    <int name="next" value="84"/>
+                </imgdir>
+                <imgdir name="86">
+                    <int name="x1" value="2868"/>
+                    <int name="y1" value="101"/>
+                    <int name="x2" value="2875"/>
+                    <int name="y2" value="102"/>
+                    <int name="prev" value="87"/>
+                    <int name="next" value="85"/>
+                </imgdir>
+                <imgdir name="87">
+                    <int name="x1" value="2864"/>
+                    <int name="y1" value="101"/>
+                    <int name="x2" value="2868"/>
+                    <int name="y2" value="101"/>
+                    <int name="prev" value="88"/>
+                    <int name="next" value="86"/>
+                </imgdir>
+                <imgdir name="88">
+                    <int name="x1" value="2814"/>
+                    <int name="y1" value="101"/>
+                    <int name="x2" value="2864"/>
+                    <int name="y2" value="101"/>
+                    <int name="prev" value="89"/>
+                    <int name="next" value="87"/>
+                </imgdir>
+                <imgdir name="89">
+                    <int name="x1" value="2808"/>
+                    <int name="y1" value="108"/>
+                    <int name="x2" value="2814"/>
+                    <int name="y2" value="101"/>
+                    <int name="prev" value="91"/>
+                    <int name="next" value="88"/>
+                </imgdir>
+                <imgdir name="90">
+                    <int name="x1" value="2626"/>
+                    <int name="y1" value="232"/>
+                    <int name="x2" value="2777"/>
+                    <int name="y2" value="232"/>
+                    <int name="prev" value="0"/>
+                    <int name="next" value="0"/>
+                </imgdir>
+                <imgdir name="91">
+                    <int name="x1" value="2793"/>
+                    <int name="y1" value="108"/>
+                    <int name="x2" value="2808"/>
+                    <int name="y2" value="108"/>
+                    <int name="prev" value="0"/>
+                    <int name="next" value="89"/>
+                </imgdir>
+                <imgdir name="92">
+                    <int name="x1" value="3098"/>
+                    <int name="y1" value="360"/>
+                    <int name="x2" value="3098"/>
+                    <int name="y2" value="420"/>
+                    <int name="prev" value="93"/>
+                    <int name="next" value="102"/>
+                </imgdir>
+                <imgdir name="93">
+                    <int name="x1" value="3098"/>
+                    <int name="y1" value="300"/>
+                    <int name="x2" value="3098"/>
+                    <int name="y2" value="360"/>
+                    <int name="prev" value="94"/>
+                    <int name="next" value="92"/>
+                </imgdir>
+                <imgdir name="94">
+                    <int name="x1" value="3098"/>
+                    <int name="y1" value="274"/>
+                    <int name="x2" value="3098"/>
+                    <int name="y2" value="300"/>
+                    <int name="prev" value="95"/>
+                    <int name="next" value="93"/>
+                </imgdir>
+                <imgdir name="95">
+                    <int name="x1" value="3022"/>
+                    <int name="y1" value="274"/>
+                    <int name="x2" value="3098"/>
+                    <int name="y2" value="274"/>
+                    <int name="prev" value="0"/>
+                    <int name="next" value="94"/>
+                </imgdir>
+                <imgdir name="96">
+                    <int name="x1" value="2970"/>
+                    <int name="y1" value="274"/>
+                    <int name="x2" value="3060"/>
+                    <int name="y2" value="274"/>
+                    <int name="prev" value="97"/>
+                    <int name="next" value="0"/>
+                </imgdir>
+                <imgdir name="97">
+                    <int name="x1" value="2880"/>
+                    <int name="y1" value="274"/>
+                    <int name="x2" value="2970"/>
+                    <int name="y2" value="274"/>
+                    <int name="prev" value="98"/>
+                    <int name="next" value="96"/>
+                </imgdir>
+                <imgdir name="98">
+                    <int name="x1" value="2790"/>
+                    <int name="y1" value="274"/>
+                    <int name="x2" value="2880"/>
+                    <int name="y2" value="274"/>
+                    <int name="prev" value="99"/>
+                    <int name="next" value="97"/>
+                </imgdir>
+                <imgdir name="99">
+                    <int name="x1" value="2700"/>
+                    <int name="y1" value="274"/>
+                    <int name="x2" value="2790"/>
+                    <int name="y2" value="274"/>
+                    <int name="prev" value="100"/>
+                    <int name="next" value="98"/>
+                </imgdir>
+                <imgdir name="100">
+                    <int name="x1" value="2610"/>
+                    <int name="y1" value="274"/>
+                    <int name="x2" value="2700"/>
+                    <int name="y2" value="274"/>
+                    <int name="prev" value="101"/>
+                    <int name="next" value="99"/>
+                </imgdir>
+                <imgdir name="101">
+                    <int name="x1" value="2520"/>
+                    <int name="y1" value="274"/>
+                    <int name="x2" value="2610"/>
+                    <int name="y2" value="274"/>
+                    <int name="prev" value="56"/>
+                    <int name="next" value="100"/>
+                </imgdir>
+                <imgdir name="102">
+                    <int name="x1" value="3098"/>
+                    <int name="y1" value="420"/>
+                    <int name="x2" value="3098"/>
+                    <int name="y2" value="480"/>
+                    <int name="prev" value="92"/>
+                    <int name="next" value="0"/>
+                </imgdir>
+                <imgdir name="103">
+                    <int name="x1" value="2654"/>
+                    <int name="y1" value="189"/>
+                    <int name="x2" value="2711"/>
+                    <int name="y2" value="189"/>
+                    <int name="prev" value="0"/>
+                    <int name="next" value="0"/>
                 </imgdir>
             </imgdir>
             <imgdir name="5">
@@ -3696,8 +4163,8 @@
             <int name="x" value="103"/>
             <int name="y" value="274"/>
             <int name="cy" value="274"/>
-            <int name="rx0" value="51"/>
-            <int name="rx1" value="151"/>
+            <int name="rx0" value="49"/>
+            <int name="rx1" value="149"/>
             <int name="f" value="1"/>
             <string name="type" value="n"/>
             <int name="fh" value="33"/>
