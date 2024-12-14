@@ -35,8 +35,8 @@ function action(mode, type, selection) {
     } else if (status == 2) {
         section = selection;
         if (selection == 1) {
-            if (cm.getPlayer().getLevel() < 25 || cm.getPlayer().getLevel() > 30 || !cm.isLeader()) {
-                cm.sendOk("You must be in the Level Range 25-30 and be the party leader.");
+            if (cm.getPlayer().getLevel() < 25 || !cm.isLeader()) {
+                cm.sendOk("You must be level 25+ and be the party leader.");
             } else {
                 if (!cm.start_PyramidSubway(-1)) {
                     cm.sendOk("The Dusty Platform is currently full at the moment.");

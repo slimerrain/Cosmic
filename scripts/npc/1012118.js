@@ -17,12 +17,7 @@ function action(mode, type, selection) {
         }
         status--;
     }
-    if (status == 0) {
-        if (cm.getLevel() >= 20) {
-            cm.sendOk("This training ground is available only for those under level 20.");
-            cm.dispose();
-
-        } else if (cm.isQuestActive(22515) || cm.isQuestActive(22516) || cm.isQuestActive(22517) || cm.isQuestActive(22518)) {
+    if (status == 0) {if (cm.isQuestActive(22515) || cm.isQuestActive(22516) || cm.isQuestActive(22517) || cm.isQuestActive(22518)) {
             cm.sendYesNo("Would you like to go in the special Training Center?");
             status = 1;
         } else {
