@@ -3144,8 +3144,8 @@
         </imgdir>
     </imgdir>
     <imgdir name="seat">
-        <vector name="0" x="1" y="604"/>
-        <vector name="1" x="68" y="604"/>
+        <vector name="0" x="111" y="604"/>
+        <vector name="1" x="178" y="604"/>
         <vector name="2" x="1173" y="124"/>
         <vector name="3" x="1196" y="124"/>
         <vector name="4" x="1217" y="124"/>
@@ -3176,8 +3176,8 @@
             <string name="pn" value="sp"/>
         </imgdir>
         <imgdir name="3">
-            <int name="x" value="1043"/>
-            <int name="y" value="480"/>
+            <int name="x" value="1041"/>
+            <int name="y" value="484"/>
             <int name="pt" value="2"/>
             <int name="tm" value="20000"/>
             <string name="tn" value="in00"/>
@@ -4152,8 +4152,8 @@
             <int name="x" value="100"/>
             <int name="y" value="293"/>
             <int name="cy" value="305"/>
-            <int name="rx0" value="62"/>
-            <int name="rx1" value="100"/>
+            <int name="rx0" value="60"/>
+            <int name="rx1" value="98"/>
             <int name="f" value="1"/>
             <string name="type" value="n"/>
             <int name="fh" value="51"/>
