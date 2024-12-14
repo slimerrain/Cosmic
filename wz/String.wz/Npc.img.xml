@@ -7557,8 +7557,8 @@
         <string name="n2" value="Be patience~ Maplers~!"/>
     </imgdir>
     <imgdir name="9900000">
-        <string name="name" value="Kin"/>
-        <string name="n0" value="If you want a makeover, come talk to me."/>
+        <string name="name" value="KIN"/>
+        <string name="n0" value="If you want to make the job adv. as the GM, come talk to me."/>
     </imgdir>
     <imgdir name="9900001">
         <string name="name" value="NimaKIN"/>
