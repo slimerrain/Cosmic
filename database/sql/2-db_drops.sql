@@ -20503,7 +20503,7 @@ USE `cosmic`;
 
   -- missing content for Bob found thanks to drmdsr & Thora
   # normalize item drops for Bob the Snail
-  INSERT INTO temp_data (`dropperid`, `itemid`, `minimum_quantity`, `maximum_quantity`, `questid`, `chance`)
+  INSERT IGNORE INTO temp_data (`dropperid`, `itemid`, `minimum_quantity`, `maximum_quantity`, `questid`, `chance`)
   SELECT  9400551, temp_data.itemid, temp_data.minimum_quantity, temp_data.maximum_quantity, temp_data.questid, LEAST(temp_data.chance * 80, 999999)
   FROM    temp_data
   WHERE   temp_data.dropperid = 100100;
@@ -20514,7 +20514,7 @@ USE `cosmic`;
   # normalize item drops for left-side Pianus
   DELETE FROM temp_data WHERE dropperid=8520000;
 
-  INSERT INTO temp_data (`dropperid`, `itemid`, `minimum_quantity`, `maximum_quantity`, `questid`, `chance`)
+  INSERT IGNORE INTO temp_data (`dropperid`, `itemid`, `minimum_quantity`, `maximum_quantity`, `questid`, `chance`)
   SELECT  8520000, temp_data.itemid, temp_data.minimum_quantity, temp_data.maximum_quantity, temp_data.questid, temp_data.chance
   FROM    temp_data
   WHERE   temp_data.dropperid = 8510000;
@@ -20523,12 +20523,12 @@ USE `cosmic`;
   DELETE FROM temp_data WHERE dropperid=8820000;
   DELETE FROM temp_data WHERE dropperid>=8820010 AND dropperid<=8820014;
 
-  INSERT INTO temp_data (`dropperid`, `itemid`, `minimum_quantity`, `maximum_quantity`, `questid`, `chance`)
+  INSERT IGNORE INTO temp_data (`dropperid`, `itemid`, `minimum_quantity`, `maximum_quantity`, `questid`, `chance`)
   SELECT  8820000, temp_data.itemid, temp_data.minimum_quantity, temp_data.maximum_quantity, temp_data.questid, temp_data.chance
   FROM    temp_data
   WHERE   temp_data.dropperid = 8820001;
 
-  INSERT INTO temp_data (`dropperid`, `itemid`, `minimum_quantity`, `maximum_quantity`, `questid`, `chance`)
+  INSERT IGNORE INTO temp_data (`dropperid`, `itemid`, `minimum_quantity`, `maximum_quantity`, `questid`, `chance`)
   SELECT  9300153, temp_data.itemid, temp_data.minimum_quantity, temp_data.maximum_quantity, temp_data.questid, temp_data.chance
   FROM    temp_data
   WHERE   temp_data.dropperid = 5110300;
@@ -21113,7 +21113,7 @@ DELETE FROM temp_data WHERE dropperid >= 9300315 AND dropperid <= 9300324;
   ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
   #pass (sorted) data from one table to another
-  INSERT INTO drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance)
+  INSERT IGNORE INTO drop_data (dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance)
   (
     SELECT dropperid, itemid, minimum_quantity, maximum_quantity, questid, chance
     FROM temp_data
@@ -21899,7 +21899,7 @@ DELETE FROM temp_data WHERE dropperid >= 9300315 AND dropperid <= 9300324;
   UPDATE reactordrops SET questid=1008 WHERE itemid=4031162;
 
   # add Amoria Wedding reward boxes
-  INSERT INTO `reactordrops` (`reactorid`, `itemid`, `chance`, `questid`) VALUES
+  INSERT IGNORE INTO `reactordrops` (`reactorid`, `itemid`, `chance`, `questid`) VALUES
 (6802000, 4031423, 5, -1),
 (6802000, 4031424, 10, -1),
 (6802000, 1442047, 10, -1),
@@ -21975,7 +21975,7 @@ DELETE FROM temp_data WHERE dropperid >= 9300315 AND dropperid <= 9300324;
 
   # update Amoria PQ reward boxes
   DELETE FROM `reactordrops` WHERE `reactorid` >= 6702003 AND `reactorid` <= 6702012;
-  INSERT INTO `reactordrops` (`reactorid`, `itemid`, `chance`, `questid`) VALUES
+  INSERT IGNORE INTO `reactordrops` (`reactorid`, `itemid`, `chance`, `questid`) VALUES
 (6702003, 1032043, 25, -1),
 (6702003, 1032044, 25, -1),
 (6702003, 1032045, 25, -1),
@@ -22257,7 +22257,7 @@ DELETE FROM temp_data WHERE dropperid >= 9300315 AND dropperid <= 9300324;
 (6702012, 3010011, 50, -1),
 (6702012, 3012005, 100, -1);
 
-  INSERT INTO `reactordrops` (`reactorid`, `itemid`, `chance`, `questid`) VALUES
+  INSERT IGNORE INTO `reactordrops` (`reactorid`, `itemid`, `chance`, `questid`) VALUES
     (9102000, 4031157, 1, 2074),
     (9102001, 4031158, 1, 2074),
     (2502001, 2022116, 1, -1),
@@ -22530,10 +22530,11 @@ DELETE FROM temp_data WHERE dropperid >= 9300315 AND dropperid <= 9300324;
     (6742014, 1132007, 40, -1),
     (6742014, 1132008, 40, -1),
     (6742014, 1082223, 50, -1),
-    (6742014, 1132009, 50, -1);
+    (6742014, 1132009, 50, -1)
+    SELECT DISTINCT id FROM reactordrops;
 
   # adding wish tickets on APQ boxes
-  INSERT INTO `reactordrops` (`reactorid`, `itemid`, `chance`, `questid`) VALUES
+  INSERT IGNORE INTO `reactordrops` (`reactorid`, `itemid`, `chance`, `questid`) VALUES
     (6702003, 4031543, 1, -1),
     (6702003, 4031544, 2, -1),
     (6702004, 4031544, 1, -1),
@@ -22556,7 +22557,7 @@ DELETE FROM temp_data WHERE dropperid >= 9300315 AND dropperid <= 9300324;
     (6702012, 4031544, 1, -1);
 
   # adding themed buffs into Zakum Prequest boxes
-  INSERT INTO `reactordrops` (`reactorid`, `itemid`, `chance`, `questid`) VALUES
+  INSERT IGNORE INTO `reactordrops` (`reactorid`, `itemid`, `chance`, `questid`) VALUES
     (2112000, 2022439, 43, -1),
     (2112001, 2022439, 43, -1),
     (2112003, 2022439, 43, -1),
@@ -22584,7 +22585,7 @@ DELETE FROM temp_data WHERE dropperid >= 9300315 AND dropperid <= 9300324;
 
   -- thanks donny (Croosade forums) for showing a lack on GPQ rewards
   # adding more rewards into GPQ bonus boxes
-  INSERT INTO `reactordrops` (`reactorid`, `itemid`, `chance`, `questid`) VALUES
+  INSERT IGNORE INTO `reactordrops` (`reactorid`, `itemid`, `chance`, `questid`) VALUES
     (9202012, 1002379, 45, -1),
     (9202012, 1002383, 45, -1),
     (9202012, 1002401, 45, -1),
@@ -22620,7 +22621,7 @@ DELETE FROM temp_data WHERE dropperid >= 9300315 AND dropperid <= 9300324;
     UNIQUE KEY `id` (`id`)
   ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
-  INSERT INTO `monstercarddata` (`cardid`, `mobid`) (SELECT itemid, min(dropperid) FROM drop_data where itemid>=2380000 and itemid<2390000 group by itemid);
+  INSERT IGNORE INTO `monstercarddata` (`cardid`, `mobid`) (SELECT itemid, min(dropperid) FROM drop_data where itemid>=2380000 and itemid<2390000 group by itemid);
 
   # delete all unused content on drop data
   DELETE FROM `drop_data` WHERE itemid=400000;

@@ -12796,7 +12796,7 @@ CREATE TABLE IF NOT EXISTS `drop_data_global` (
   KEY `mobid` (`continent`) USING BTREE
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC AUTO_INCREMENT=5 ;
 
-INSERT INTO `drop_data_global` (`id`, `continent`, `itemid`, `minimum_quantity`, `maximum_quantity`, `questid`, `chance`, `comments`) VALUES
+INSERT IGNORE INTO `drop_data_global` (`id`, `continent`, `itemid`, `minimum_quantity`, `maximum_quantity`, `questid`, `chance`, `comments`) VALUES
 (1, -1, 4031865, 1, 1, 0, 35000, 'NX Card 100 PTS'),
 (2, -1, 4031866, 1, 1, 0, 20000, 'NX Card 250 PTS'),
 (3, -1, 4001126, 1, 2, 0, 8000, 'Maple Leaves'),
@@ -15988,7 +15988,7 @@ CREATE TABLE IF NOT EXISTS `monstercarddata` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=309 ;
 
-INSERT INTO `monstercarddata` (`id`, `cardid`, `mobid`) VALUES
+INSERT IGNORE INTO `monstercarddata` (`id`, `cardid`, `mobid`) VALUES
 (1, 2380000, 100100),
 (2, 2380001, 100101),
 (3, 2380003, 130100),
@@ -16413,7 +16413,7 @@ CREATE TABLE IF NOT EXISTS `nxcoupons` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
 
-INSERT INTO `nxcoupons` (`id`, `couponid`, `rate`, `activeday`, `starthour`, `endhour`) VALUES
+INSERT IGNORE INTO `nxcoupons` (`id`, `couponid`, `rate`, `activeday`, `starthour`, `endhour`) VALUES
 (1,5211000,2,254,18,20),
 (2,5211004,2,124,7,11),
 (3,5211005,2,124,10,14),
@@ -16603,7 +16603,7 @@ CREATE TABLE IF NOT EXISTS `reactordrops` (
   KEY `reactorid` (`reactorid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 PACK_KEYS=1 AUTO_INCREMENT=841 ;
 
-INSERT INTO `reactordrops` (`reactordropid`, `reactorid`, `itemid`, `chance`, `questid`) VALUES
+INSERT IGNORE INTO `reactordrops` (`reactordropid`, `reactorid`, `itemid`, `chance`, `questid`) VALUES
 (1, 2001, 4031161, 1, 1008),
 (2, 2001, 4031162, 1, 1008),
 (3, 2001, 2010009, 2, -1),
@@ -17486,7 +17486,7 @@ CREATE TABLE IF NOT EXISTS `shopitems` (
   PRIMARY KEY (`shopitemid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20047 ;
 
-INSERT INTO `shopitems` (`shopitemid`, `shopid`, `itemid`, `price`, `pitch`, `position`) VALUES
+INSERT IGNORE INTO `shopitems` (`shopitemid`, `shopid`, `itemid`, `price`, `pitch`, `position`) VALUES
 (1, 11000, 1332005, 500, 0, 104),
 (2, 11000, 1322005, 50, 0, 108),
 (3, 11000, 1312004, 50, 0, 112),
@@ -18822,7 +18822,7 @@ INSERT INTO `shopitems` (`shopitemid`, `shopid`, `itemid`, `price`, `pitch`, `po
 (1359, 2041003, 1040085, 200000, 0, 436),
 (1360, 2041003, 1040000, 200000, 0, 440),
 (1361, 2041003, 1002004, 160000, 0, 444);
-INSERT INTO `shopitems` (`shopitemid`, `shopid`, `itemid`, `price`, `pitch`, `position`) VALUES
+INSERT IGNORE INTO `shopitems` (`shopitemid`, `shopid`, `itemid`, `price`, `pitch`, `position`) VALUES
 (1362, 2041006, 2330000, 600, 0, 104),
 (1363, 2041006, 2070000, 500, 0, 108),
 (1364, 2041006, 2061001, 10, 0, 112),
@@ -20108,7 +20108,7 @@ INSERT INTO `shopitems` (`shopitemid`, `shopid`, `itemid`, `price`, `pitch`, `po
 (2664, 9120004, 2030008, 400, 0, 116),
 (2665, 9120004, 1050100, 30000, 0, 120),
 (2666, 9120019, 2070000, 500, 0, 104);
-INSERT INTO `shopitems` (`shopitemid`, `shopid`, `itemid`, `price`, `pitch`, `position`) VALUES
+INSERT IGNORE INTO `shopitems` (`shopitemid`, `shopid`, `itemid`, `price`, `pitch`, `position`) VALUES
 (2667, 9120019, 2030010, 500, 0, 108),
 (2668, 9120019, 2030009, 500, 0, 112),
 (2669, 9120019, 2030008, 400, 0, 116),
@@ -21133,7 +21133,7 @@ CREATE TABLE IF NOT EXISTS `shops` (
   PRIMARY KEY (`shopid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10000000 ;
 
-INSERT INTO `shops` (`shopid`, `npcid`) VALUES
+INSERT IGNORE INTO `shops` (`shopid`, `npcid`) VALUES
 (11000, 11000),
 (11100, 11100),
 (21000, 21000),
@@ -21241,14 +21241,14 @@ INSERT INTO `shops` (`shopid`, `npcid`) VALUES
 (9270065, 9270065);
 
  -- missing shops
-INSERT INTO `shops` (`shopid`, `npcid`) VALUES
+INSERT IGNORE INTO `shops` (`shopid`, `npcid`) VALUES
 ( 57, 2002001 ),
 (1052116, 1052116),
 (1301000, 1301000),
 (1200001, 1200001),
 (1200002, 1200002);
 
-INSERT INTO `shopitems` ( `shopid`, `itemid`, `price`, `position`) VALUES
+INSERT IGNORE INTO `shopitems` ( `shopid`, `itemid`, `price`, `position`) VALUES
 ( 57, 3990000, 500, 1 ), 
 ( 57, 3990001, 500, 2 ), 
 ( 57, 3990002, 500, 3 ), 
@@ -21441,7 +21441,7 @@ CREATE TABLE IF NOT EXISTS `specialcashitems` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `specialcashitems` (`id`, `sn`, `modifier`, `info`) VALUES
+INSERT IGNORE INTO `specialcashitems` (`id`, `sn`, `modifier`, `info`) VALUES
 (1, 10000617, 1024, 1);
 
 CREATE TABLE IF NOT EXISTS `storages` (
@@ -21492,11 +21492,23 @@ CREATE TABLE IF NOT EXISTS `characterexplogs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 ALTER TABLE `dueyitems`
+  DROP CONSTRAINT `dueyitems_ibfk_1`;
+
+ALTER TABLE `famelog`
+  DROP CONSTRAINT `famelog_ibfk_1` FOREIGN KEY (`characterid`) REFERENCES `characters` (`id`) ON DELETE CASCADE;
+  
+ALTER TABLE `family_character`
+  DROP CONSTRAINT `family_character_ibfk_1` FOREIGN KEY (`cid`) REFERENCES `characters` (`id`) ON DELETE CASCADE;
+
+ALTER TABLE `skills`
+  DROP CONSTRAINT `skills_chrid_fk` FOREIGN KEY (`characterid`) REFERENCES `characters` (`id`) ON DELETE CASCADE;	# thanks Shavit
+
+ALTER TABLE `dueyitems`
   ADD CONSTRAINT `dueyitems_ibfk_1` FOREIGN KEY (`PackageId`) REFERENCES `dueypackages` (`PackageId`) ON DELETE CASCADE;
 
 ALTER TABLE `famelog`
   ADD CONSTRAINT `famelog_ibfk_1` FOREIGN KEY (`characterid`) REFERENCES `characters` (`id`) ON DELETE CASCADE;
-  
+
 ALTER TABLE `family_character`
   ADD CONSTRAINT `family_character_ibfk_1` FOREIGN KEY (`cid`) REFERENCES `characters` (`id`) ON DELETE CASCADE;
 

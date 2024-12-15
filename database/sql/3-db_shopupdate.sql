@@ -4,7 +4,7 @@
 USE `cosmic`;
 
 # Scroll shop at Asia, chair shop at Kino Konoko, potion shop at T-1337
-INSERT INTO `shops` (`shopid`,`npcid`) VALUES
+INSERT IGNORE INTO `shops` (`shopid`,`npcid`) VALUES
 (2082014,2082014),
 (9110002,9110002),
 (9201101,9201101);
@@ -137,7 +137,7 @@ INSERT IGNORE INTO `shopitems` (`shopid`, `itemid`, `price`, `pitch`, `position`
 --        Others, Equips, Mounts, Scrolls.
 
 DELETE FROM `shopitems` WHERE `shopid`=1337;
-INSERT INTO `shopitems` ( `shopid`, `itemid`, `price`, `position`) VALUES
+INSERT IGNORE INTO `shopitems` ( `shopid`, `itemid`, `price`, `position`) VALUES
 (1337, 2100036, 1, 1),
 (1337, 2100035, 1, 2),
 (1337, 2100034, 1, 3),
@@ -226,7 +226,7 @@ INSERT INTO `shopitems` ( `shopid`, `itemid`, `price`, `position`) VALUES
 (1337, 2050004, 1, 86);
 
 -- Thanks to DietStory v1.02 dev team
-INSERT INTO `shopitems` ( `shopid`, `itemid`, `price`, `pitch`, `position`) VALUES
+INSERT IGNORE INTO `shopitems` ( `shopid`, `itemid`, `price`, `pitch`, `position`) VALUES
  (1200001, 3010001, 1000, 0, 1),
  (1200001, 1092003, 2000, 0, 2),
  (1200001, 1072063, 10000, 0, 3),
@@ -304,7 +304,7 @@ INSERT INTO `shopitems` ( `shopid`, `itemid`, `price`, `pitch`, `position`) VALU
  (1301000, 2000000, 50, 0, 172);
 
 # adding missing pirate items at Singapore npc's
-INSERT INTO `shopitems` ( `shopid`, `itemid`, `price`, `pitch`, `position`) VALUES
+INSERT IGNORE INTO `shopitems` ( `shopid`, `itemid`, `price`, `pitch`, `position`) VALUES
  (9270019, 1492006, 160000, 0, 80),
  (9270019, 1492005, 100000, 0, 84),
  (9270019, 1492004, 75000, 0, 88),
